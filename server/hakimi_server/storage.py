@@ -222,6 +222,29 @@ class AccountRepository:
             raise RuntimeError("created account could not be reloaded")
         return record
 
+    def find_by_role(self, role_name: str) -> AccountRecord | None:
+        with self._connect() as connection:
+            row = connection.execute(
+                """
+                SELECT account, player_id, hero_id, role_name, starter_hero,
+                       created_ms, updated_ms, state_json
+                FROM accounts WHERE role_name = ?
+                """,
+                (role_name,),
+            ).fetchone()
+        return self._record(row)
+
+    def all_accounts(self) -> list[AccountRecord]:
+        with self._connect() as connection:
+            rows = connection.execute(
+                """
+                SELECT account, player_id, hero_id, role_name, starter_hero,
+                       created_ms, updated_ms, state_json
+                FROM accounts ORDER BY player_id
+                """
+            ).fetchall()
+        return [self._record(row) for row in rows]
+
     def rename(self, account: str, role_name: str) -> None:
         validate_role_name(role_name)
         with self._connect() as connection:

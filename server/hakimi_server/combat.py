@@ -261,7 +261,8 @@ def enemy_roster(config, battle_id: str, wave: int, waves: int,
     for index in range(count):
         units.append((slots[index], int(rng.choice(pool)["id"]), MINOR))
     if last:
-        named = [h for h in heroes if h["name"] == battle.get("name")]
+        boss_name = str(battle.get("name", "")).replace("精英", "")
+        named = [h for h in heroes if h["name"] == boss_name]
         if named:
             boss = min(named, key=lambda h: int(h["star"]))
             units[0] = (slots[0], int(boss["id"]), BOSS)

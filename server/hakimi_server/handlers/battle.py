@@ -62,10 +62,10 @@ def _unlocked(ctx: Context, battle: dict) -> bool:
     if index > 0:
         return same[index - 1]["id"] in cleared
     campaign = ctx.config.index("CampaignConfig").get(battle["campaignId"], {})
-    prev_campaign = campaign.get("prevId")
-    if not prev_campaign:
-        return True
-    return prev_campaign in set(ctx.state.get("campaigns", []))
+    prev = campaign.get("prevId") or ""
+    prev_campaigns = parse_json(prev, [prev]) if prev.startswith("[") else ([prev] if prev else [])
+    done = set(ctx.state.get("campaigns", [])) | set(ctx.state.get("elite_campaigns", []))
+    return all(c in done for c in prev_campaigns)
 
 
 def _check_enter(ctx: Context, battle: dict) -> None:

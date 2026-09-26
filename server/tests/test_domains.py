@@ -308,5 +308,39 @@ class BattleTests(DomainTestCase):
         self.assertEqual(self.call(22, 1, {})["code"], 0)
 
 
+class EliteMailTests(DomainTestCase):
+    def test_elite_attack_buy_and_sweep(self):
+        def change(state):
+            state["player"]["level"] = 60
+            state["wallet"]["gold"] = 1000
+            state["wallet"]["totalCharge"] = 100000  # buying elite entries is a recharge perk
+            for card in state["cards"]:
+                card["level"] = 60
+        self.edit(change)
+        grid = [[long_id(v) for v in row] for row in self.state()["groups"]["groups"][0]["embattles"]]
+        result = self.call(61, 2, {"battleId": "CH01BN01", "embattle": [grid], "quick": False})
+        self.assertEqual(result["code"], 0)
+        for trigger in result["content"]["triggers"]:
+            parse_report(trigger["reports"][0])
+        self.assertEqual(self.call(61, 1, {})["code"], 0)
+        self.assertEqual(self.call(61, 8, {})["code"], 0)
+        self.assertEqual(self.call(61, 6, {"battleId": "CH01BN01"})["code"], 0)
+
+    def test_system_mail_attachment(self):
+        import hakimi_server.handlers.email as email
+        from hakimi_server.game import Context
+        record = self.repo.get(ACCOUNT)
+        ctx = Context(self.server, ACCOUNT, record, record.state)
+        email.send_system_mail(ctx, 1, [{"type": "CURRENCY", "code": 1, "amount": 88}])
+        self.repo.update_state(ACCOUNT, ctx.state)
+        box = self.call(17, 1, {})["content"]
+        mail_id = box["receives"][0]["id"]
+        self.assertTrue(self.call(17, 8, {})["content"])
+        drawn = self.call(17, 4, {"mailId": mail_id, "target": {"id": "", "type": 0}})
+        self.assertEqual(drawn["code"], 0)
+        self.assertEqual(self.state()["wallet"]["gold"], 88)
+        self.assertEqual(self.call(17, 4, {"mailId": mail_id, "target": {"id": "", "type": 0}})["code"], -12)
+
+
 if __name__ == "__main__":
     unittest.main()

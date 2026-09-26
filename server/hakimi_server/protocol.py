@@ -73,6 +73,18 @@ class Schema:
                 self.objects_by_name[alias] = self.objects_by_name[canonical]
             if canonical in self.enums_by_name:
                 self.enums_by_name[alias] = self.enums_by_name[canonical]
+        # Subclasses such as TurkeyRewardResult or AttachmentReward are empty
+        # in the schema (fields are inherited); borrow the parent's field types.
+        parents = {
+            "RewardResult": "com.eyu.mt.module.reward.model.RewardResult",
+            "CostResult": "com.eyu.mt.module.cost.model.CostResult",
+            "AttachmentReward": "com.eyu.mt.module.reward.model.Reward",
+        }
+        for name, info in self.objects_by_name.items():
+            if self.types.get(name) == {}:
+                parent = next((p for suffix, p in parents.items() if name.endswith(suffix)), None)
+                if parent and parent in self.types:
+                    self.types[name] = self.types[parent]
         self.objects_by_code = {
             int(info["code"]): info for info in self.objects_by_name.values()
         }
@@ -291,6 +303,12 @@ class Writer:
         info = self.schema.enums_by_name.get(type_name)
         if info is None:
             raise ProtocolError(f"enum code missing for {type_name}")
+        if isinstance(value, str) and not value.lstrip("-").isdigit():
+            names = self.schema.types.get(type_name, {}).get("arg") or {}
+            ordinal = next((int(k) for k, v in names.items() if v == value), None)
+            if ordinal is None:
+                raise ProtocolError(f"{type_name} has no constant {value!r}")
+            value = ordinal
         self._byte(ENUM)
         self._varint(int(info["code"]))
         self._varint(int(value))
