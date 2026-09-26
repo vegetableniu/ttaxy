@@ -1,0 +1,20 @@
+<!-- string pool: 62 entries -->
+<?xml version="1.0" encoding="utf-8"?>
+<AXML>
+  <manifest versionCode="144" versionName="1.0.8.0" installLocation="1" package="com.eyugame.ahxy.mi" platformBuildVersionCode="14" platformBuildVersionName="4.0.2-1406408">
+    <uses-sdk minSdkVersion="8" targetSdkVersion="8">
+    <uses-permission name="android.permission.WRITE_EXTERNAL_STORAGE">
+    <uses-permission name="android.permission.READ_EXTERNAL_STORAGE">
+    <uses-permission name="android.permission.ACCESS_NETWORK_STATE">
+    <uses-permission name="android.permission.INTERNET">
+    <uses-permission name="android.permission.ACCESS_WIFI_STATE">
+    <supports-screens anyDensity="true" smallScreens="true" normalScreens="true" largeScreens="true">
+    <application label="@0x7f040000" icon="@0x7f020000">
+      <activity theme="@0x01030007" label="@0x7f040000" name="com.eyugame.game.ActivityMain" screenOrientation="1" configChanges="0xe0" windowBackground="@0x00000000" windowSoftInputMode="0x20">
+        <intent-filter >
+          <action name="android.intent.action.MAIN">
+          <category name="android.intent.category.LAUNCHER">
+      <meta-data name="EY_OPERATOR_TYPE" value="CryptoPlatformV1">
+      <meta-data name="EY_OPERATOR_PATH" value="sdk/mi/">
+      <meta-data name="EY_RES_COPY_DIR" value="assets/audio,assets/ccb,assets/ccbResources,assets/data,assets/db,assets/images,assets/ini,assets/particles,assets/script,assets/sdk,assets/ui,assets/logo">
+</AXML>

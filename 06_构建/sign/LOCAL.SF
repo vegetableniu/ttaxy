@@ -1,0 +1,225 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: SewWZdeWN1q3RWLdvpvkGoWy7k8=
+Created-By: LocalOffline
+
+Name: AndroidManifest.xml
+SHA1-Digest: ylV69CTxjwLs8arcCmZx5Mehmz0=
+
+Name: classes.dex
+SHA1-Digest: iCdEqKUtAlk+VNOnTDkADj9m9q0=
+
+Name: classes2.dex
+SHA1-Digest: EpsrigraVGf/VkaxtFLrP4eTshk=
+
+Name: res/drawable/icon.png
+SHA1-Digest: mr16Mt+FTYKye8ZrzANYMC0lC4c=
+
+Name: res/drawable/splash.png
+SHA1-Digest: Wy87XVGKDyzqGKr/iexyukkEmz0=
+
+Name: res/layout/callboard.xml
+SHA1-Digest: qE2MoRMw4UzorX7efBMH+iz6hw8=
+
+Name: res/layout/game.xml
+SHA1-Digest: hBdIjnuB9/pHPQ/9ynbdYprELSI=
+
+Name: res/layout/main.xml
+SHA1-Digest: /Bm3DqSM7DlZ2snEM0IzJDd3i/A=
+
+Name: res/layout/update_progress.xml
+SHA1-Digest: 5BpkJoG9ZBW8WvQTUF2yamsy7Sc=
+
+Name: res/layout-v11/callboard.xml
+SHA1-Digest: ato7EaDjcu/L3A0nmjAkT5ke6o8=
+
+Name: resources.arsc
+SHA1-Digest: rTej9H0ytcVMLryx5L14mDpf6J0=
+
+Name: assets/audio/battle_001.mp3
+SHA1-Digest: FHbfVs24bBZsSbRCtIJ0Y09aZQQ=
+
+Name: assets/audio/bg_001.mp3
+SHA1-Digest: +HtqgWIxIxwQ7pMl1wDHyoc+62E=
+
+Name: assets/audio/clicked.mp3
+SHA1-Digest: fQ5a67rtXvMRunuRspXSEgfwsUs=
+
+Name: assets/audio/compose.mp3
+SHA1-Digest: j85hAJIKe7xvjY0Ycrx55OSp2oY=
+
+Name: assets/audio/dead.mp3
+SHA1-Digest: lXEx6ieThphgh8DmkALQ8e4WtD8=
+
+Name: assets/audio/effect/arrow.mp3
+SHA1-Digest: S2GcqHylaZJSl4eCsaKUc1tuVpE=
+
+Name: assets/audio/effect/burn.mp3
+SHA1-Digest: xLMM3Qp+CTypcyyMEShOs913y/E=
+
+Name: assets/audio/effect/burst_a.mp3
+SHA1-Digest: l4uYUXy86SGGUlkFSO48Vz7J+mk=
+
+Name: assets/audio/effect/burst_b.mp3
+SHA1-Digest: mRUKAXv8ahdUGtwaMs/mkbo3Ca0=
+
+Name: assets/audio/effect/burst_c.mp3
+SHA1-Digest: o2Rb8JBpPPsnY0TIOU5pVxZUMd4=
+
+Name: assets/audio/effect/click.mp3
+SHA1-Digest: LFxTfS0KqU9a6MX6yLJJt2XbzTY=
+
+Name: assets/audio/effect/cutting.mp3
+SHA1-Digest: M9k5USmTRkNPPulCnEuidJJkmWw=
+
+Name: assets/audio/effect/flamecut_a.mp3
+SHA1-Digest: PZWKytDK+Hl8gLk2f0AOyEED3Bg=
+
+Name: assets/audio/effect/flamecut_b.mp3
+SHA1-Digest: FJN+wgQSc7UJPtmGXt7hma8rRvQ=
+
+Name: assets/audio/effect/heal.mp3
+SHA1-Digest: XfIosSk9L0inTSLtbm5YQqvuo5E=
+
+Name: assets/audio/effect/icearrow.mp3
+SHA1-Digest: NK+HCdwUf4c2341Iw6hiQpnY/No=
+
+Name: assets/audio/effect/piercing.mp3
+SHA1-Digest: BJSXq/t3beVbLTO6twYgQCFF10M=
+
+Name: assets/audio/effect/poisonattack.mp3
+SHA1-Digest: kVaoD9Yby1WrD8LVgQafEetaMBE=
+
+Name: assets/audio/effect/poisongas.mp3
+SHA1-Digest: vHS/REWuJ4lWaXXq2pk9zw04BEg=
+
+Name: assets/audio/effect/skull.mp3
+SHA1-Digest: fFLeHKZN79HSjwCQbPowoAm7dZY=
+
+Name: assets/audio/effect/strafe_a.mp3
+SHA1-Digest: /arHVzdGh5ZVrAaTmzPrZav016Y=
+
+Name: assets/audio/effect/strafe_b.mp3
+SHA1-Digest: XF06ujRSab29NC1eoN9T4/IkCmo=
+
+Name: assets/audio/effect/strike.mp3
+SHA1-Digest: +oGX1ohzpngE96r9tM2fpaXlbmw=
+
+Name: assets/audio/effect/swept_a.mp3
+SHA1-Digest: 6fLyFLhHKjZJhnSkstkZaDM1Av4=
+
+Name: assets/audio/effect/swept_b.mp3
+SHA1-Digest: zZXjDlo2EHgUlSH3fCvuFDAIMn0=
+
+Name: assets/audio/effect/thunderarrow.mp3
+SHA1-Digest: r6aC4Hv/fSk5Q3BdbIkguTHX/zo=
+
+Name: assets/audio/effect/thunderbolt.mp3
+SHA1-Digest: eWFx002iWlRdQXAnL1rWAno9Un8=
+
+Name: assets/audio/effect/waterspout_a.mp3
+SHA1-Digest: rEmNkJHnn6vndk5lglPB5Lz8FJY=
+
+Name: assets/audio/effect/waterspout_b.mp3
+SHA1-Digest: FLofE5tVxRHjAj82FZDhbxeBgd8=
+
+Name: assets/audio/getpower.mp3
+SHA1-Digest: UUAF1YoY/vmCagJga93VgkKydPE=
+
+Name: assets/audio/gift.mp3
+SHA1-Digest: UKt/syePJrLa9zxqTA6xyRiuuRw=
+
+Name: assets/audio/heroupgrade.mp3
+SHA1-Digest: 0kF7+W6Mq8zg+VZKlKOy74OSkW4=
+
+Name: assets/audio/login.mp3
+SHA1-Digest: EpSIofw9XR3Zfj7FYwIY3bzwz64=
+
+Name: assets/audio/lose.mp3
+SHA1-Digest: adyXrIRW7Gq1h+Ef9f7gWg65olo=
+
+Name: assets/audio/lottery.mp3
+SHA1-Digest: +CbxOpAtHJuZixA5phYzawp8Bxw=
+
+Name: assets/audio/resolve.mp3
+SHA1-Digest: eE9Bt6VjmbT8C6b51Yyp/BEGSn0=
+
+Name: assets/audio/sale.mp3
+SHA1-Digest: tiKJ6fah+BelklewEcN8kKpi/Ss=
+
+Name: assets/audio/skillupgrade.mp3
+SHA1-Digest: WktTgB0fnXF8N7prRCOqJUduGhM=
+
+Name: assets/audio/up.mp3
+SHA1-Digest: Cx4rjxVYeaCGZRM8G9XADtGkbFM=
+
+Name: assets/audio/win.mp3
+SHA1-Digest: W3zJaYUYfi6LZxK133v05AL+tOw=
+
+Name: assets/binlogaV6
+SHA1-Digest: Zg9yinQ04SM4yELAeccS6ClYWPY=
+
+Name: assets/binlogxV6
+SHA1-Digest: fBolkEHCGa+AoMj7lXS1/ABO3Mw=
+
+Name: assets/ccb.dat
+SHA1-Digest: uB15YJthKm1D1LJXhdR6AdqYK9c=
+
+Name: assets/ccbResources.dat
+SHA1-Digest: +ZMqXpweJMmLcuAcf+fPMWi5xWo=
+
+Name: assets/data.dat
+SHA1-Digest: jIamIbF4XC3hLDM7pzz6uSySurM=
+
+Name: assets/db.dat
+SHA1-Digest: Uu3aqVelvNRvrL9CdxVQZoXyPpE=
+
+Name: assets/images.dat
+SHA1-Digest: 8dm8dBA3cs8jm0VwCijwbQ/VgIM=
+
+Name: assets/ini/data.ini
+SHA1-Digest: esUd8pxowk4lkrzfzaQx2wo8YX0=
+
+Name: assets/ini/effect.ini
+SHA1-Digest: cLcyJIy6piRhPC94k6ahVfcm0p4=
+
+Name: assets/ini/font.ini
+SHA1-Digest: OjfXmwQOrTECH9yhIBxvfe68P4w=
+
+Name: assets/ini/misc.ini
+SHA1-Digest: iCHRxQj5k08wd5Nf4BGgGvM+p1c=
+
+Name: assets/ini/PreloadTextures.ini
+SHA1-Digest: UpYPWZnwkHSEpo9ES30TFYTHdyM=
+
+Name: assets/ini/strres.ini
+SHA1-Digest: Z4qP5+HB6n+W7h4eSv8i4wdjnmI=
+
+Name: assets/logo.png
+SHA1-Digest: 6+HP8DZeLwnId04XCdB14KOuTKo=
+
+Name: assets/particles.dat
+SHA1-Digest: ZBtI1aT7Bprb3GgBD/SWpmXVy6s=
+
+Name: assets/script.dat
+SHA1-Digest: NpsfU5rWtj4o8J53/vRlMBZ29Zc=
+
+Name: assets/sdk.dat
+SHA1-Digest: f/n8x5rP/qesCawbVk/rLZf2K8Q=
+
+Name: assets/sologaV6
+SHA1-Digest: OdsEMKzFv8y/Y6Gfw5iFByD22ec=
+
+Name: assets/sologxV6
+SHA1-Digest: Ab71ZOBwebzAJILPpQEdIf3KF6M=
+
+Name: assets/version.dat
+SHA1-Digest: 9C+ulVMem1vEO+Qnv3cbyYCsrko=
+
+Name: lib/armeabi/libgame.so
+SHA1-Digest: Fne+EZ7s6bg3bMjW8zMavHBMNIc=
+
+Name: assets/images/Other/xianjinClean.png
+SHA1-Digest: xEh0XUxuTxjXCSaNL5R0ICi5KQg=
+
+Name: assets/images/newfont/BeginSkip4.png
+SHA1-Digest: tBMesCrCWkUSLCDSM2vTyjJgbF4=

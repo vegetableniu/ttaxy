@@ -1,0 +1,1897 @@
+--------- beginning of system
+D/CompatibilityChangeReporter(  359): Compat change id reported: 161252188; UID 10071; state: DISABLED
+W/ActivityTaskManager(  359): callingPackage for (uid=2000, pid=3328) has no WPC
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265464455; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265452344; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 266124927; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265451093; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265456536; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 255940284; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 236283604; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 263959004; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 264304459; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 264301586; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 254631730; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 273509367; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 263259275; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 174042980; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 174042936; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 181136395; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 194480991; UID 10071; state: ENABLED
+--------- beginning of main
+E/CellBroadcastUtils(  359): getDefaultCellBroadcastReceiverPackageName: no package found
+D/CompatibilityChangeReporter(  359): Compat change id reported: 205907456; UID 10071; state: DISABLED
+V/WindowManagerShell(  569): Transition requested: android.os.BinderProxy@ee5eabd TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=15 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain } baseActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} topActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} origActivity=null realActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} numActivities=1 lastActiveTime=2443586 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@4f91003} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{63eeb80 com.eyugame.game.ActivityMain} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+I/ActivityTaskManager(  359): START u0 {flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+W/libprocessgroup(  359): SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/top-app/cgroup.procs: No such file or directory
+D/CompatibilityChangeReporter(  359): Compat change id reported: 168419799; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 273564678; UID 10071; state: DISABLED
+D/WindowManagerShell(  569): onFixedRotationStarted: null, state=PipTransitionState(mState=undefined, mInSwipePipToHomeTransition=false)
+D/CompatibilityChangeReporter(  359): Compat change id reported: 135634846; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 143937733; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265195908; UID 10071; state: ENABLED
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:46 android.app.ActivityThread.handleReceiver:4499 
+D/Zygote  (  184): Forked child process 3331
+I/ActivityManager(  359): Start proc 3331:com.eyugame.ahxy.mi/u0a71 for next-top-activity {com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain}
+D/CoreBackPreview(  359): Window{fb3a3ed u0 Splash Screen com.eyugame.ahxy.mi}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@d3391e9, mPriority=0, mIsAnimationCallback=false}
+W/nativebridge( 3331): Failed to bind-mount /data/local/cfg-hnegi/ as /proc/cpuinfo: Not a directory
+W/nativebridge( 3331): Failed to bind-mount /system/etc/cpuinfo.arm.txt as /proc/cpuinfo: No such file or directory
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer(  569): Failed to set EGL_SWAP_BEHAVIOR on surface 0x758d57394900, error=EGL_BAD_MATCH
+E/OpenGLRenderer(  569): Unable to match the desired swap behavior.
+I/Zygote  ( 3331): seccomp disabled by setenforce 0
+I/eyugame.ahxy.mi( 3331): Late-enabling -Xcheck:jni
+I/ndroid.systemui(  569): fastpipe: Connect success
+D/HostConnection(  569): HostRPC::connect sucess: app=com.android.systemui, pid=569, tid=3332, this=0x758d572f7fc0
+D/HostConnection(  569): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.android.systemui
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+I/eyugame.ahxy.mi( 3331): Using CollectorTypeCC GC.
+V/WindowManager(  359): Sent Transition #29 createdAt=09-25 12:44:19.805 via request=TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=15 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain } baseActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} topActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} origActivity=null realActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} numActivities=1 lastActiveTime=2443586 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{a666d9c Task{72fddb1 #15 type=standard A=10071:com.eyugame.ahxy.mi}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{5aa63a5 com.eyugame.game.ActivityMain} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+V/WindowManager(  359):     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+V/WindowManager(  359):     info={id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{a666d9c Task{72fddb1 #15 type=standard A=10071:com.eyugame.ahxy.mi}}} m=OPEN f=NONE leash=Surface(name=Task=15)/@0x8a04e6e sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{RemoteToken{ac6ed8e Task{e8c83d3 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x2032766 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): onTransitionReady android.os.BinderProxy@ee5eabd: {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f4bfd2d} m=OPEN f=NONE leash=Surface(name=Task=15)/@0x4ff7ed6 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@84cb262} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x8f26557 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): Transition (#29)android.os.BinderProxy@ee5eabd@0 ready while (#28)android.os.BinderProxy@d2423b7@0 is still animating. Notify the animating transition in case they can be merged
+V/WindowManagerShell(  569): Transition animation finished (aborted=false), notifying core (#28)android.os.BinderProxy@d2423b7@0
+I/ndroid.systemui(  569): fastpipe: close connect
+V/WindowManager(  359): Finish Transition #28: created at 09-25 12:44:19.023 collect-started=0.03ms request-sent=0.66ms started=355.079ms ready=355.067ms sent=577.883ms finished=865.535ms
+E/BpTransactionCompletedListener(  240): Failed to transact (-32)
+E/BpTransactionCompletedListener(  240): Failed to transact (-32)
+V/WindowManagerShell(  569): Playing animation for (#29)android.os.BinderProxy@ee5eabd@0
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultMixedHandler@88c1e50
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@6c57849
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.pip.PipTransition@e30a54e
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@568566f
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.recents.RecentsTransitionHandler@9ccf7c
+V/ShellRecents(  569): RecentsTransitionHandler.startAnimation: no controller found
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.splitscreen.StageCoordinator@fe45005
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.RemoteTransitionHandler@d75c85a
+V/WindowManagerShell(  569): Transition doesn't have explicit remote, search filters for match for {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f4bfd2d} m=OPEN f=NONE leash=Surface(name=Task=15)/@0x4ff7ed6 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@84cb262} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x8f26557 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569):  Delegate animation for #29 to null
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): start default transition animation, info = {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@f4bfd2d} m=OPEN f=NONE leash=Surface(name=Task=15)/@0x4ff7ed6 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@84cb262} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x8f26557 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): loadAnimation: anim=android.view.animation.AnimationSet@a4792ae animAttr=0x13 type=OPEN isEntrance=false
+V/WindowManagerShell(  569): loadAnimation: anim=android.view.animation.AnimationSet@afe2bba animAttr=0x12 type=OPEN isEntrance=true
+V/WindowManagerShell(  569):  animated by com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+I/houdini ( 3331): [3331] Houdini now in android app mode
+I/houdini ( 3331): [3331] Intel Bridge Technology for Leidian Android Emulator only, Copyright(C) Intel Corp. 2012-2025.
+I/houdini ( 3331): [3331] Use permitted only under a valid evaluation software license agreement - all other rights reserved. Expire date 20261101.
+I/houdini ( 3331): [3331] Initialize library(version: 14.0.0_y.leidian_com1.0 RELEASE)... successfully.
+I/adbd    ( 1811): jdwp connection from 3331
+V/appproc ( 3331): App process: starting thread pool.
+W/libprocessgroup(  359): SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/top-app/cgroup.procs: No such file or directory
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 171979766; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 242716250; UID 10071; state: DISABLED
+W/OpenGLRenderer(  856): Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+D/CompatibilityChangeReporter(  359): Compat change id reported: 170503758; UID 10071; state: DISABLED
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:55 android.app.ActivityThread.handleReceiver:4499 
+D/ApplicationLoaders( 3331): Returning zygote-cached class loader: /system/framework/android.test.base.jar
+D/nativeloader( 3331): Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=22, uses_libraries=ALL, library_path=/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/lib/arm:/system/fake-libs:/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/com.eyugame.ahxy.mi
+W/ziparchive( 3331): Unable to open '/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.dm': No such file or directory
+W/ziparchive( 3331): Unable to open '/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.dm': No such file or directory
+D/nativeloader( 3331): Configuring clns-7 for other apk /data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.apk. target_sdk_version=22, uses_libraries=, library_path=/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/lib/arm:/system/fake-libs:/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/com.eyugame.ahxy.mi
+V/GraphicsEnvironment( 3331): Currently set values for:
+V/GraphicsEnvironment( 3331):   angle_gl_driver_selection_pkgs=[]
+V/GraphicsEnvironment( 3331):   angle_gl_driver_selection_values=[]
+V/GraphicsEnvironment( 3331): ANGLE GameManagerService for com.eyugame.ahxy.mi: false
+V/GraphicsEnvironment( 3331): com.eyugame.ahxy.mi is not listed in per-application setting
+V/GraphicsEnvironment( 3331): Neither updatable production driver nor prerelease driver is supported.
+I/RenderThread( 3331): type=1400 audit(0.0:2081): avc:  denied  { read } for  name="libandroidbase.so" dev="sda2" ino=5330 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+I/RenderThread( 3331): type=1400 audit(0.0:2082): avc:  denied  { open } for  path="/system/vendor/lib/libandroidbase.so" dev="sda2" ino=5330 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+D/libEGL  ( 3331): loaded /vendor/lib/egl/libEGL_adreno.so
+I/RenderThread( 3331): type=1400 audit(0.0:2083): avc:  denied  { getattr } for  path="/system/vendor/lib/libandroidbase.so" dev="sda2" ino=5330 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+D/libEGL  ( 3331): loaded /vendor/lib/egl/libGLESv1_CM_adreno.so
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glClientWaitSyncAPPLE to eglBindTexImage failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glCopyTextureLevelsAPPLE to eglWaitSync failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glDeleteSyncAPPLE to eglClientWaitSyncKHR failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glFenceSyncAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glFramebufferTexture2DMultisampleEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glGetInteger64vAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glGetSyncivAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glIsSyncAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glRenderbufferStorageMultisampleAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glRenderbufferStorageMultisampleEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glResolveMultisampleFramebufferAPPLE to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glTexStorage1DEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glTextureStorage1DEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glTextureStorage2DEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glTextureStorage3DEXT to NULL failed
+E/libEGL  ( 3331): denglibo Loader::init_api redirect glWaitSyncAPPLE to NULL failed
+V/WindowManagerShell(  569): Transition animation finished (aborted=false), notifying core (#29)android.os.BinderProxy@ee5eabd@0
+V/WindowManager(  359): Finish Transition #29: created at 09-25 12:44:19.805 collect-started=0.066ms request-sent=3.068ms started=4.351ms ready=74.733ms sent=78.02ms finished=384.978ms
+D/AsyncRotation(  359): Update original rotation 0
+D/libEGL  ( 3331): loaded /vendor/lib/egl/libGLESv2_adreno.so
+I/RenderThread( 3331): type=1400 audit(0.0:2084): avc:  denied  { map } for  path="/system/vendor/lib/libandroidbase.so" dev="sda2" ino=5330 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+I/ActivityTaskManager(  359): Config changes=20000480 {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.542 fontWeightAdjustment=0}
+I/WindowManager(  359): Override config changes=20000480 {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.542 fontWeightAdjustment=0} for displayId=0
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+V/WindowManagerShell(  569): Transition requested: android.os.BinderProxy@b534986 TransitionRequestInfo { type = 6, triggerTask = null, remoteTransition = null, displayChange = DisplayChange { displayId = 0, startAbsBounds = null, endAbsBounds = null, startRotation = 0, endRotation = 3, physicalDisplayChanged = false }, flags = 0 }
+D/WindowManagerShell(  569): PipTaskOrganizer: Skip onMovementBoundsChanged on rotation change InSwipePipToHomeTransition=false mWaitForFixedRotation=true getTransitionState=0
+I/InputManager-JNI(  359): Viewport [0] to add: local:0, isActive: true
+W/SubscriptionInfo(  638): MCC string is not a number
+W/SubscriptionInfo(  638): MNC string is not a number
+V/WindowManager(  359): Sent Transition #30 createdAt=09-25 12:44:20.191 via request=TransitionRequestInfo { type = 6, triggerTask = null, remoteTransition = null, displayChange = DisplayChange { displayId = 0, startAbsBounds = null, endAbsBounds = null, startRotation = 0, endRotation = 3, physicalDisplayChanged = false }, flags = 0 }
+V/WindowManager(  359):     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+V/WindowManager(  359):     info={id=30 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{a666d9c Task{72fddb1 #15 type=standard A=10071:com.eyugame.ahxy.mi}}} m=CHANGE f=NONE p=WCT{RemoteToken{cce6f16 DefaultTaskDisplayArea@209855736}} leash=Surface(name=Task=15)/@0x8a04e6e sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{RemoteToken{cce6f16 DefaultTaskDisplayArea@209855736}} m=CHANGE f=NONE p=WCT{RemoteToken{ac23097 Display{#0 state=ON size=1080x1920 ROTATION_270}}} leash=Surface(name=DefaultTaskDisplayArea)/@0x996d3c1 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{RemoteToken{ac23097 Display{#0 state=ON size=1080x1920 ROTATION_270}}} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0xbf24475 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+I/RenderThread( 3331): type=1400 audit(0.0:2085): avc:  denied  { execute } for  path="/system/vendor/lib/libstagefright_gl1enc.so" dev="sda2" ino=5365 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+I/BpBinder(  240): onLastStrongRef automatically unlinking death recipients: 
+D/WindowManagerShell(  569): onFixedRotationFinished: null, state=PipTransitionState(mState=undefined, mInSwipePipToHomeTransition=false)
+V/ShellDragAndDrop(  569): Display changed: 0
+V/WindowManagerShell(  569): onTransitionReady android.os.BinderProxy@b534986: {id=30 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@2f602e6} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@b858027} leash=Surface(name=Task=15)/@0x6815247 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@a0da2d4} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@3631c7d} leash=Surface(name=DefaultTaskDisplayArea)/@0x60bda74 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@98f6772} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0x9538b9d sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+V/WindowManagerShell(  569): Playing animation for (#30)android.os.BinderProxy@b534986@0
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultMixedHandler@88c1e50
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@6c57849
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.pip.PipTransition@e30a54e
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@568566f
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.recents.RecentsTransitionHandler@9ccf7c
+V/ShellRecents(  569): RecentsTransitionHandler.startAnimation: no controller found
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.splitscreen.StageCoordinator@fe45005
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.RemoteTransitionHandler@d75c85a
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): start default transition animation, info = {id=30 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@2f602e6} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@b858027} leash=Surface(name=Task=15)/@0x6815247 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@a0da2d4} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@3631c7d} leash=Surface(name=DefaultTaskDisplayArea)/@0x60bda74 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@98f6772} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0x9538b9d sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+V/WindowManagerShell(  569): Display is changing, resolve the animation hint.
+V/WindowManagerShell(  569):   display requests explicit seamless
+V/WindowManagerShell(  569): Transition animation finished (aborted=false), notifying core (#30)android.os.BinderProxy@b534986@0
+I/InputReader(  359): Reconfiguring input devices, changes=DISPLAY_INFO
+W/InputReader(  359): Touch device 'VirtualMouse' did not report support for X or Y axis!  The device will be inoperable.
+I/InputReader(  359): Device reconfigured: id=2, name='VirtualMouse', size 1x1, orientation 0, mode 0, display id 0
+D/b/254119092(  856): DisplayController#onConfigurationChanged: {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.542 fontWeightAdjustment=0}
+I/NoBackGesture(  569): NavbarController: newConfig={1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.570 fontWeightAdjustment=0} mTaskbarDelegate initialized=false willApplyConfigToNavbars=false navBarCount=0
+V/WindowManager(  359): Finish Transition #30: created at 09-25 12:44:20.191 collect-started=0.012ms request-sent=0.026ms started=9.915ms ready=10.101ms sent=10.943ms finished=30.18ms
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+V/WindowManagerShell(  569):  animated by com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+W/SubscriptionInfo(  359): MCC string is not a number
+W/SubscriptionInfo(  359): MNC string is not a number
+D/KeyguardBlueprintViewBinder(  569): applying blueprint: com.android.systemui.keyguard.ui.view.layout.blueprints.DefaultKeyguardBlueprint@181472d
+W/utmethod.pinyin( 1362): Reducing the number of considered missed Gc histogram windows from 239 to 100
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer(  569): Failed to set EGL_SWAP_BEHAVIOR on surface 0x758cfcf92780, error=EGL_BAD_MATCH
+E/OpenGLRenderer(  569): Unable to match the desired swap behavior.
+W/m.android.phone(  767): Reducing the number of considered missed Gc histogram windows from 242 to 100
+I/WindowManager(  359): finishDrawing of orientation change: Window{da90470 u0 StatusBar} 87ms
+I/houdini ( 3331): [3331] Expected CPU feature >> AES << is not supported.
+I/houdini ( 3331): [3331] Expected CPU feature >> PCLMULQDQ << is not supported.
+D/cocos2dxhelper( 3331): /data/user/0/com.eyugame.ahxy.mi/files/assets
+D/cocos2dxhelper( 3331): /data/user/0/com.eyugame.ahxy.mi/files/doc
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 210923482; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 37756858; UID 10071; state: DISABLED
+W/System.err( 3331): java.lang.NoSuchFieldException: splash_ex
+W/System.err( 3331): 	at java.lang.Class.getField(Class.java:2355)
+W/System.err( 3331): 	at com.eyugame.game.MResource.getIdByName(MResource.java:24)
+W/System.err( 3331): 	at org.cocos2dx.lib.Cocos2dxActivity.onCreateView(Cocos2dxActivity.java:163)
+W/System.err( 3331): 	at org.cocos2dx.lib.Cocos2dxActivity.onCreate(Cocos2dxActivity.java:70)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:259)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 3331): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 3331): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 3331): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 3331): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 3331): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 3331): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 3331): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 3331): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 3331): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 3331): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 3331): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 3331): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+D/LocationUtils( 3331): same version, return
+W/SoundPool( 3331): Use of stream types is deprecated for operations other than volume control
+W/SoundPool( 3331): See the documentation of SoundPool() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+W/System.err( 3331): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:265)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 3331): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 3331): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 3331): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 3331): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 3331): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 3331): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 3331): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 3331): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 3331): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 3331): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 3331): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 3331): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 3331): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 3331): 	... 22 more
+W/System.err( 3331): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:277)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 3331): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 3331): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 3331): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 3331): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 3331): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 3331): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 3331): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 3331): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 3331): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 3331): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 3331): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 3331): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 3331): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 3331): 	... 22 more
+W/System.err( 3331): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 3331): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 3331): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.InitCrashReport(ActivityMain.java:303)
+W/System.err( 3331): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:296)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 3331): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 3331): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 3331): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 3331): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 3331): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 3331): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 3331): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 3331): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 3331): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 3331): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 3331): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 3331): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 3331): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 3331): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 3331): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 3331): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 3331): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 3331): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 3331): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 3331): 	... 23 more
+W/eyugame.ahxy.mi( 3331): Accessing hidden field Ljava/lang/Integer;->value:I (max-target-p, JNI, allowed)
+D/NativeCrashReport( 3331): serverfd = 80, clientfd = 79
+D/NativeCrashReport( 3331): /data/user/0/com.eyugame.ahxy.mi/app_files
+D/NativeCrashReport( 3331): /data/user/0/com.eyugame.ahxy.mi/files/doc/
+D/LocationUtils( 3331): same version, return
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:55 android.app.ActivityThread.handleReceiver:4499 
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 237531167; UID 10071; state: DISABLED
+W/OpenGLRenderer( 3331): Unknown dataspace 0
+W/WindowManager(  359): Failed looking up window session=Session{78b90d0 3331:u0a10071} callers=com.android.server.wm.WindowManagerService.windowForClientLocked:6011 com.android.server.wm.Session.updateRequestedVisibleTypes:695 android.view.IWindowSession$Stub.onTransact:1034 
+D/CoreBackPreview(  359): Window{9a4aef u0 com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@d769885, mPriority=0, mIsAnimationCallback=false}
+I/eyugame.ahxy.mi( 3331): fastpipe: Connect success
+I/eyugame.ahxy.mi( 3331): fastpipe: Connect success
+D/HostConnection( 3331): HostRPC::connect sucess: app=com.eyugame.ahxy.mi, pid=3331, tid=3350, this=0xec379a00
+D/HostConnection( 3331): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.eyugame.ahxy.mi
+W/OpenGLRenderer( 3331): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+I/eyugame.ahxy.mi( 3331): fastpipe: Connect success
+D/HostConnection( 3331): HostRPC::connect sucess: app=com.eyugame.ahxy.mi, pid=3331, tid=3356, this=0xec27abc0
+D/EGL_emulation( 3331): eglCreateContext: 0xec53a1c0: maj 3 min 1 rcv 4
+D/HostConnection( 3331): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.eyugame.ahxy.mi
+D/EGL_emulation( 3331): eglCreateContext: 0xec76adf0: maj 3 min 1 rcv 4
+I/hwservicemanager(  117): getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+I/Gralloc4( 3331): mapper 4.x is not supported
+I/hwservicemanager(  117): getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device VINTF manifest.
+W/Gralloc3( 3331): mapper 3.x is not supported
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000082da
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000082e5
+D/HostConnection( 3331): ExtendedRCEncoderContext GL_VERSION return OpenGL ES 3.1 v1
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000084ff
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000087fe
+D/skia    ( 3331): force disable skia program binary by wb!
+E/HWComposer(  240): getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+E/EGL_emulation( 3331): tid 3350: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer( 3331): Failed to set EGL_SWAP_BEHAVIOR on surface 0xec47cf00, error=EGL_BAD_MATCH
+E/OpenGLRenderer( 3331): Unable to match the desired swap behavior.
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): EnvAdapter CreateInstance beg
+W/system_server(  359): Failed to determine oat file name for dex location /data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.apk: Dalvik cache directory does not exist
+W/ziparchive(  359): Unable to open '/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.dm': No such file or directory
+I/ActivityTaskManager(  359): Displayed com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain for user 0: +868ms
+D/CompatibilityChangeReporter(  359): Compat change id reported: 214016041; UID 10071; state: DISABLED
+I/ImeTracker(  359): com.eyugame.ahxy.mi:e7b972b1: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+I/ImeTracker(  359): com.eyugame.ahxy.mi:e7b972b1: onCancelled at PHASE_SERVER_SHOULD_HIDE
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:71 android.app.ActivityThread.handleReceiver:4499 
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:71 android.app.ActivityThread.handleReceiver:4499 
+D/b/279059025(  856): go to state Normal
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> AutoPatch
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 3331): [W-MISC]# [PATCH] offline: skip Sdk+AutoPatch -> go Logout
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+W/WindowOnBackDispatcher(  569): sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@864b475
+D/CoreBackPreview(  359): Window{fb3a3ed u0 Splash Screen com.eyugame.ahxy.mi EXITING}: Setting back callback null
+W/InputManager-JNI(  359): Input channel object 'fb3a3ed Splash Screen com.eyugame.ahxy.mi (client)' was disposed without first being removed with the input manager!
+I/ldinit  (  232): type=1400 audit(0.0:2107): avc:  denied  { read } for  name="partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:2108): avc:  denied  { open } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:2109): avc:  denied  { getattr } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/TwLog   ( 3331): [W-MISC]# [PATCH] offline: ChgStage Logout
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> Logout
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading GameLoading
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded GameLoading userdata: 0xe15c86f8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Cover
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Cover userdata: 0xe134ca58
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Logout: schedule autoLogin
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter GameLoading
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading UI/UIdljm
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/Module/BattleShow/CCBAnimation.dat:31: in function 'initialize'
+I/TwLog   ( 3331): 	script/base/dependencies/objectlua/Class.dat:32: in function 'new'
+I/TwLog   ( 3331): 	script/Logic/AniMgr.dat:258: in function 'RunCCBAni'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded UI/UIdljm userdata: 0xe1348038
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/Module/BattleShow/CCBAnimation.dat:31: in function 'initialize'
+I/TwLog   ( 3331): 	script/base/dependencies/objectlua/Class.dat:32: in function 'new'
+I/TwLog   ( 3331): 	script/Logic/AniMgr.dat:258: in function 'RunCCBAni'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter BaseAni
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/Module/BattleShow/CCBAnimation.dat:84: in function 'AddChild'
+I/TwLog   ( 3331): 	script/Module/BattleShow/CCBAnimation.dat:193: in function 'RunAnimationByWaitSign'
+I/TwLog   ( 3331): 	script/Logic/AniMgr.dat:268: in function 'RunCCBAni'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading LoginEnter
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:215: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded LoginEnter userdata: 0xb7c33858
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:215: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginEnter
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+D/Device Model( 3331): 2509FPN0BC
+D/audio_hw_hal(  186): log_func, out_standby
+D/audio_hw_hal(  186): raw_close_output_stream, dev=0x7a456f879000, stream =0x7a456f8791c0
+D/audio_hw_hal(  186): raw_close_output_stream, stream=0x7a456f8791c0,  success!
+D/NuPlayerDriver(  300): NuPlayerDriver(0xee509140) created, clientPid(3331)
+D/GenericSource(  300): FileSource remote
+D/NuPlayerDriver(  300): stop(0xee509140)
+I/GenericSource(  300): start
+D/CCodec  (  300): allocate(c2.android.mp3.decoder)
+I/CCodec  (  300): Created component [c2.android.mp3.decoder]
+D/CCodecConfig(  300): read media type: audio/mpeg
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.max-count.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.subscribed-indices.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: input.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.buffers.pool-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.pool-ids.values
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+D/CCodecConfig(  300): c2 config diff is Dict {
+D/CCodecConfig(  300):   c2::u32 coded.bitrate.value = 64000
+D/CCodecConfig(  300):   c2::u32 input.buffers.max-size.value = 8192
+D/CCodecConfig(  300):   c2::u32 input.delay.value = 0
+D/CCodecConfig(  300):   string input.media-type.value = "audio/mpeg"
+D/CCodecConfig(  300):   string output.media-type.value = "audio/raw"
+D/CCodecConfig(  300):   c2::u32 raw.channel-count.value = 2
+D/CCodecConfig(  300):   c2::u32 raw.sample-rate.value = 44100
+D/CCodecConfig(  300): }
+I/com.eyugame.ahxy.mi( 3331): type=1400 audit(0.0:2110): avc:  denied  { ioctl } for  comm=474C546872656164203238 path="/dev/fastpipe" dev="tmpfs" ino=529 ioctlcmd=0x6867 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1 app=com.eyugame.ahxy.mi
+D/MediaCodec(  300): flushMediametrics
+D/CCodec  (  300): [c2.android.mp3.decoder] buffers are bound to CCodec for this session
+D/CCodecConfig(  300): no c2 equivalents for durationUs
+D/CCodecConfig(  300): no c2 equivalents for flags
+D/CCodecConfig(  300): c2 config diff is   c2::u32 coded.bitrate.value = 128000
+W/Codec2Client(  300): query -- param skipped: index = 1107298332.
+D/CCodec  (  300): encoding statistics level = 0
+D/CCodec  (  300): setup formats input: AMessage(what = 0x00000000) = {
+D/CCodec  (  300):   int32_t bitrate = 128000
+D/CCodec  (  300):   int32_t channel-count = 2
+D/CCodec  (  300):   int32_t max-input-size = 8192
+D/CCodec  (  300):   string mime = "audio/mpeg"
+D/CCodec  (  300):   int32_t sample-rate = 44100
+D/CCodec  (  300): }
+D/CCodec  (  300): setup formats output: AMessage(what = 0x00000000) = {
+D/CCodec  (  300):   int32_t channel-count = 2
+D/CCodec  (  300):   string mime = "audio/raw"
+D/CCodec  (  300):   int32_t sample-rate = 44100
+D/CCodec  (  300):   int32_t android._config-pcm-encoding = 2
+D/CCodec  (  300): }
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+I/MediaCodec(  300): MediaCodec will operate in async mode
+D/MediaCodec(  300): keep callback message for reclaim
+W/Codec2Client(  300): query -- param skipped: index = 1342179345.
+W/Codec2Client(  300): query -- param skipped: index = 2415921170.
+D/BufferPoolAccessor2.0(  300): bufferpool2 0xee2f8a18 : 4(32768 size) total buffers - 4(32768 size) used buffers - 2274/2286 (recycle/alloc) - 16/4558 (fetch/transfer)
+D/CCodecBufferChannel(  300): [c2.android.mp3.decoder#863] Created input block pool with allocatorID 16 => poolID 30 - OK (0)
+D/BufferPoolAccessor2.0(  319): bufferpool2 0x74f010234228 : 0(0 size) total buffers - 0(0 size) used buffers - 103/107 (recycle/alloc) - 4/107 (fetch/transfer)
+D/BufferPoolAccessor2.0(  319): Destruction - bufferpool2 0x74f010234228 cached: 0/0M, 0/0% in use; allocs: 107, 96% recycled; transfers: 107, 96% unfetched
+D/BufferPoolAccessor2.0(  319): bufferpool2 0x74f0102a5228 : 0(0 size) total buffers - 0(0 size) used buffers - 2274/2280 (recycle/alloc) - 8/2280 (fetch/transfer)
+I/CCodecBufferChannel(  300): [c2.android.mp3.decoder#863] Created output block pool with allocatorID 16 => poolID 41 - OK
+D/CCodecBufferChannel(  300): [c2.android.mp3.decoder#863] Configured output block pool ids 41 => OK
+D/SimpleC2Component(  319): Using output block pool with poolID 41 => got 41 - 0
+D/MediaCodec(  300): keep callback message for reclaim
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+W/Codec2Client(  300): query -- param skipped: index = 1342179345.
+W/Codec2Client(  300): query -- param skipped: index = 2415921170.
+I/C2SoftMp3Dec(  319): Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+W/AudioFlinger(  233): createTrack_l(): mismatch between requested flags (00000008) and output flags (00000002)
+D/AudioFlinger(  233): Client defaulted notificationFrames to 11280 for frameCount 22560
+D/audioserver(  233): logFgsApiBegin: FGS Logger Transaction failed, -129
+D/audio_hw_hal(  186): raw_start_output_stream, stream=0x7a456f8791c0, sampleRate=48000, channel=2, bps=16, bufSize=4096
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Callboard
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'openCallboard'
+I/TwLog   ( 3331): 	script/UI/LoginEnter.dat: in function <script/UI/LoginEnter.dat:21>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Callboard userdata: 0xb7d3d578
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'openCallboard'
+I/TwLog   ( 3331): 	script/UI/LoginEnter.dat: in function <script/UI/LoginEnter.dat:21>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Callboard
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:18: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'openCallboard'
+I/TwLog   ( 3331): 	script/UI/LoginEnter.dat: in function <script/UI/LoginEnter.dat:21>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3331): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/WebViewFactory( 3331): Loading com.google.android.webview version 146.0.7680.119 (code 768011908)
+D/ApplicationLoaders( 3331): Returning zygote-cached class loader: /system/framework/android.test.base.jar
+D/ApplicationLoaders( 3331): Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+D/nativeloader( 3331): Configuring clns-shared-8 for other apk /system/product/app/webview/webview.apk. target_sdk_version=36, uses_libraries=, library_path=/system/product/app/webview/lib/x86:/system/product/app/webview/webview.apk!/lib/x86:/system/lib:/system/vendor/lib, permitted_path=/data:/mnt/expand::/system/product/app/webview:/system/lib:/system/vendor/lib
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading NetConnTip
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/GameShell.dat:67: in function 'Block'
+I/TwLog   ( 3331): 	script/base/NetHttp.dat:42: in function 'Send'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded NetConnTip userdata: 0xe13445b8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/GameShell.dat:67: in function 'Block'
+I/TwLog   ( 3331): 	script/base/NetHttp.dat:42: in function 'Send'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter NetConnTip
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:18: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/GameShell.dat:67: in function 'Block'
+I/TwLog   ( 3331): 	script/base/NetHttp.dat:42: in function 'Send'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/eyugame.ahxy.mi( 3331): type=1400 audit(0.0:2111): avc:  denied  { read } for  name="bootstrap" dev="sda2" ino=2666 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:system_bootstrap_lib_file:s0 tclass=dir permissive=1 app=com.eyugame.ahxy.mi
+I/eyugame.ahxy.mi( 3331): type=1400 audit(0.0:2112): avc:  denied  { open } for  path="/system/lib/bootstrap" dev="sda2" ino=2666 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:system_bootstrap_lib_file:s0 tclass=dir permissive=1 app=com.eyugame.ahxy.mi
+I/eyugame.ahxy.mi( 3331): type=1400 audit(0.0:2113): avc:  denied  { read } for  name="libhoudini.so" dev="sda2" ino=5342 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+I/eyugame.ahxy.mi( 3331): type=1400 audit(0.0:2114): avc:  denied  { open } for  path="/system/vendor/lib/libhoudini.so" dev="sda2" ino=5342 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=1 app=com.eyugame.ahxy.mi
+I/cr_WVCFactoryProvider( 3331): version=146.0.7680.119 (768011908) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
+I/chromium( 3331): [0925/124422.540005:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading SureConfirm
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'ConfirmDlg'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'Fail'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnError'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function '?'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/cr_LibraryLoader( 3331): Successfully loaded native library
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/cr_CachingUmaRecorder( 3331): Flushed 20 samples from 19 histograms, 0 samples were dropped.
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/cr_ChildProcLH( 3331): ScopedServiceBindingBatch.tryActivate: false
+I/cr_CombinedPProvider( 3331): #registerProvider() provider:WV.qk@121ff3 isPolicyCacheEnabled:false policyProvidersSize:0
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+D/CompatibilityChangeReporter(  359): Compat change id reported: 161145287; UID 10071; state: DISABLED
+I/cr_PolicyProvider( 3331): #setManagerAndSource() 0
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/cr_DisplayManager( 3331): Is Display Topology available: false
+D/CompatibilityChangeReporter(  359): Compat change id reported: 135634846; UID 99008; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 143937733; UID 10071; state: ENABLED
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+D/Zygote  (  739): Forked child process 3390
+I/ActivityManager(  359): Start proc 3390:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i8 for  {com.eyugame.ahxy.mi/org.chromium.content.app.SandboxedProcessService0:0}
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded SureConfirm userdata: 0xb7d12e38
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:13: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'ConfirmDlg'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'Fail'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnError'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function '?'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter SureConfirm
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:18: in function 'pushPrompt'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'ConfirmDlg'
+I/TwLog   ( 3331): 	script/base/Prompt.dat: in function 'Fail'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnError'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function '?'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'OnAccountCrypto'
+I/TwLog   ( 3331): 	script/Logic/Sdk.dat: in function '?'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:137>
+I/webview_zygote( 3390): type=1400 audit(0.0:2115): avc:  denied  { getattr } for  path="/data/local/cfg-hnegi/app_sysprop" dev="sdb2" ino=131294 scontext=u:r:webview_zygote:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1
+W/nativebridge( 3390): Failed to bind-mount /data/local/cfg-hnegi/ as /proc/cpuinfo: Operation not permitted
+I/Zygote  ( 3390): seccomp disabled by setenforce 0
+I/webview_zygote( 3390): type=1400 audit(0.0:2116): avc:  denied  { read } for  name="app_sysprop" dev="sdb2" ino=131294 scontext=u:r:webview_zygote:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1
+I/ocessService0:0( 3390): Using CollectorTypeCC GC.
+E/ocessService0:0( 3390): Not starting debugger since process cannot load the jdwp agent.
+V/appproc ( 3390): App process: starting thread pool.
+D/CompatibilityChangeReporter( 3390): Compat change id reported: 171979766; UID 99008; state: ENABLED
+D/CompatibilityChangeReporter( 3390): Compat change id reported: 242716250; UID 99008; state: ENABLED
+D/ApplicationLoaders( 3390): Returning zygote-cached class loader: /system/framework/android.test.base.jar
+D/ApplicationLoaders( 3390): Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+I/cr_CombinedPProvider( 3331): #linkNativeInternal() 1
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 183155436; UID 10071; state: DISABLED
+I/cr_AppResProvider( 3331): #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+I/cr_PolicyProvider( 3331): #notifySettingsAvailable() 0
+I/cr_CombinedPProvider( 3331): #onSettingsAvailable() 0
+I/cr_CombinedPProvider( 3331): #flushPolicies()
+I/cr_WebViewApkApp( 3390): version=146.0.7680.119 (768011908) minSdkVersion=29 processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 splits=<none>
+W/SystemServiceRegistry( 3390): No service published for: virtualdevice
+I/cr_ChildProcessService( 3390): Creating new ChildProcessService pid=3390
+W/cr_PlatformSer-Internal( 3331): Unable to find GMS package on device
+W/chromium( 3331): [WARNING:android_webview/browser/network_service/net_helpers.cc:137] HTTP Cache size is: 39718957
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 214741472; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 171228096; UID 10071; state: ENABLED
+D/ConnectivityService(  359): requestNetwork for uid/pid:10071/3331 activeRequest: null callbackRequest: 91 [NetworkRequest [ REQUEST id=92, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10071 RequestorUid: 10071 RequestorPkg: com.eyugame.ahxy.mi UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+D/WifiNetworkFactory(  359): got request NetworkRequest [ REQUEST id=92, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10071 RequestorUid: 10071 RequestorPkg: com.eyugame.ahxy.mi UnderlyingNetworks: Null] ]
+D/UntrustedWifiNetworkFactory(  359): got request NetworkRequest [ REQUEST id=92, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10071 RequestorUid: 10071 RequestorPkg: com.eyugame.ahxy.mi UnderlyingNetworks: Null] ]
+D/OemPaidWifiNetworkFactory(  359): got request NetworkRequest [ REQUEST id=92, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10071 RequestorUid: 10071 RequestorPkg: com.eyugame.ahxy.mi UnderlyingNetworks: Null] ]
+D/MultiInternetWifiNetworkFactory(  359): got request NetworkRequest [ REQUEST id=92, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10071 RequestorUid: 10071 RequestorPkg: com.eyugame.ahxy.mi UnderlyingNetworks: Null] ]
+D/ConnectivityService(  359): NetReassign [92 : null → 100] [c 0] [a 0] [i 2]
+D/ConnectivityService(  359): NetReassign [no changes] [c 0] [a 0] [i 0]
+W/cr_media( 3331): BLUETOOTH_CONNECT permission is missing.
+W/cr_media( 3331): getBluetoothAdapter() requires BLUETOOTH permission
+W/cr_media( 3331): registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+D/vulkan  ( 3331): load vulkan HAL success!
+I/eyugame.ahxy.mi( 3331): fastpipe: Connect success
+D/HostConnection( 3331): HostRPC::connect sucess: app=com.eyugame.ahxy.mi, pid=3331, tid=3424, this=0xd17c3240
+I/cr_LibraryLoader( 3390): Successfully loaded native library
+I/cr_CachingUmaRecorder( 3390): Flushed 2 samples from 2 histograms, 0 samples were dropped.
+D/HostConnection( 3331): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.eyugame.ahxy.mi
+D/vulkan  ( 3331): searching for layers in '/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/lib/arm'
+D/vulkan  ( 3331): searching for layers in '/data/app/~~1L5GNafrXRMByww_PIud0g==/com.eyugame.ahxy.mi-b6AFY2MetO7R6r94XMCADQ==/base.apk!/lib/armeabi'
+D/CompatibilityChangeReporter( 3331): Compat change id reported: 193247900; UID 10071; state: DISABLED
+W/libprocessgroup(  359): SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/top-app/cgroup.procs: No such file or directory
+I/CameraManagerGlobal( 3331): Connecting to camera service
+D/EGL_emulation( 3331): eglCreateContext: 0xec53b180: maj 3 min 0 rcv 3
+D/HostConnection( 3331): ExtendedRCEncoderContext GL_VERSION return OpenGL ES 3.1 v1
+W/chromium( 3390): [WARNING:content/child/runtime_features.cc:563] Fenced frames cannot be enabled in this configuration. Use --enable-features=FencedFrames instead.
+W/chromium( 3390): [WARNING:content/child/runtime_features.cc:588] Topics cannot be enabled in this configuration. Use --enable-features=BrowsingTopics in addition.
+W/chromium( 3390): [WARNING:content/child/runtime_features.cc:609] SharedStorage cannot be enabled in this configuration. Use --enable-features=SharedStorageAPI in addition.
+D/EGL_emulation( 3331): eglCreateContext: 0xec53b180: maj 3 min 0 rcv 3
+D/HostConnection( 3331): ExtendedRCEncoderContext GL_VERSION return OpenGL ES 3.1 v1
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000088ef
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000084ff
+E/eglCodecCommon( 3331): glUtilsParamSize: unknow param 0x000087fe
+I/UTILS   ( 3331): config cache reloaded, version=1, lastModified=1790309032179, length=35438
+E/chromium( 3390): [ERROR:cc/tiles/tile_manager.cc:997] WARNING: tile memory limits exceeded, some content may not draw
+E/chromium( 3390): [ERROR:cc/tiles/tile_manager.cc:997] WARNING: tile memory limits exceeded, some content may not draw
+E/chromium( 3390): [ERROR:cc/tiles/tile_manager.cc:997] WARNING: tile memory limits exceeded, some content may not draw
+E/chromium( 3390): [ERROR:cc/tiles/tile_manager.cc:997] WARNING: tile memory limits exceeded, some content may not draw
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Logout: timer autoLogin
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] autoLogin account=localuser op=1
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:4
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'OnDescription'
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=105004 bound=true total=24
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'OnDescription'
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] handler 10:4 -> true
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'OnDescription'
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:2
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'PostLogin'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:494>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=105002 bound=true total=24
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'PostLogin'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:494>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] handler 10:2 -> localsession0001
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'PostLogin'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:494>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:7
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:603>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=105007 bound=true total=24
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:603>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] init heroes=20 battles=1 campaigns=0
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'init'
+I/TwLog   ( 3331): 	?: in function <?:1101>
+I/TwLog   ( 3331): 	[C]: in function 'pcall'
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:603>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] handler 10:7 -> {exploreExecuteTasks={},artifactLevel=0,menpaiLoginVo={joinBidDate={},joined=false,country=0,joinFightDate={},job={arg=0,args=0},holdRewardDate=0,menpaiId=0,reportDate={},needRename=false,prayTime=0},eliteBattleIds={},buyEquipSpace=0,dailyCheckInfo={segment=0,continueDays=0,checkedIds={},refreshTime=0,isFirst=false},hasAchieve=false,targetProgress={},heroCultivateVos={},chargeRankCanDraw=false,items={},friendPack={extendCount=0,friends={},extendLimit=50,apply=false},asset=1000,buyEquipPackCount=0,buffs={},groupVo={groups={1={embattles={1={1=���,2=���},2={1=���,2=���},3={1=
+I/TwLog   ( 3331): Dumplicate event name!
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'initialize'
+I/TwLog   ( 3331): 	script/base/dependencies/objectlua/Class.dat:32: in function 'new'
+I/TwLog   ( 3331): 	script/base/Logic.dat:40: in function 'Get'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function <?:1513>
+I/TwLog   ( 3331): 	[C]: in function 'xpcall'
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 16:7
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'PoseDRAW_SP_REGISTER'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'IsDrawSpREcard'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'OnAllGift'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=165007 bound=true total=87
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'PoseDRAW_SP_REGISTER'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'IsDrawSpREcard'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'OnAllGift'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 16:7
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'PoseDRAW_SP_REGISTER'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'IsDrawSpREcard'
+I/TwLog   ( 3331): 	script/Logic/Gift.dat: in function 'OnAllGift'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:9
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'LoginComplete'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=105009 bound=true total=235
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'LoginComplete'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] handler 10:9 -> 0
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'LoginComplete'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> Normal
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function <?:1513>
+I/TwLog   ( 3331): 	[C]: in function 'xpcall'
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Root
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Root userdata: 0xb7c420b8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Cover
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Cover userdata: 0xbecbcfb8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	?: in function 'loadAsScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:307: in function 'replaceScene'
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Normal: replaceScene(Root) -> userdata: 0xbecb33d8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'OnStageActive'
+I/TwLog   ( 3331): 	?: in function 'Setup'
+I/TwLog   ( 3331): 	?: in function 'ChgStage'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:733>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 10:9
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'LoginComplete'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:616>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 10:7
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:603>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 10:2
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'PostLogin'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function <script/Logic/Login.dat:494>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	...
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 10:4
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'PostPrior'
+I/TwLog   ( 3331): 	script/Logic/Login.dat: in function 'OnDescription'
+I/TwLog   ( 3331): 	?: in function 'Login'
+I/TwLog   ( 3331): 	script/Logic/Account.dat: in function 'LoginFinish'
+I/TwLog   ( 3331): 	?: in function 'CheckUser'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3331): 	?: in function 'autoLogin'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Root
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Main
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:78: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/surfaceflinger(  240): type=1400 audit(0.0:2128): avc:  denied  { call } for  scontext=u:r:surfaceflinger:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Main userdata: 0xbf5ba0f8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:78: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Progress
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LabelAtlas
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter PlayerInfoPrompt
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter MainHeroInfo
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Functions
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter RichText
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Main
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading LoginReward
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:150: in function 'pushScene'
+I/TwLog   ( 3331): 	script/UI/Main.dat: in function <script/UI/Main.dat:5>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded LoginReward userdata: 0xbeceb0d8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:150: in function 'pushScene'
+I/TwLog   ( 3331): 	script/UI/Main.dat: in function <script/UI/Main.dat:5>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginRewardItem
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:164: in function 'pushScene'
+I/TwLog   ( 3331): 	script/UI/Main.dat: in function <script/UI/Main.dat:5>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginReward
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:164: in function 'pushScene'
+I/TwLog   ( 3331): 	script/UI/Main.dat: in function <script/UI/Main.dat:5>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:80: in function 'insertScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Home
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:110: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Home userdata: 0xbecb6d18
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:110: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LabelAtlas
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Home
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 47:2
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Sect.dat: in function 'PostRefreshSelfMenpai'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=475002 bound=true total=286
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Sect.dat: in function 'PostRefreshSelfMenpai'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 47:2
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Sect.dat: in function 'PostRefreshSelfMenpai'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+D/BufferPoolAccessor2.0(  300): bufferpool2 0xedf3be18 : 0(0 size) total buffers - 0(0 size) used buffers - 7432/7441 (recycle/alloc) - 19/14834 (fetch/transfer)
+D/BufferPoolAccessor2.0(  300): evictor expired: 1, evicted: 1
+I/TwLog   ( 3331): Dumplicate event name!
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 13:12
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Hero.dat: in function 'PostGetFightPoint'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+D/BufferPoolAccessor2.0(  319): bufferpool2 0x74f0102a5e28 : 0(0 size) total buffers - 0(0 size) used buffers - 7414/7420 (recycle/alloc) - 29/7420 (fetch/transfer)
+D/BufferPoolAccessor2.0(  319): evictor expired: 2, evicted: 1
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] eventId=135012 bound=true total=286
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Hero.dat: in function 'PostGetFightPoint'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] handler 13:12 -> {}
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Hero.dat: in function 'PostGetFightPoint'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] replied 13:12
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:1483>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	?: in function 'Post'
+I/TwLog   ( 3331): 	script/Logic/Hero.dat: in function 'PostGetFightPoint'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading HomeItem
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function 'tableCellAtIndex'
+I/TwLog   ( 3331): 	script/UI/TableViewEx.dat:177: in function <script/UI/TableViewEx.dat:171>
+I/TwLog   ( 3331): 	[C]: in function 'create'
+I/TwLog   ( 3331): 	script/UI/TableViewEx.dat:201: in function 'createList'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded HomeItem userdata: 0xb3d1fed8
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function 'load'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function 'tableCellAtIndex'
+I/TwLog   ( 3331): 	script/UI/TableViewEx.dat:177: in function <script/UI/TableViewEx.dat:171>
+I/TwLog   ( 3331): 	[C]: in function 'create'
+I/TwLog   ( 3331): 	script/UI/TableViewEx.dat:201: in function 'createList'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter HomeItem
+I/TwLog   ( 3331): stack traceback:
+I/TwLog   ( 3331): 	?: in function <?:73>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/Home.dat: in function <script/UI/Home.dat:36>
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	(tail call): ?
+I/TwLog   ( 3331): 	[C]: in function 'addChild'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:114: in function '_runWithScene'
+I/TwLog   ( 3331): 	script/UI/SceneHelper.dat:126: in function 'runWithScene'
+I/TwLog   ( 3331): 	?: in function 'callback'
+I/TwLog   ( 3331): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3331): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3331): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3331): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+D/NuPlayerDriver(  300): stop(0xee509140)
+V/MediaPlayer( 3331): resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+V/MediaPlayer( 3331): cleanDrmObj: mDrmObj=null mDrmSessionId=null
+D/NuPlayerDriver(  300): reset(0xee509140) at state 8
+D/CCodecBuffers(  300): [c2.android.mp3.decoder#863:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 0
+D/CCodecBuffers(  300): [c2.android.mp3.decoder#863:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 1
+D/CCodecBuffers(  300): [c2.android.mp3.decoder#863:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 2
+I/hw-BpHwBinder(  300): onLastStrongRef automatically unlinking death recipients
+I/hw-BpHwBinder(  319): onLastStrongRef automatically unlinking death recipients
+D/MediaCodec(  300): flushMediametrics
+D/NuPlayerDriver(  300): notifyResetComplete(0xee509140)
+W/AMessage(  300): failed to post message as target looper for handler 0 is gone.
+D/NuPlayerDriver(  300): NuPlayerDriver(0xee509140) created, clientPid(3331)
+D/GenericSource(  300): FileSource remote
+D/NuPlayerDriver(  300): stop(0xee509140)
+I/GenericSource(  300): start
+D/CCodec  (  300): allocate(c2.android.mp3.decoder)
+I/CCodec  (  300): Created component [c2.android.mp3.decoder]
+D/CCodecConfig(  300): read media type: audio/mpeg
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.max-count.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.subscribed-indices.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: input.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.allocator-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: output.buffers.pool-ids.values
+D/ReflectedParamUpdater(  300): extent() != 1 for single value type: algo.buffers.pool-ids.values
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+D/CCodecConfig(  300): c2 config diff is Dict {
+D/CCodecConfig(  300):   c2::u32 coded.bitrate.value = 64000
+D/CCodecConfig(  300):   c2::u32 input.buffers.max-size.value = 8192
+D/CCodecConfig(  300):   c2::u32 input.delay.value = 0
+D/CCodecConfig(  300):   string input.media-type.value = "audio/mpeg"
+D/CCodecConfig(  300):   string output.media-type.value = "audio/raw"
+D/CCodecConfig(  300):   c2::u32 raw.channel-count.value = 2
+D/CCodecConfig(  300):   c2::u32 raw.sample-rate.value = 44100
+D/CCodecConfig(  300): }
+D/MediaCodec(  300): flushMediametrics
+D/CCodec  (  300): [c2.android.mp3.decoder] buffers are bound to CCodec for this session
+D/CCodecConfig(  300): no c2 equivalents for durationUs
+D/CCodecConfig(  300): no c2 equivalents for flags
+D/CCodecConfig(  300): c2 config diff is   c2::u32 coded.bitrate.value = 128000
+W/Codec2Client(  300): query -- param skipped: index = 1107298332.
+D/CCodec  (  300): encoding statistics level = 0
+D/CCodec  (  300): setup formats input: AMessage(what = 0x00000000) = {
+D/CCodec  (  300):   int32_t bitrate = 128000
+D/CCodec  (  300):   int32_t channel-count = 2
+D/CCodec  (  300):   int32_t max-input-size = 8192
+D/CCodec  (  300):   string mime = "audio/mpeg"
+D/CCodec  (  300):   int32_t sample-rate = 44100
+D/CCodec  (  300): }
+D/CCodec  (  300): setup formats output: AMessage(what = 0x00000000) = {
+D/CCodec  (  300):   int32_t channel-count = 2
+D/CCodec  (  300):   string mime = "audio/raw"
+D/CCodec  (  300):   int32_t sample-rate = 44100
+D/CCodec  (  300):   int32_t android._config-pcm-encoding = 2
+D/CCodec  (  300): }
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+I/MediaCodec(  300): MediaCodec will operate in async mode
+D/MediaCodec(  300): keep callback message for reclaim
+W/Codec2Client(  300): query -- param skipped: index = 1342179345.
+W/Codec2Client(  300): query -- param skipped: index = 2415921170.
+D/BufferPoolAccessor2.0(  319): Destruction - bufferpool2 0x74f0102a5e28 cached: 0/0M, 0/0% in use; allocs: 7420, 100% recycled; transfers: 7420, 100% unfetched
+D/CCodecBufferChannel(  300): [c2.android.mp3.decoder#991] Created input block pool with allocatorID 16 => poolID 31 - OK (0)
+I/CCodecBufferChannel(  300): [c2.android.mp3.decoder#991] Created output block pool with allocatorID 16 => poolID 42 - OK
+D/CCodecBufferChannel(  300): [c2.android.mp3.decoder#991] Configured output block pool ids 42 => OK
+D/BufferPoolAccessor2.0(  300): Destruction - bufferpool2 0xedf3be18 cached: 0/0M, 0/0% in use; allocs: 7441, 100% recycled; transfers: 14834, 100% unfetched
+D/SimpleC2Component(  319): Using output block pool with poolID 42 => got 42 - 0
+D/audioserver(  233): logFgsApiEnd: FGS Logger Transaction failed, -129
+D/CCodecBufferChannel(  300): [c2.android.mp3.decoder#991] Discard frames from previous generation.
+D/MediaCodec(  300): keep callback message for reclaim
+I/CCodecConfig(  300): query failed after returning 7 values (BAD_INDEX)
+W/Codec2Client(  300): query -- param skipped: index = 1342179345.
+W/Codec2Client(  300): query -- param skipped: index = 2415921170.
+I/C2SoftMp3Dec(  319): Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+W/AudioFlinger(  233): createTrack_l(): mismatch between requested flags (00000008) and output flags (00000002)
+D/AudioFlinger(  233): Client defaulted notificationFrames to 11280 for frameCount 22560
+D/audioserver(  233): logFgsApiEnd: FGS Logger Transaction failed, -129
+D/audioserver(  233): logFgsApiBegin: FGS Logger Transaction failed, -129
+E/PersistableBundle(  233): Failed at frameworks/native/libs/binder/PersistableBundle.cpp:160 (erase)
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+D/BufferPoolAccessor2.0(  319): evictor expired: 1, evicted: 0
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/ResilientAtomicFile(  359): Failed to verity-protect package restrictions
+E/ResilientAtomicFile(  359): java.io.IOException: Failed to enable fs-verity on FD(437): Operation not supported on transport endpoint
+E/ResilientAtomicFile(  359): 	at com.android.internal.security.VerityUtils.setUpFsverity(VerityUtils.java:89)
+E/ResilientAtomicFile(  359): 	at com.android.server.security.FileIntegrity.setUpFsVerity(FileIntegrity.java:56)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.ResilientAtomicFile.finishWrite(ResilientAtomicFile.java:146)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.Settings.writePackageRestrictions(Settings.java:2377)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.Settings.writePackageRestrictions(Settings.java:2212)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.PackageManagerService.writePendingRestrictions(PackageManagerService.java:1482)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.PackageManagerService$2.handleMessage(PackageManagerService.java:1509)
+E/ResilientAtomicFile(  359): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/ResilientAtomicFile(  359): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/ResilientAtomicFile(  359): 	at android.os.Looper.loop(Looper.java:294)
+E/ResilientAtomicFile(  359): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+E/ResilientAtomicFile(  359): 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+D/AudioAnalytics(  299): gc(1700, 2000): log size:1700 item map size:4, item map items:1700
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+D/BufferPoolAccessor2.0(  300): bufferpool2 0xedfa4118 : 0(0 size) total buffers - 0(0 size) used buffers - 104/112 (recycle/alloc) - 8/212 (fetch/transfer)
+D/BufferPoolAccessor2.0(  300): evictor expired: 1, evicted: 1
+D/BufferPoolAccessor2.0(  319): bufferpool2 0x74f010234028 : 0(0 size) total buffers - 0(0 size) used buffers - 102/106 (recycle/alloc) - 4/106 (fetch/transfer)
+D/BufferPoolAccessor2.0(  319): evictor expired: 1, evicted: 1
+D/BufferPoolAccessor2.0(  300): bufferpool2 0xedf3bd18 : 8(65536 size) total buffers - 5(40960 size) used buffers - 211/219 (recycle/alloc) - 8/424 (fetch/transfer)
+D/BufferPoolAccessor2.0(  319): bufferpool2 0x74f0102a3028 : 3(13824 size) total buffers - 1(4608 size) used buffers - 210/213 (recycle/alloc) - 3/212 (fetch/transfer)
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+D/BufferPoolAccessor2.0(  300): evictor expired: 1, evicted: 0
+D/BufferPoolAccessor2.0(  319): evictor expired: 1, evicted: 0
+I/ldinit  (  232): type=1400 audit(0.0:2129): avc:  denied  { read } for  name="partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:2130): avc:  denied  { open } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:2131): avc:  denied  { getattr } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/writer  (  186): type=1400 audit(0.0:2132): avc:  denied  { ioctl } for  path="/dev/fastpipe" dev="tmpfs" ino=529 ioctlcmd=0x6867 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1

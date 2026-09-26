@@ -1,0 +1,26 @@
+﻿--------- beginning of main
+I/TwLog   ( 3062): EnvAdapter CreateInstance beg
+I/TwLog   ( 3062): [W-MISC]# [PATCH] ChgStage -> AutoPatch
+I/TwLog   ( 3062): stack traceback:
+I/TwLog   ( 3062): 	?: in function 'ChgStage'
+I/TwLog   ( 3062): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3062): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3062): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 3062): [W-MISC]# [PATCH] offline: skip Sdk+AutoPatch -> go Logout
+I/TwLog   ( 3062): stack traceback:
+I/TwLog   ( 3062): 	?: in function 'OnStageActive'
+I/TwLog   ( 3062): 	?: in function 'Setup'
+I/TwLog   ( 3062): 	?: in function 'ChgStage'
+I/TwLog   ( 3062): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3062): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3062): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 3062): ?:0: attempt to get length of a nil value
+I/TwLog   ( 3062): stack traceback:
+I/TwLog   ( 3062): 	?: in function 'ServerSort'
+I/TwLog   ( 3062): 	?: in function 'InitServerLst'
+I/TwLog   ( 3062): 	?: in function 'OnStageActive'
+I/TwLog   ( 3062): 	?: in function 'Setup'
+I/TwLog   ( 3062): 	?: in function 'ChgStage'
+I/TwLog   ( 3062): 	...dk\Android\ttaxy\release\assets\script\GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3062): 	...ndroid\ttaxy\release\assets\script\base\GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3062): 	...oid\ttaxy\release\assets\script\base\HostAdapter.dat: in function <...oid\ttaxy\release\assets\script\base\HostAdapter.dat:120>

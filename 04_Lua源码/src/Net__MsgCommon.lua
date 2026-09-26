@@ -1,0 +1,58 @@
+local NetMsg = Singleton(NetMsg)
+module(...)
+NetMsg:Setup(...)
+types = {
+  ["facade.CommonResult"] = const({LOCKED = -500}),
+  ["model.AttachmentState"] = const({
+    NEW_MAIL = 1,
+    NEW_POST = 2,
+    FRIEND_APPLY = 4,
+    CHARGE = 8,
+    NEW_GIFT = 16,
+    NEW_EMBLEM_ACHIEVE = 32,
+    VERSION_CHANGE = 64,
+    VIP_CHANGE = 128,
+    POINT_EXTRA = 256,
+    FIGHTER_CHANGE = 512,
+    NEW_ARENA_INTEGRAL = 1024,
+    NEW_DEMOG = 2048,
+    DEMOG_ACTIVE_OPEN = 4096,
+    FRIEND_GIFT = 8192,
+    NEW_ACTIVITY = 16384,
+    NEW_DAY = 32768,
+    MENPAI_DEMOG = 65536,
+    TASK_COMPLETE = 131072,
+    TALISMAN_ACTIVITY_COMPLETE = 262144,
+    CONSUME_RANK_SCORE_REWARD = 524288,
+    GIFT_SP_COMMENT_CLOSED = 1048576,
+    CHARGE_RANK_SCORE_REWARD = 2097152,
+    MENPAI_COUNTRY_FIGHT = 4194304,
+    TENCENT_NEED_LOGIN = 8388608,
+    GOD_TASK_COMPLETE = 16777216,
+    MONOPOLY_TASK_COMPLETE = 33554432,
+    NEW_MONOPOLY_TASK_COMPLETE = 67108864
+  }),
+  ["model.ChargeAddType"] = enum({
+    [0] = "ARENA",
+    [1] = "ACTION_POINT",
+    [2] = "GIFT_SENDS",
+    [3] = "DEMOG_ENERGY",
+    [4] = "QUICK_ADVANVE",
+    [5] = "REBIRTH_BUYS",
+    [6] = "QUICK_ARENA",
+    [7] = "AUTO_TREASURE",
+    [8] = "AUTO_GET_TALISMAN",
+    [9] = "MENPAI_PRAY",
+    [10] = "TALISMAN_OPEN_DRAGON_KING",
+    [11] = "CURRENCY_OPEN_BOX_",
+    [12] = "CURRENCY_OPEN_BOX_",
+    [13] = "CURRENCY_OPEN_BOX_",
+    [14] = "TREASURE_ROOM_COST_REFRESH",
+    [15] = "ELITE",
+    [16] = "TASK_MAX_COMPLETE_TIMES",
+    [17] = "ELITE_QUICK_ADVANVE",
+    [18] = "CULTIVATE",
+    [19] = "EXPLORE_BUY_EXP"
+  })
+}
+NetMsg:Import(...)

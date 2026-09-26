@@ -1,0 +1,378 @@
+﻿--------- beginning of main
+I/TwLog   ( 5211): EnvAdapter CreateInstance beg
+I/TwLog   ( 5211): [W-MISC]# [PATCH] ChgStage -> AutoPatch
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'ChgStage'
+I/TwLog   ( 5211): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] offline: skip Sdk+AutoPatch -> go Logout
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'OnStageActive'
+I/TwLog   ( 5211): 	?: in function 'Setup'
+I/TwLog   ( 5211): 	?: in function 'ChgStage'
+I/TwLog   ( 5211): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] offline: ChgStage Logout
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] ChgStage -> Logout
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'ChgStage'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] Logout: schedule autoLogin
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'OnStageActive'
+I/TwLog   ( 5211): 	?: in function 'Setup'
+I/TwLog   ( 5211): 	?: in function 'ChgStage'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-COCOS2D]# script/base/Events.dat:70: attempt to index local 'self' (a function value)
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:116>
+I/TwLog   ( 5211): 	script/base/Events.dat:70: in function 'Exist'
+I/TwLog   ( 5211): 	?: in function 'inquireServerInfo'
+I/TwLog   ( 5211): 	script/UI/LoginEnter.dat: in function <script/UI/LoginEnter.dat:21>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	[C]: in function 'addChild'
+I/TwLog   ( 5211): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 5211): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 5211): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): [W-MISC]# [PATCH] Logout: timer autoLogin
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] autoLogin account=localuser op=1
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] Account:CheckUser -> local
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [PATCH] Login:Login -> OnDescription (skip version check)
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] dispatch 10:4
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'OnDescription'
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] eventId=105004 bound=true total=12
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'OnDescription'
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] handler 10:4 -> true
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'OnDescription'
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] dispatch 10:2
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'PostLogin'
+I/TwLog   ( 5211): 	?: in function <?:596>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] eventId=105002 bound=true total=12
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'PostLogin'
+I/TwLog   ( 5211): 	?: in function <?:596>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] handler 10:2 -> localsession0001
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'PostLogin'
+I/TwLog   ( 5211): 	?: in function <?:596>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] dispatch 10:7
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function <?:760>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] eventId=105007 bound=true total=12
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function <?:760>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] init heroes=20 battles=0 campaigns=0
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'init'
+I/TwLog   ( 5211): 	?: in function <?:949>
+I/TwLog   ( 5211): 	[C]: in function 'pcall'
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function <?:760>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] handler 10:7 -> {exploreExecuteTasks={},artifactLevel=0,menpaiLoginVo={},equipVos={},progressVo={battles={},campaigns={},dailyCounts={}},dailyCheckInfo={},hasAchieve=false,targetProgress={},lotteryRecord={},emblemAchieveList={},items={},friendPack={extendCount=0,friends={},extendLimit=50,apply=false},buffs={},groupVo={groups={1={embattles={1={1=���,2=���},2={1=���,2=���},3={1=
+I/TwLog   ( 5211): Dumplicate event name!
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	script/Logic/Gift.dat: in function 'initialize'
+I/TwLog   ( 5211): 	script/base/dependencies/objectlua/Class.dat:32: in function 'new'
+I/TwLog   ( 5211): 	script/base/Logic.dat:40: in function 'Get'
+I/TwLog   ( 5211): 	?: in function <?:839>
+I/TwLog   ( 5211): 	[C]: in function 'pcall'
+I/TwLog   ( 5211): 	?: in function <?:773>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] OnReceived error 10:7:
+I/TwLog   ( 5211): ?:0: attempt to index a function value
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1369>
+I/TwLog   ( 5211): 	?: in function 'GetTencentLoginRet'
+I/TwLog   ( 5211): 	?: in function <?:773>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function <?:1361>
+I/TwLog   ( 5211): 	[C]: in function 'xpcall'
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function <?:760>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): 
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] replied 10:2
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'PostLogin'
+I/TwLog   ( 5211): 	?: in function <?:596>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function <script/base/Events.dat:32>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	...
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-MISC]# [LocalServer] replied 10:4
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function <?:1331>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'PostPrior'
+I/TwLog   ( 5211): 	?: in function 'OnDescription'
+I/TwLog   ( 5211): 	?: in function 'Login'
+I/TwLog   ( 5211): 	?: in function 'LoginFinish'
+I/TwLog   ( 5211): 	?: in function 'CheckUser'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 5211): 	?: in function 'autoLogin'
+I/TwLog   ( 5211): 	?: in function 'callback'
+I/TwLog   ( 5211): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 5211): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 5211): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 5211): [W-COCOS2D]# script/base/Timer.dat:62: attempt to perform arithmetic on field 'interval' (a nil value)
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:116>
+I/TwLog   ( 5211): 	script/base/Timer.dat:62: in function 'Queue'
+I/TwLog   ( 5211): 	script/base/Timer.dat:57: in function <script/base/Timer.dat:48>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function <?:232>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	?: in function 'RefreshLoginTicket'
+I/TwLog   ( 5211): 	script/UI/LoginEnter.dat: in function 'func'
+I/TwLog   ( 5211): 	script/base/Tw/Controller.dat:95: in function <script/base/Tw/Controller.dat:82>
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): 	(tail call): ?
+I/TwLog   ( 5211): ?:0: attempt to index a nil value
+I/TwLog   ( 5211): stack traceback:
+I/TwLog   ( 5211): 	?: in function 'OnAccountCrypto'
+I/TwLog   ( 5211): 	...dk\Android\ttaxy\release\assets\script\Logic\Sdk.dat: in function '?'
+I/TwLog   ( 5211): 	...oid\ttaxy\release\assets\script\base\HostAdapter.dat: in function <...oid\ttaxy\release\assets\script\base\HostAdapter.dat:137>

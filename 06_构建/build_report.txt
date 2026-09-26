@@ -1,0 +1,61 @@
+[1] 模块名->key 映射: 910 条
+[2.1] NetMsg      注入登录夹具(103334 字节)，保留原版 encode/queue/TCP 发送路径
+[2.2] AutoPatch    跳过热更新 HTTP，直接本地区服列表
+[2.3] GameStageAutoPatch  跳过平台 SDK + 热更，延时直接切 Logout 阶段
+[2.4] Account      CheckUser 跳过 HTTP 账号校验；inquireServerInfo 离线跳过
+[2.5v] Login 寄存器复用修正（Logic:Get 链 + 逐行 pcall）
+[2.5] Login        Login() 跳过版本检查；InitServerLst/HandleServerUnopened 已重写去 _UPVALUE
+[2.6b] GameStageNormal  记录 Root 场景创建结果
+[2.6] GameStageLogout  自动选服 + 2 秒后自动登录
+[2.8] base/GameStage     记录阶段切换
+[2.9] Logic/EnvLogic   Login/Regist/AnonymityLogin 本地化
+[2.10] Logic/Guide     跳过所有新手引导
+[2.11] Logic/BattleShow  不自动弹升级界面；GetReport 离线返回 nil
+[2.12] Logic/Friend    离线时不刷新好友列表
+[2.13] base/StrictCheck  禁用未声明变量告警
+[2.14] 通用 GetSingleton 链寄存器复用修正
+[2.15] 通用 RecordErrorMsg _UPVALUE -> nil 修正
+[2.16] 通用 class=Logic.class:subclass() 寄存器复用修正
+[2.17] 通用 GLOBAL:Method() 三行式寄存器复用修正
+[2.18] 通用 tonumber 防 nil 比较修正
+[2.19] 通用 A:Method1():Method2() 链式寄存器复用修正
+[2] 已生成 15 个补丁模块 -> C:\Users\nkq\Desktop\game\hakimi\05_改造\patched
+  [OK] base/NetMsg                  108117 -> 103625 字节
+  [OK] Stage/GameStageAutoPatch     2432 -> 3046 字节
+  [OK] Logic/Account                106294 -> 27120 字节
+  [OK] Logic/Login                  172210 -> 43402 字节
+  [OK] Stage/GameStageNormal        3291 -> 3973 字节
+  [OK] Stage/GameStageLogout        933 -> 1438 字节
+  [OK] base/GameStage               1716 -> 2683 字节
+  [OK] Logic/EnvLogic               62702 -> 16209 字节
+  [OK] Logic/Guide                  26339 -> 7533 字节
+  [OK] Logic/Friend                 115796 -> 29200 字节
+  [OK] base/StrictCheck             1172 -> 1184 字节
+  [OK] Module/Guide/FightDrawGift   4584 -> 1441 字节
+  [OK] Module/Guide/DrawGift        9358 -> 2863 字节
+  [OK] Logic/GroupPurchase          49255 -> 12557 字节
+  [OK] Logic/Battle                 172568 -> 44279 字节
+[3] luac 编译通过: 15/15
+  base/NetMsg                  key=a524a12e
+  Stage/GameStageAutoPatch     key=9e55f54e
+  Logic/Account                key=b1ed84c0
+  Logic/Login                  key=ca4d55b7
+  Stage/GameStageNormal        key=c8ede849
+  Stage/GameStageLogout        key=fc088781
+  base/GameStage               key=4210cac5
+  Logic/EnvLogic               key=87f70ca4
+  Logic/Guide                  key=c1a7c0d3
+  Logic/Friend                 key=b09355a4
+  base/StrictCheck             key=41aeb4e4
+  Module/Guide/FightDrawGift   key=2e2c782e
+  Module/Guide/DrawGift        key=7db0d402
+  Logic/GroupPurchase          key=30853333
+  Logic/Battle                 key=52e42d94
+[4] script.dat 重打包完成: 6625938 -> 6722047 字节 (C:\Users\nkq\Desktop\game\hakimi\06_构建\script_offline.dat)
+[4.5] AndroidManifest targetSdkVersion: 8 -> 22（长度不变 0）
+  AndroidManifest.xml 已替换 (targetSdk 8 -> 22)
+  classes.dex 已替换 (535852 字节)
+  assets/script.dat 已替换 (6722047 字节)
+[5] APK 重建: 74 条 -> C:\Users\nkq\Desktop\game\hakimi\06_构建\hakimi_offline.apk (52.9 MB)
+[6] 复用已有签名密钥
+[6] v1 签名完成 -> C:\Users\nkq\Desktop\game\hakimi\06_构建\hakimi_offline.apk (52.9 MB)

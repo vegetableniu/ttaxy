@@ -1,0 +1,6 @@
+require("Scene.patch")
+require("Scene.Define")
+require("Scene.RoleView")
+require("Scene.Scene")
+require("Scene.ActionMgr")
+require("Scene.RoleBuilder")

@@ -1,0 +1,139 @@
+Starting: Intent { cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain }
+
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer( 3331): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+E/EGL_emulation( 3331): tid 3350: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> AutoPatch
+I/TwLog   ( 3331): [W-MISC]# [PATCH] offline: skip Sdk+AutoPatch -> go Logout
+I/TwLog   ( 3331): [W-MISC]# [PATCH] offline: ChgStage Logout
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> Logout
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading GameLoading
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded GameLoading userdata: 0xe15c86f8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Cover
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Cover userdata: 0xe134ca58
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Logout: schedule autoLogin
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter GameLoading
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading UI/UIdljm
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded UI/UIdljm userdata: 0xe1348038
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter BaseAni
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading LoginEnter
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded LoginEnter userdata: 0xb7c33858
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginEnter
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Callboard
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Callboard userdata: 0xb7d3d578
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Callboard
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading NetConnTip
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded NetConnTip userdata: 0xe13445b8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter NetConnTip
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading SureConfirm
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded SureConfirm userdata: 0xb7d12e38
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter SureConfirm
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Logout: timer autoLogin
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:4
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:2
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:7
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 16:7
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 10:9
+I/TwLog   ( 3331): [W-MISC]# [PATCH] ChgStage -> Normal
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Root
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Root userdata: 0xb7c420b8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Cover
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Cover userdata: 0xbecbcfb8
+I/TwLog   ( 3331): [W-MISC]# [PATCH] Normal: replaceScene(Root) -> userdata: 0xbecb33d8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Root
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Main
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Main userdata: 0xbf5ba0f8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Progress
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LabelAtlas
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter PlayerInfoPrompt
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter MainHeroInfo
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Functions
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter RichText
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Main
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading LoginReward
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded LoginReward userdata: 0xbeceb0d8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginRewardItem
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LoginReward
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading Home
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded Home userdata: 0xbecb6d18
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter LabelAtlas
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter Home
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 47:2
+I/TwLog   ( 3331): [W-MISC]# [LocalServer] dispatch 13:12
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loading HomeItem
+I/TwLog   ( 3331): [W-MISC]# [SCENE] loaded HomeItem userdata: 0xb3d1fed8
+I/TwLog   ( 3331): [W-MISC]# [SCENE] onEnter HomeItem
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 3331): error to create ttf type face: YaHei.ttf
+LOG: C:\Users\nkq\Desktop\game\hakimi\06_¹¹½¨\debug_124430.log

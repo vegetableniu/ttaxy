@@ -1,0 +1,66 @@
+﻿--------- beginning of system
+D/CompatibilityChangeReporter(  360): Compat change id reported: 161252188; UID 10071; state: DISABLED
+W/ActivityTaskManager(  360): callingPackage for (uid=2000, pid=2335) has no WPC
+--------- beginning of main
+E/CellBroadcastUtils(  360): getDefaultCellBroadcastReceiverPackageName: no package found
+I/ActivityTaskManager(  360): START u0 {flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+D/WindowManagerShell(  568): onActivityRestartAttempt: ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain}
+D/KeyguardService(  568): setOccluded(false)
+D/KeyguardViewMediator(  568): setOccluded(false)
+D/KeyguardViewMediator(  568): handleSetOccluded(false)
+D/KeyguardViewMediator(  568): KeyguardViewMediator queue processing message: SET_OCCLUDED
+E/BLASTSyncEngine(  360): WM sent Transaction to organized, but never received commit callback. Application ANR likely to follow.
+E/ResilientAtomicFile(  360): Failed to verity-protect package manager settings
+E/ResilientAtomicFile(  360): java.io.IOException: Failed to enable fs-verity on FD(213): Operation not supported on transport endpoint
+E/ResilientAtomicFile(  360): 	at com.android.internal.security.VerityUtils.setUpFsverity(VerityUtils.java:89)
+E/ResilientAtomicFile(  360): 	at com.android.server.security.FileIntegrity.setUpFsVerity(FileIntegrity.java:56)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.ResilientAtomicFile.finishWrite(ResilientAtomicFile.java:146)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.Settings.writeLPr(Settings.java:2693)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.PackageManagerService.writeSettingsLPrTEMP(PackageManagerService.java:7348)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.PackageManagerService.writeSettings(PackageManagerService.java:1489)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.PackageHandler.doHandleMessage(PackageHandler.java:121)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.PackageHandler.handleMessage(PackageHandler.java:76)
+E/ResilientAtomicFile(  360): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+E/ResilientAtomicFile(  360): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/ResilientAtomicFile(  360): 	at android.os.Looper.loop(Looper.java:294)
+E/ResilientAtomicFile(  360): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+E/ResilientAtomicFile(  360): 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+E/ResilientAtomicFile(  360): Failed to verity-protect package restrictions
+E/ResilientAtomicFile(  360): java.io.IOException: Failed to enable fs-verity on FD(213): Operation not supported on transport endpoint
+E/ResilientAtomicFile(  360): 	at com.android.internal.security.VerityUtils.setUpFsverity(VerityUtils.java:89)
+E/ResilientAtomicFile(  360): 	at com.android.server.security.FileIntegrity.setUpFsVerity(FileIntegrity.java:56)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.ResilientAtomicFile.finishWrite(ResilientAtomicFile.java:146)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.Settings.writePackageRestrictions(Settings.java:2377)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.Settings.lambda$writePackageRestrictionsLPr$1(Settings.java:2203)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.Settings.$r8$lambda$OPlPaPj08qmthsK8f0-7Du1VRyA(Settings.java:0)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.Settings$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+E/ResilientAtomicFile(  360): 	at com.android.server.pm.PackageManagerService$2.handleMessage(PackageManagerService.java:1514)
+E/ResilientAtomicFile(  360): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/ResilientAtomicFile(  360): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/ResilientAtomicFile(  360): 	at android.os.Looper.loop(Looper.java:294)
+E/ResilientAtomicFile(  360): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+E/ResilientAtomicFile(  360): 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+E/RuntimePermissionsPersistenceImpl(  360): Failed to verity-protect runtime-permissions
+E/RuntimePermissionsPersistenceImpl(  360): java.io.IOException: Failed to enable fs-verity on /data/misc_de/0/apexdata/com.android.permission/runtime-permissions.xml: Operation not supported on transport endpoint
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.internal.security.VerityUtils.setUpFsverity(VerityUtils.java:80)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.server.security.FileIntegrity.setUpFsVerity(FileIntegrity.java:45)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.permission.persistence.RuntimePermissionsPersistenceImpl.lambda$new$0(RuntimePermissionsPersistenceImpl.java:86)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.permission.persistence.RuntimePermissionsPersistenceImpl.$r8$lambda$5h47_iJJQtrg6YAo_U8axU1owJI(RuntimePermissionsPersistenceImpl.java:0)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.permission.persistence.RuntimePermissionsPersistenceImpl$$ExternalSyntheticLambda0.enableFsVerity(R8$$SyntheticClass:0)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.permission.persistence.RuntimePermissionsPersistenceImpl.writeForUser(RuntimePermissionsPersistenceImpl.java:252)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.server.pm.Settings$RuntimePermissionPersistence.writePendingStates(Settings.java:5935)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.server.pm.Settings$RuntimePermissionPersistence.-$$Nest$mwritePendingStates(Settings.java:0)
+E/RuntimePermissionsPersistenceImpl(  360): 	at com.android.server.pm.Settings$RuntimePermissionPersistence$PersistenceHandler.handleMessage(Settings.java:6190)
+E/RuntimePermissionsPersistenceImpl(  360): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+E/RuntimePermissionsPersistenceImpl(  360): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/RuntimePermissionsPersistenceImpl(  360): 	at android.os.Looper.loop(Looper.java:294)
+E/RuntimePermissionsPersistenceImpl(  360): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+D/ActivityManager(  360): freezing 1003 com.android.permissioncontroller
+I/binder:207_2(  207): type=1400 audit(0.0:1221): avc:  denied  { read } for  scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+I/ldinit  (  224): type=1400 audit(0.0:1222): avc:  denied  { search } for  name="data" dev="sdb2" ino=17 scontext=u:r:ldinit:s0 tcontext=u:object_r:system_data_file:s0:c512,c768 tclass=dir permissive=1
+I/storaged(  305): type=1400 audit(0.0:1223): avc:  denied  { read } for  name="stat" dev="sysfs" ino=9238 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+I/storaged(  305): type=1400 audit(0.0:1224): avc:  denied  { open } for  path="/sys/devices/pci0000:00/0000:00:0f.0/virtio1/host0/target0:0:0/0:0:0:0/block/sda/stat" dev="sysfs" ino=9238 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+I/storaged(  305): type=1400 audit(0.0:1225): avc:  denied  { getattr } for  path="/sys/devices/pci0000:00/0000:00:0f.0/virtio1/host0/target0:0:0/0:0:0:0/block/sda/stat" dev="sysfs" ino=9238 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+I/imsdk   ( 1125): TIM: |-longconnection.cpp:312                  OnRecvSSOPingRequest                    |command:SSO.HelloPush|seq:2684354560
+I/imsdk   ( 1125): TIM: |-login.cpp:532                           RequestHeartbeat                        |send heartbeat request
+I/imsdk   ( 1125): TIM: |-login.cpp:571                           HandleHeartbeatResponse                 |receive heartbeat response|client_address:36.110.14.65:61139|heartbeat_interval:120

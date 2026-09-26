@@ -1,0 +1,93 @@
+﻿--------- beginning of main
+I/TwLog   ( 3492): EnvAdapter CreateInstance beg
+I/TwLog   ( 3492): [W-MISC]# [PATCH] ChgStage -> AutoPatch
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'ChgStage'
+I/TwLog   ( 3492): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 3492): [W-MISC]# [PATCH] offline: skip Sdk+AutoPatch -> go Logout
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'OnStageActive'
+I/TwLog   ( 3492): 	?: in function 'Setup'
+I/TwLog   ( 3492): 	?: in function 'ChgStage'
+I/TwLog   ( 3492): 	script/GameShell.dat:36: in function 'OnStartup'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:64: in function 'OnSysStartup'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:120>
+I/TwLog   ( 3492): [W-MISC]# [PATCH] offline: ChgStage Logout
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): [W-MISC]# [PATCH] ChgStage -> Logout
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'ChgStage'
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): [W-MISC]# [PATCH] Logout: schedule autoLogin
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'OnStageActive'
+I/TwLog   ( 3492): 	?: in function 'Setup'
+I/TwLog   ( 3492): 	?: in function 'ChgStage'
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): [W-COCOS2D]# script/base/Events.dat:70: attempt to index local 'self' (a function value)
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:116>
+I/TwLog   ( 3492): 	script/base/Events.dat:70: in function 'Exist'
+I/TwLog   ( 3492): 	?: in function 'inquireServerInfo'
+I/TwLog   ( 3492): 	script/UI/LoginEnter.dat: in function <script/UI/LoginEnter.dat:21>
+I/TwLog   ( 3492): 	(tail call): ?
+I/TwLog   ( 3492): 	(tail call): ?
+I/TwLog   ( 3492): 	[C]: in function 'addChild'
+I/TwLog   ( 3492): 	script/UI/SceneHelper.dat:232: in function 'pushMoveScene'
+I/TwLog   ( 3492): 	script/UI/GameLoading.dat: in function 'onGameStageChange'
+I/TwLog   ( 3492): 	script/UI/GameLoading.dat: in function <script/UI/GameLoading.dat:7>
+I/TwLog   ( 3492): 	(tail call): ?
+I/TwLog   ( 3492): 	(tail call): ?
+I/TwLog   ( 3492): [W-MISC]# [PATCH] Logout: timer autoLogin
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): [W-MISC]# [LocalServer] autoLogin account=localuser op=1
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'autoLogin'
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): [W-MISC]# [PATCH] Account:CheckUser -> local
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'CheckUser'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3492): 	?: in function 'autoLogin'
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	script/base/Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	script/base/Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	script/base/GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	script/base/HostAdapter.dat: in function <script/base/HostAdapter.dat:294>
+I/TwLog   ( 3492): ?:0: attempt to get length of a nil value
+I/TwLog   ( 3492): stack traceback:
+I/TwLog   ( 3492): 	?: in function 'RecordServerInfo'
+I/TwLog   ( 3492): 	?: in function 'RememberLoginAccount'
+I/TwLog   ( 3492): 	?: in function 'LoginFinish'
+I/TwLog   ( 3492): 	?: in function 'CheckUser'
+I/TwLog   ( 3492): 	...oid\ttaxy\release\assets\script\base\HostAdapter.dat: in function 'OnLogin'
+I/TwLog   ( 3492): 	?: in function 'autoLogin'
+I/TwLog   ( 3492): 	?: in function 'callback'
+I/TwLog   ( 3492): 	...\Android\ttaxy\release\assets\script\base\Events.dat:33: in function 'fire'
+I/TwLog   ( 3492): 	...k\Android\ttaxy\release\assets\script\base\Timer.dat:40: in function 'Process'
+I/TwLog   ( 3492): 	...ndroid\ttaxy\release\assets\script\base\GameRoot.dat:76: in function 'OnTick'
+I/TwLog   ( 3492): 	...oid\ttaxy\release\assets\script\base\HostAdapter.dat: in function <...oid\ttaxy\release\assets\script\base\HostAdapter.dat:294>

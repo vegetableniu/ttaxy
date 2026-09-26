@@ -1,0 +1,40 @@
+local Base = require("BattleShow.Action.Base")
+local Define = require("BattleShow.BattleDefine")
+module((...), package.seeall)
+class = Base.class:subclass()
+function class:initialize(...)
+  super.initialize(self, ...)
+end
+function class:PlayAction()
+  local stageAni1 = self:RunHero(self.owner, self.info.stage1)
+  local stageAni2 = self:RunEffect(self.owner, self.info.stage2)
+  stageAni1:RunAnimation(nil, self.sync)
+  stageAni2:RunAnimation(nil, self.sync)
+  self.sync:Sync()
+  stageAni1:RemoveAnimation()
+  stageAni2:RemoveAnimation()
+  local stageAni4 = self:RunGroupEffect(not self.owner:IsEnemy(), self.info.stage4, self.info.param, self.sync)
+  local hitFunc = bind(self.HitTarget, self)
+  self:ForeachTarget(hitFunc, nil, "HIT")
+  local passFunc = bind(self.PassiveTarget, self)
+  self:ForeachTarget(passFunc, nil, "PASSIVE")
+  local buffFunc = bind(self.BuffTarget, self)
+  self:ForeachTarget(buffFunc, nil, "BUFF")
+  self.sync:Sync()
+  stageAni4:RemoveAnimation()
+end
+function class:HitTarget(target, hp, status, shield, info)
+  self:RunPassiveAndBuff(target, hp, status, shield, info)
+  if hp ~= 0 or shield ~= 0 then
+    do
+      local stageAni3 = self:RunHero(target, self.info.stage3)
+      local waitSign3 = self.sync:Join()
+      stageAni3:RunAnimationByWaitSign(nil, function()
+        waitSign3()
+        stageAni3:RemoveAnimation()
+        target:CheckShieldRemove()
+        target:CheckDead()
+      end, Define.ANI_TIMEOUT)
+    end
+  end
+end

@@ -1,0 +1,423 @@
+--------- beginning of system
+D/CompatibilityChangeReporter(  359): Compat change id reported: 161252188; UID 10071; state: DISABLED
+W/ActivityTaskManager(  359): callingPackage for (uid=2000, pid=6029) has no WPC
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265464455; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265452344; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 266124927; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265451093; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265456536; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 255940284; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 236283604; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 263959004; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 264304459; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 264301586; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 254631730; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 273509367; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 263259275; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 174042980; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 174042936; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 181136395; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 194480991; UID 10071; state: ENABLED
+--------- beginning of main
+E/CellBroadcastUtils(  359): getDefaultCellBroadcastReceiverPackageName: no package found
+D/CompatibilityChangeReporter(  359): Compat change id reported: 205907456; UID 10071; state: DISABLED
+V/WindowManagerShell(  569): Transition requested: android.os.BinderProxy@70f0f5e TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=35 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain } baseActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} topActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} origActivity=null realActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} numActivities=1 lastActiveTime=18558737 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@8cc5f3f} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{dc3f00c com.eyugame.game.ActivityMain} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+I/ActivityTaskManager(  359): START u0 {flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} with LAUNCH_MULTIPLE from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+D/CompatibilityChangeReporter(  359): Compat change id reported: 135634846; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter(  359): Compat change id reported: 143937733; UID 10071; state: DISABLED
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:46 android.app.ActivityThread.handleReceiver:4499 
+D/CompatibilityChangeReporter(  359): Compat change id reported: 265195908; UID 10071; state: ENABLED
+W/libprocessgroup(  359): SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/top-app/cgroup.procs: No such file or directory
+I/BpBinder(  240): onLastStrongRef automatically unlinking death recipients: 
+D/Zygote  (  184): Forked child process 6032
+I/ActivityManager(  359): Start proc 6032:com.eyugame.ahxy.mi/u0a71 for next-top-activity {com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain}
+D/WindowManagerShell(  569): onFixedRotationStarted: null, state=PipTransitionState(mState=undefined, mInSwipePipToHomeTransition=false)
+D/CoreBackPreview(  359): Window{c4dc5ef u0 Splash Screen com.eyugame.ahxy.mi}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e6cdb01, mPriority=0, mIsAnimationCallback=false}
+W/nativebridge( 6032): Failed to bind-mount /data/local/cfg-hnegi/ as /proc/cpuinfo: Not a directory
+W/nativebridge( 6032): Failed to bind-mount /system/etc/cpuinfo.arm.txt as /proc/cpuinfo: No such file or directory
+I/Zygote  ( 6032): seccomp disabled by setenforce 0
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer(  569): Failed to set EGL_SWAP_BEHAVIOR on surface 0x758d57394980, error=EGL_BAD_MATCH
+E/OpenGLRenderer(  569): Unable to match the desired swap behavior.
+I/eyugame.ahxy.mi( 6032): Late-enabling -Xcheck:jni
+I/ndroid.systemui(  569): fastpipe: Connect success
+D/HostConnection(  569): HostRPC::connect sucess: app=com.android.systemui, pid=569, tid=6033, this=0x758d03db8480
+D/HostConnection(  569): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.android.systemui
+V/WindowManager(  359): Sent Transition #77 createdAt=09-25 17:12:54.955 via request=TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=35 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain } baseActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} topActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} origActivity=null realActivity=ComponentInfo{com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain} numActivities=1 lastActiveTime=18558737 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{497783 Task{8f68082 #35 type=standard A=10071:com.eyugame.ahxy.mi}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{403fd00 com.eyugame.game.ActivityMain} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+V/WindowManager(  359):     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+V/WindowManager(  359):     info={id=77 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{497783 Task{8f68082 #35 type=standard A=10071:com.eyugame.ahxy.mi}}} m=OPEN f=NONE leash=Surface(name=Task=35)/@0x2e283e7 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{RemoteToken{ac6ed8e Task{e8c83d3 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x2032766 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): onTransitionReady android.os.BinderProxy@70f0f5e: {id=77 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@8379828} m=OPEN f=NONE leash=Surface(name=Task=35)/@0x2e1962f sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f82941} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xd29743c sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): Playing animation for (#77)android.os.BinderProxy@70f0f5e@0
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultMixedHandler@88c1e50
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@6c57849
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.pip.PipTransition@e30a54e
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@568566f
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.recents.RecentsTransitionHandler@9ccf7c
+V/ShellRecents(  569): RecentsTransitionHandler.startAnimation: no controller found
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.splitscreen.StageCoordinator@fe45005
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.RemoteTransitionHandler@d75c85a
+V/WindowManagerShell(  569): Transition doesn't have explicit remote, search filters for match for {id=77 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@8379828} m=OPEN f=NONE leash=Surface(name=Task=35)/@0x2e1962f sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f82941} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xd29743c sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569):  Delegate animation for #77 to null
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): start default transition animation, info = {id=77 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@8379828} m=OPEN f=NONE leash=Surface(name=Task=35)/@0x2e1962f sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0 endFixedRotation=3},{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f82941} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xd29743c sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1920, 1080) d=0}]}
+V/WindowManagerShell(  569): loadAnimation: anim=android.view.animation.AnimationSet@5981c27 animAttr=0x13 type=OPEN isEntrance=false
+V/WindowManagerShell(  569): loadAnimation: anim=android.view.animation.AnimationSet@66053c3 animAttr=0x12 type=OPEN isEntrance=true
+V/WindowManagerShell(  569):  animated by com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+I/eyugame.ahxy.mi( 6032): Using CollectorTypeCC GC.
+I/ndroid.systemui(  569): fastpipe: close connect
+I/houdini ( 6032): [6032] Houdini now in android app mode
+I/houdini ( 6032): [6032] Intel Bridge Technology for Leidian Android Emulator only, Copyright(C) Intel Corp. 2012-2025.
+I/houdini ( 6032): [6032] Use permitted only under a valid evaluation software license agreement - all other rights reserved. Expire date 20261101.
+I/houdini ( 6032): [6032] Initialize library(version: 14.0.0_y.leidian_com1.0 RELEASE)... successfully.
+I/adbd    ( 1811): jdwp connection from 6032
+V/appproc ( 6032): App process: starting thread pool.
+W/libprocessgroup(  359): SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/top-app/cgroup.procs: No such file or directory
+W/ActivityManager(  359): pid 359 system sent binder code 1 with flags 1 to frozen apps and got error -32
+W/DisplayManagerService(  359): Failed to notify process 5766 that displays changed, assuming it died.
+W/DisplayManagerService(  359): android.os.DeadObjectException
+W/DisplayManagerService(  359): 	at android.os.BinderProxy.transactNative(Native Method)
+W/DisplayManagerService(  359): 	at android.os.BinderProxy.transact(BinderProxy.java:584)
+W/DisplayManagerService(  359): 	at android.hardware.display.IDisplayManagerCallback$Stub$Proxy.onDisplayEvent(IDisplayManagerCallback.java:121)
+W/DisplayManagerService(  359): 	at com.android.server.display.DisplayManagerService$CallbackRecord.notifyDisplayEventAsync(DisplayManagerService.java:3397)
+W/DisplayManagerService(  359): 	at com.android.server.display.DisplayManagerService$PendingCallback.sendPendingDisplayEvent(DisplayManagerService.java:3459)
+W/DisplayManagerService(  359): 	at com.android.server.display.DisplayManagerService$UidImportanceListener.onUidImportance(DisplayManagerService.java:956)
+W/DisplayManagerService(  359): 	at android.app.ActivityManager$MyUidObserver.onUidStateChanged(ActivityManager.java:208)
+W/DisplayManagerService(  359): 	at com.android.server.am.UidObserverController.dispatchUidsChangedForObserver(UidObserverController.java:414)
+W/DisplayManagerService(  359): 	at com.android.server.am.UidObserverController.dispatchUidsChanged(UidObserverController.java:280)
+W/DisplayManagerService(  359): 	at com.android.server.am.UidObserverController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+W/DisplayManagerService(  359): 	at android.os.Handler.handleCallback(Handler.java:958)
+W/DisplayManagerService(  359): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+W/DisplayManagerService(  359): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/DisplayManagerService(  359): 	at android.os.Looper.loop(Looper.java:294)
+W/DisplayManagerService(  359): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+W/DisplayManagerService(  359): 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+W/DisplayManagerService(  359): 	at com.android.server.UiThread.run(UiThread.java:45)
+D/DisplayManagerService(  359): Drop pending events for dead process 5766
+D/CompatibilityChangeReporter( 6032): Compat change id reported: 171979766; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter( 6032): Compat change id reported: 242716250; UID 10071; state: DISABLED
+V/WindowManagerShell(  569): Transition animation finished (aborted=false), notifying core (#77)android.os.BinderProxy@70f0f5e@0
+V/WindowManager(  359): Finish Transition #77: created at 09-25 17:12:54.955 collect-started=0.013ms request-sent=4.386ms started=5.316ms ready=50.867ms sent=51.822ms finished=353.111ms
+I/ActivityTaskManager(  359): Config changes=20000480 {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1324 fontWeightAdjustment=0}
+I/WindowManager(  359): Override config changes=20000480 {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1324 fontWeightAdjustment=0} for displayId=0
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+V/WindowManagerShell(  569): Transition requested: android.os.BinderProxy@6dbda35 TransitionRequestInfo { type = 6, triggerTask = null, remoteTransition = null, displayChange = DisplayChange { displayId = 0, startAbsBounds = null, endAbsBounds = null, startRotation = 0, endRotation = 3, physicalDisplayChanged = false }, flags = 0 }
+D/WindowManagerShell(  569): PipTaskOrganizer: Skip onMovementBoundsChanged on rotation change InSwipePipToHomeTransition=false mWaitForFixedRotation=true getTransitionState=0
+I/NoBackGesture(  569): NavbarController: newConfig={1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1352 fontWeightAdjustment=0} mTaskbarDelegate initialized=false willApplyConfigToNavbars=false navBarCount=0
+D/WindowManagerShell(  569): onFixedRotationFinished: null, state=PipTransitionState(mState=undefined, mInSwipePipToHomeTransition=false)
+I/InputManager-JNI(  359): Viewport [0] to add: local:0, isActive: true
+V/ShellDragAndDrop(  569): Display changed: 0
+I/InputReader(  359): Reconfiguring input devices, changes=DISPLAY_INFO
+W/InputReader(  359): Touch device 'VirtualMouse' did not report support for X or Y axis!  The device will be inoperable.
+I/InputReader(  359): Device reconfigured: id=2, name='VirtualMouse', size 1x1, orientation 0, mode 0, display id 0
+V/WindowManagerShell(  569): onTransitionReady android.os.BinderProxy@6dbda35: {id=78 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@33a78e9} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@df2a96e} leash=Surface(name=Task=35)/@0xf7ce4b1 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@905d80f} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@9ebc09c} leash=Surface(name=DefaultTaskDisplayArea)/@0x7c17d96 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@2b8baa5} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0x9aa5d17 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+V/WindowManagerShell(  569): Playing animation for (#78)android.os.BinderProxy@6dbda35@0
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultMixedHandler@88c1e50
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@6c57849
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.pip.PipTransition@e30a54e
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@568566f
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.recents.RecentsTransitionHandler@9ccf7c
+V/ShellRecents(  569): RecentsTransitionHandler.startAnimation: no controller found
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.splitscreen.StageCoordinator@fe45005
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.RemoteTransitionHandler@d75c85a
+V/WindowManagerShell(  569):  try handler com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): start default transition animation, info = {id=78 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@33a78e9} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@df2a96e} leash=Surface(name=Task=35)/@0xf7ce4b1 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@905d80f} m=CHANGE f=NONE p=WCT{android.window.IWindowContainerToken$Stub$Proxy@9ebc09c} leash=Surface(name=DefaultTaskDisplayArea)/@0x7c17d96 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@2b8baa5} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0x9aa5d17 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+V/WindowManagerShell(  569): Display is changing, resolve the animation hint.
+V/WindowManagerShell(  569):   display requests explicit seamless
+D/KeyguardBlueprintViewBinder(  569): applying blueprint: com.android.systemui.keyguard.ui.view.layout.blueprints.DefaultKeyguardBlueprint@181472d
+W/SubscriptionInfo(  638): MCC string is not a number
+W/SubscriptionInfo(  638): MNC string is not a number
+V/WindowManager(  359): Sent Transition #78 createdAt=09-25 17:12:55.309 via request=TransitionRequestInfo { type = 6, triggerTask = null, remoteTransition = null, displayChange = DisplayChange { displayId = 0, startAbsBounds = null, endAbsBounds = null, startRotation = 0, endRotation = 3, physicalDisplayChanged = false }, flags = 0 }
+V/WindowManagerShell(  569): Transition animation finished (aborted=false), notifying core (#78)android.os.BinderProxy@6dbda35@0
+V/WindowManager(  359):     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+V/WindowManager(  359):     info={id=78 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{497783 Task{8f68082 #35 type=standard A=10071:com.eyugame.ahxy.mi}}} m=CHANGE f=NONE p=WCT{RemoteToken{cce6f16 DefaultTaskDisplayArea@209855736}} leash=Surface(name=Task=35)/@0x2e283e7 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{RemoteToken{cce6f16 DefaultTaskDisplayArea@209855736}} m=CHANGE f=NONE p=WCT{RemoteToken{ac23097 Display{#0 state=ON size=1080x1920 ROTATION_270}}} leash=Surface(name=DefaultTaskDisplayArea)/@0x996d3c1 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:-1},{WCT{RemoteToken{ac23097 Display{#0 state=ON size=1080x1920 ROTATION_270}}} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0xbf24475 sb=Rect(0, 0 - 1920, 1080) eb=Rect(0, 0 - 1080, 1920) d=0 r=0->3:3}]}
+V/WindowManager(  359): Finish Transition #78: created at 09-25 17:12:55.309 collect-started=0.015ms request-sent=0.038ms started=4.695ms ready=4.799ms sent=5.423ms finished=11.523ms
+W/SubscriptionInfo(  359): MCC string is not a number
+W/SubscriptionInfo(  359): MNC string is not a number
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+V/WindowManagerShell(  569):  animated by com.android.wm.shell.transition.DefaultTransitionHandler@dcdea8b
+V/WindowManagerShell(  569): Track 0 became idle
+V/WindowManagerShell(  569): All active transition animations finished
+W/utmethod.pinyin( 1362): Reducing the number of considered missed Gc histogram windows from 515 to 100
+E/EGL_emulation(  569): tid 679: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer(  569): Failed to set EGL_SWAP_BEHAVIOR on surface 0x758cfcf92780, error=EGL_BAD_MATCH
+E/OpenGLRenderer(  569): Unable to match the desired swap behavior.
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+W/System  ( 1362): A resource failed to call close. 
+D/b/254119092(  856): DisplayController#onConfigurationChanged: {1.0 ?mcc0mnc [zh_CN] ldltr sw617dp w617dp h1073dp 280dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 1920) mAppBounds=Rect(0, 0 - 1080, 1920) mMaxBounds=Rect(0, 0 - 1080, 1920) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1324 fontWeightAdjustment=0}
+I/WindowManager(  359): finishDrawing of orientation change: Window{da90470 u0 StatusBar} 32ms
+D/CompatibilityChangeReporter(  359): Compat change id reported: 170503758; UID 10071; state: DISABLED
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:55 android.app.ActivityThread.handleReceiver:4499 
+D/ApplicationLoaders( 6032): Returning zygote-cached class loader: /system/framework/android.test.base.jar
+D/nativeloader( 6032): Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=22, uses_libraries=ALL, library_path=/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/lib/arm:/system/fake-libs:/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/com.eyugame.ahxy.mi
+W/ziparchive( 6032): Unable to open '/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.dm': No such file or directory
+W/ziparchive( 6032): Unable to open '/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.dm': No such file or directory
+D/nativeloader( 6032): Configuring clns-7 for other apk /data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.apk. target_sdk_version=22, uses_libraries=, library_path=/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/lib/arm:/system/fake-libs:/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/com.eyugame.ahxy.mi
+V/GraphicsEnvironment( 6032): Currently set values for:
+V/GraphicsEnvironment( 6032):   angle_gl_driver_selection_pkgs=[]
+V/GraphicsEnvironment( 6032):   angle_gl_driver_selection_values=[]
+V/GraphicsEnvironment( 6032): ANGLE GameManagerService for com.eyugame.ahxy.mi: false
+V/GraphicsEnvironment( 6032): com.eyugame.ahxy.mi is not listed in per-application setting
+V/GraphicsEnvironment( 6032): Neither updatable production driver nor prerelease driver is supported.
+D/libEGL  ( 6032): loaded /vendor/lib/egl/libEGL_adreno.so
+D/libEGL  ( 6032): loaded /vendor/lib/egl/libGLESv1_CM_adreno.so
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glClientWaitSyncAPPLE to eglBindTexImage failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glCopyTextureLevelsAPPLE to eglWaitSync failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glDeleteSyncAPPLE to eglClientWaitSyncKHR failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glFenceSyncAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glFramebufferTexture2DMultisampleEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glGetInteger64vAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glGetSyncivAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glIsSyncAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glRenderbufferStorageMultisampleAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glRenderbufferStorageMultisampleEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glResolveMultisampleFramebufferAPPLE to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glTexStorage1DEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glTextureStorage1DEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glTextureStorage2DEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glTextureStorage3DEXT to NULL failed
+E/libEGL  ( 6032): denglibo Loader::init_api redirect glWaitSyncAPPLE to NULL failed
+D/libEGL  ( 6032): loaded /vendor/lib/egl/libGLESv2_adreno.so
+I/houdini ( 6032): [6032] Expected CPU feature >> AES << is not supported.
+I/houdini ( 6032): [6032] Expected CPU feature >> PCLMULQDQ << is not supported.
+D/cocos2dxhelper( 6032): /data/user/0/com.eyugame.ahxy.mi/files/assets
+D/cocos2dxhelper( 6032): /data/user/0/com.eyugame.ahxy.mi/files/doc
+D/CompatibilityChangeReporter( 6032): Compat change id reported: 210923482; UID 10071; state: DISABLED
+D/CompatibilityChangeReporter( 6032): Compat change id reported: 37756858; UID 10071; state: DISABLED
+W/System.err( 6032): java.lang.NoSuchFieldException: splash_ex
+W/System.err( 6032): 	at java.lang.Class.getField(Class.java:2355)
+W/System.err( 6032): 	at com.eyugame.game.MResource.getIdByName(MResource.java:24)
+W/System.err( 6032): 	at org.cocos2dx.lib.Cocos2dxActivity.onCreateView(Cocos2dxActivity.java:163)
+W/System.err( 6032): 	at org.cocos2dx.lib.Cocos2dxActivity.onCreate(Cocos2dxActivity.java:70)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:259)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 6032): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 6032): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 6032): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 6032): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 6032): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 6032): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 6032): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 6032): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 6032): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 6032): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 6032): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 6032): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+D/LocationUtils( 6032): same version, return
+W/SoundPool( 6032): Use of stream types is deprecated for operations other than volume control
+W/SoundPool( 6032): See the documentation of SoundPool() for what to use instead with android.media.AudioAttributes to qualify your playback use case
+W/System.err( 6032): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:265)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 6032): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 6032): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 6032): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 6032): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 6032): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 6032): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 6032): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 6032): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 6032): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 6032): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 6032): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 6032): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 6032): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 6032): 	... 22 more
+W/System.err( 6032): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:277)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 6032): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 6032): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 6032): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 6032): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 6032): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 6032): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 6032): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 6032): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 6032): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 6032): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 6032): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 6032): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 6032): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 6032): 	... 22 more
+W/System.err( 6032): java.io.FileNotFoundException: /data/user/0/com.eyugame.ahxy.mi/files/doc/Patch/ini/misc.ini: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:574)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:289)
+W/System.err( 6032): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:152)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromFile(LocationUtils.java:403)
+W/System.err( 6032): 	at com.eyugame.base.LocationUtils.getStringFromPack(LocationUtils.java:386)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.GetItemFromMiscIniConfig(ActivityMain.java:725)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.InitCrashReport(ActivityMain.java:303)
+W/System.err( 6032): 	at com.eyugame.game.ActivityMain.onCreate(ActivityMain.java:296)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8627)
+W/System.err( 6032): 	at android.app.Activity.performCreate(Activity.java:8605)
+W/System.err( 6032): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1456)
+W/System.err( 6032): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3813)
+W/System.err( 6032): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3972)
+W/System.err( 6032): 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:103)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:139)
+W/System.err( 6032): 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:96)
+W/System.err( 6032): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2477)
+W/System.err( 6032): 	at android.os.Handler.dispatchMessage(Handler.java:106)
+W/System.err( 6032): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/System.err( 6032): 	at android.os.Looper.loop(Looper.java:294)
+W/System.err( 6032): 	at android.app.ActivityThread.main(ActivityThread.java:8373)
+W/System.err( 6032): 	at java.lang.reflect.Method.invoke(Native Method)
+W/System.err( 6032): 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:555)
+W/System.err( 6032): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+W/System.err( 6032): Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+W/System.err( 6032): 	at libcore.io.Linux.open(Native Method)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+W/System.err( 6032): 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+W/System.err( 6032): 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8259)
+W/System.err( 6032): 	at libcore.io.IoBridge.open(IoBridge.java:560)
+W/System.err( 6032): 	... 23 more
+W/eyugame.ahxy.mi( 6032): Accessing hidden field Ljava/lang/Integer;->value:I (max-target-p, JNI, allowed)
+D/NativeCrashReport( 6032): serverfd = 80, clientfd = 79
+D/NativeCrashReport( 6032): /data/user/0/com.eyugame.ahxy.mi/app_files
+D/NativeCrashReport( 6032): /data/user/0/com.eyugame.ahxy.mi/files/doc/
+D/LocationUtils( 6032): same version, return
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:55 android.app.ActivityThread.handleReceiver:4499 
+D/CompatibilityChangeReporter( 6032): Compat change id reported: 237531167; UID 10071; state: DISABLED
+W/OpenGLRenderer( 6032): Unknown dataspace 0
+W/WindowManager(  359): Failed looking up window session=Session{ff1fb60 6032:u0a10071} callers=com.android.server.wm.WindowManagerService.windowForClientLocked:6011 com.android.server.wm.Session.updateRequestedVisibleTypes:695 android.view.IWindowSession$Stub.onTransact:1034 
+D/CoreBackPreview(  359): Window{f9562bf u0 com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@667cd5, mPriority=0, mIsAnimationCallback=false}
+I/eyugame.ahxy.mi( 6032): fastpipe: Connect success
+I/eyugame.ahxy.mi( 6032): fastpipe: Connect success
+D/HostConnection( 6032): HostRPC::connect sucess: app=com.eyugame.ahxy.mi, pid=6032, tid=6052, this=0xec379c00
+D/HostConnection( 6032): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.eyugame.ahxy.mi
+W/OpenGLRenderer( 6032): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+W/System  (  569): A resource failed to call release. 
+I/eyugame.ahxy.mi( 6032): fastpipe: Connect success
+D/HostConnection( 6032): HostRPC::connect sucess: app=com.eyugame.ahxy.mi, pid=6032, tid=6058, this=0xec1f4200
+D/EGL_emulation( 6032): eglCreateContext: 0xec53a1c0: maj 3 min 1 rcv 4
+D/HostConnection( 6032): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:com.eyugame.ahxy.mi
+D/EGL_emulation( 6032): eglCreateContext: 0xec76adf0: maj 3 min 1 rcv 4
+I/hwservicemanager(  117): getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+I/Gralloc4( 6032): mapper 4.x is not supported
+I/hwservicemanager(  117): getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device VINTF manifest.
+W/Gralloc3( 6032): mapper 3.x is not supported
+E/eglCodecCommon( 6032): glUtilsParamSize: unknow param 0x000082da
+E/eglCodecCommon( 6032): glUtilsParamSize: unknow param 0x000082e5
+D/HostConnection( 6032): ExtendedRCEncoderContext GL_VERSION return OpenGL ES 3.1 v1
+E/eglCodecCommon( 6032): glUtilsParamSize: unknow param 0x000084ff
+E/eglCodecCommon( 6032): glUtilsParamSize: unknow param 0x000087fe
+D/skia    ( 6032): force disable skia program binary by wb!
+E/HWComposer(  240): getSupportedContentTypes: getSupportedContentTypes failed for display 0: Unsupported (8)
+E/EGL_emulation( 6032): tid 6052: eglSurfaceAttrib(1504): error 0x3009 (EGL_BAD_MATCH)
+W/OpenGLRenderer( 6032): Failed to set EGL_SWAP_BEHAVIOR on surface 0xec480c60, error=EGL_BAD_MATCH
+E/OpenGLRenderer( 6032): Unable to match the desired swap behavior.
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+E/Cocos2dxBitmap( 6032): error to create ttf type face: YaHei.ttf
+I/TwLog   ( 6032): EnvAdapter CreateInstance beg
+W/system_server(  359): Failed to determine oat file name for dex location /data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.apk: Dalvik cache directory does not exist
+W/ziparchive(  359): Unable to open '/data/app/~~gLRJjBxp6OpXJKWGq685Xg==/com.eyugame.ahxy.mi-lKO1u4shHDADl2TyUZn2GA==/base.dm': No such file or directory
+I/ActivityTaskManager(  359): Displayed com.eyugame.ahxy.mi/com.eyugame.game.ActivityMain for user 0: +904ms
+D/CompatibilityChangeReporter(  359): Compat change id reported: 214016041; UID 10071; state: DISABLED
+I/ImeTracker(  359): com.eyugame.ahxy.mi:1c9c4b81: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+I/ImeTracker(  359): com.eyugame.ahxy.mi:1c9c4b81: onCancelled at PHASE_SERVER_SHOULD_HIDE
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:71 android.app.ActivityThread.handleReceiver:4499 
+W/ContextImpl( 1118): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1899 android.content.ContextWrapper.startService:825 android.content.ContextWrapper.startService:825 com.android.coreservice.CoreBroadcastReceiver.onReceive:71 android.app.ActivityThread.handleReceiver:4499 
+W/ActivityTaskManager(  359): Request to remove task ignored for non-existent task 33
+D/b/279059025(  856): go to state Normal
+W/WindowOnBackDispatcher(  996): sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@3bca2df
+D/CoreBackPreview(  359): Window{16326bf u0 com.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ReviewPermissionsActivity}: Setting back callback null
+W/InputManager-JNI(  359): Input channel object '16326bf com.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ReviewPermissionsActivity (client)' was disposed without first being removed with the input manager!
+W/UsageStatsService(  359): Unexpected activity event reported! (com.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ReviewPermissionsActivity event : 23 instanceId : 235386537)
+I/TwLog   ( 6032): ...k\Android\ttaxy\release\assets\script\base\Logic.dat:33: loop or previous error loading logic 'Logic.Login'
+I/TwLog   ( 6032): stack traceback:
+I/TwLog   ( 6032): 	[C]: in function 'error'
+I/TwLog   ( 6032): 	...axy\release\assets\script\base\dependencies\base.dat:391: in function 'assert'
+I/TwLog   ( 6032): 	...k\Android\ttaxy\release\assets\script\base\Logic.dat:33: in function 'Get'
+I/TwLog   ( 6032): 	...k\Android\ttaxy\release\assets\script\base\utils.dat:52: in function 'buildReport'
+I/TwLog   ( 6032): 	...k\Android\ttaxy\release\assets\script\base\utils.dat:89: in function 'report'
+I/TwLog   ( 6032): 	...k\Android\ttaxy\release\assets\script\base\utils.dat:122: in function 'Log'
+I/TwLog   ( 6032): 	...\Android\ttaxy\release\assets\script\base\logger.dat:40: in function <...\Android\ttaxy\release\assets\script\base\logger.dat:30>
+I/TwLog   ( 6032): 	(tail call): ?
+I/TwLog   ( 6032): 	(tail call): ?
+I/TwLog   ( 6032): 	?: in function 'initialize'
+I/TwLog   ( 6032): 	...\assets\script\base\dependencies\objectlua\Class.dat:32: in function '?'
+I/TwLog   ( 6032): 	?: in main chunk
+I/TwLog   ( 6032): 	[C]: in function 'require'
+I/TwLog   ( 6032): 	...\Android\ttaxy\release\assets\script\base\NetMgr.dat: in main chunk
+I/TwLog   ( 6032): 	[C]: in function 'require'
+I/TwLog   ( 6032): 	...oid\ttaxy\release\assets\script\base
+I/TwLog   ( 6032): attempt to call a nil value
+I/TwLog   ( 6032): stack traceback:
+W/WindowOnBackDispatcher(  569): sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@62a55c2
+D/CoreBackPreview(  359): Window{c4dc5ef u0 Splash Screen com.eyugame.ahxy.mi EXITING}: Setting back callback null
+W/InputManager-JNI(  359): Input channel object 'c4dc5ef Splash Screen com.eyugame.ahxy.mi (client)' was disposed without first being removed with the input manager!
+I/ldinit  (  232): type=1400 audit(0.0:3473): avc:  denied  { read } for  name="partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:3474): avc:  denied  { open } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:3475): avc:  denied  { getattr } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+I/ldinit  (  232): type=1400 audit(0.0:3476): avc:  denied  { search } for  name="data" dev="sdb2" ino=17 scontext=u:r:ldinit:s0 tcontext=u:object_r:system_data_file:s0:c512,c768 tclass=dir permissive=1
+D/EmuHWC2 (  201): sent 26 syncs in 60s
+E/ResilientAtomicFile(  359): Failed to verity-protect package restrictions
+E/ResilientAtomicFile(  359): java.io.IOException: Failed to enable fs-verity on FD(531): Operation not supported on transport endpoint
+E/ResilientAtomicFile(  359): 	at com.android.internal.security.VerityUtils.setUpFsverity(VerityUtils.java:89)
+E/ResilientAtomicFile(  359): 	at com.android.server.security.FileIntegrity.setUpFsVerity(FileIntegrity.java:56)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.ResilientAtomicFile.finishWrite(ResilientAtomicFile.java:146)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.Settings.writePackageRestrictions(Settings.java:2377)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.Settings.writePackageRestrictions(Settings.java:2212)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.PackageManagerService.writePendingRestrictions(PackageManagerService.java:1482)
+E/ResilientAtomicFile(  359): 	at com.android.server.pm.PackageManagerService$2.handleMessage(PackageManagerService.java:1509)
+E/ResilientAtomicFile(  359): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/ResilientAtomicFile(  359): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/ResilientAtomicFile(  359): 	at android.os.Looper.loop(Looper.java:294)
+E/ResilientAtomicFile(  359): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+E/ResilientAtomicFile(  359): 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+D/ActivityManager(  359): freezing 996 com.android.permissioncontroller
