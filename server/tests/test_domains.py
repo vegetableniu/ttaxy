@@ -166,5 +166,34 @@ class PlayerTests(DomainTestCase):
         self.assertEqual(self.call(11, 9, {})["code"], -10)  # roulette unlocks at level 5
 
 
+class LotteryEquipTests(DomainTestCase):
+    def test_mall_list_and_draws(self):
+        rows = self.call(11, 11, {})["content"]
+        self.assertIn("LOTTERY_L1", [r["lotteryType"] for r in rows])
+        self.edit(lambda s: (s["wallet"].update(gold=5000, friendship=1000),
+                             s["player"].update(level=10)))
+        result = self.call(11, 1, {"id": 2, "time": 10})
+        self.assertEqual(result["code"], 0)
+        stars = [self.config.heroes[r["code"]]["star"] for r in result["content"]["rewards"]]
+        self.assertEqual(len(stars), 10)
+        self.assertIn(7, stars)  # ten-draw guarantee
+        self.assertEqual(self.state()["wallet"]["gold"], 5000 - 2800)
+        self.assertEqual(self.call(11, 1, {"id": 1, "time": 1})["code"], 0)
+
+    def test_equipment_flow(self):
+        self.edit(lambda s: (s.update(equip_fragments={"11101": 20}),
+                             s["wallet"].update(copper=10000)))
+        composed = self.call(56, 3, {"baseId": 11101})
+        self.assertEqual(composed["code"], 0)
+        pack = self.call(56, 6, {})["content"]
+        self.assertEqual(pack["usedSpace"], 1)
+        equip_id = composed["content"]["id"]
+        hero = next(c for c in self.state()["cards"] if c["base_id"] == 1041)  # 二当家
+        worn = self.call(56, 2, {"hero": long_id(hero["id"]), "id": equip_id, "position": 1})
+        self.assertIn(worn["code"], (0, -4))  # depends on unit type
+        self.assertEqual(self.call(56, 7, {"equipId": equip_id, "hero": long_id(hero["id"]),
+                                           "position": 1})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

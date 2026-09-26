@@ -1,3 +1,3 @@
 """Business handlers; importing a module registers its @route commands."""
 
-from . import hero, item, player  # noqa: F401
+from . import equip, hero, item, lottery, player  # noqa: F401

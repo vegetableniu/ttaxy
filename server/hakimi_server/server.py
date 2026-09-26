@@ -42,6 +42,7 @@ from .game import (
     init_new_player, point_value, refresh_points,
 )
 from .handlers.player import vip_info
+from .handlers.equip import equip_vo
 from . import handlers  # noqa: F401  (registers @route handlers)
 from .storage import (
     AccountExistsError,
@@ -151,6 +152,8 @@ class LocalServer:
                 kind: point_value(ctx, kind) for kind in (0, 1, 2)
             }
             info["vip"] = vip_info(ctx)
+            info["equipVos"] = [equip_vo(ctx, e) for e in ctx.state.get("equips", [])]
+            info["buyEquipSpace"] = int(ctx.state.get("equip_extend", 0))
             gifts = build_gift_list(self.schema, record)
             info["validGiftVo"] = gifts
             info["hasReward"] = bool(gifts["users"])

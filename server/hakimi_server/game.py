@@ -462,6 +462,16 @@ class Ledger:
             ctx.save()
             return [self._result(kind, code, amount,
                                  {"point": points[str(code)], "refreshTime": now_ms()})]
+        if kind == "EQUIPMENT":
+            from .handlers.equip import grant_equipment
+            return [grant_equipment(ctx, self, code) and self.rewards[-1]
+                    for _ in range(max(1, amount))]
+        if kind in ("EQUIPMENT_FRAGMENT", "EQUIPMENT_MATERIAL"):
+            store = ctx.state.setdefault(
+                "equip_fragments" if kind == "EQUIPMENT_FRAGMENT" else "equip_materials", {})
+            store[str(code)] = int(store.get(str(code), 0)) + amount
+            ctx.save()
+            return [self._result(kind, code, amount, {})]
         # Counters consumed by their own modules (token coin, box keys, ...).
         ctx.add_counter(f"reward_{kind}_{code}", amount)
         return [self._result(kind, code, amount, {})]
