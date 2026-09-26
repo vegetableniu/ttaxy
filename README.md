@@ -37,6 +37,7 @@
 | `09_脚本/` | 构建与工具脚本（见下） |
 | `server/hakimi_server/` | **最终本地服务端**（Python） |
 | `server/tests/` | 服务端自动测试 |
+| `server/config/server_settings.json` | **可调参数**：价格、掉率、卡池、敌人强度、活动开关等推测值 |
 | `文档/` | `进度.md`（任务与进度）、`技术要点.md`（协议与踩坑）、`协议覆盖自动生成.md/.csv` |
 
 调试截图、日志、测试 db 已不入库（见 `.gitignore`）。
@@ -51,7 +52,7 @@ $env:OFFLINE_STANDALONE = "1"; $env:OFFLINE_DEBUG = "1"
 python 09_脚本\17_gen_localserver.py
 python 09_脚本\18_build_offline.py        # -> 06_构建\hakimi_offline.apk
 
-# 2. 启动服务端
+# 2. 启动服务端（或直接双击根目录 启动本地服务端.bat）
 python -m unittest discover -s server\tests
 $env:PYTHONPATH = "server"
 python -m hakimi_server.server --host 127.0.0.1 --port 19019 --data 06_构建\hakimi.db
