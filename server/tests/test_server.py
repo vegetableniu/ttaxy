@@ -333,7 +333,7 @@ class StartupSequenceTests(unittest.TestCase):
             self.request(16, 9, {}, session=TEST_SESSION)
         )
         self.assertEqual(activities["code"], 0)
-        self.assertEqual(activities["content"]["activitys"], [])
+        self.assertTrue(activities["content"]["activitys"])  # 单机: all activities open
         self.assertEqual(activities["content"]["logs"], {})
         groupbuy = self.round_trip_response(
             self.request(46, 2, {}, session=TEST_SESSION)

@@ -6,7 +6,7 @@ import random
 import time
 
 from ..game import (
-    CURRENCY, Context, GameError, charge_times, now_ms, parse_json, point_value, refresh_points, route,
+    CURRENCY, REWARD_TYPES, Context, GameError, charge_times, now_ms, parse_json, point_value, refresh_points, route,
 )
 from ..storage import InvalidRoleError, validate_role_name
 
@@ -33,6 +33,15 @@ def show_spec(show_type: str, show_id, amount) -> dict:
         return {"type": "CURRENCY", "code": CURRENCY.index(show_type), "amount": amount}
     if show_type == "ACTION":
         return {"type": "ACTION_POINT", "code": 0, "amount": amount}
+    if show_type == "GOLDCARD":  # 万能碎片
+        return {"type": "CURRENCY", "code": CURRENCY.index("FRAGMENT"), "amount": amount}
+    if show_type.startswith("TOKEN_COIN"):
+        return {"type": "TOKEN_COIN", "code": int(show_type.split("_")[-1] or 0)
+                if show_type[-1].isdigit() else 0, "amount": amount}
+    if show_type.startswith("SOUL_STONE_"):
+        return {"type": "SOUL_STONE", "code": int(show_type.split("_")[-1]), "amount": amount}
+    if show_type not in REWARD_TYPES:  # display-only types (MYSTCARD, ...): 推测 as copper
+        return {"type": "CURRENCY", "code": 0, "amount": amount}
     return {"type": show_type, "code": int(show_id or 0), "amount": amount}
 
 
