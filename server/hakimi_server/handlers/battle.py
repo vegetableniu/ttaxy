@@ -81,6 +81,21 @@ def _check_enter(ctx: Context, battle: dict) -> None:
         raise GameError(POINT_NOT_ENOUGH, "stamina")
 
 
+def card_fighter(ctx: Context, slot: int, card: dict, role: int):
+    """A player's card as a fighter, with worn equipment and talisman bonuses."""
+    from ..combat import apply_alters
+    from .talisman import card_alters
+    fighter = make_fighter(ctx.config, slot, int(card["base_id"]), int(card.get("level", 1)),
+                           role, int(card.get("power_skill") or 0), card_id=int(card["id"]))
+    alters = card_alters(ctx, int(card["id"]))
+    equips = ctx.config.index("BaseEquip")
+    for equip in ctx.state.get("equips", []):
+        if int(equip.get("hero", 0)) == int(card["id"]):
+            for key, value in parse_json(equips.get(int(equip["base_id"]), {}).get("alters"), {}).items():
+                alters[key] = alters.get(key, 0) + float(value)
+    return apply_alters(fighter, alters)
+
+
 def _attackers(ctx: Context, grid: list[list[int]]) -> list:
     group = next(g for g in ctx.groups["groups"] if int(g["groupId"]) == int(ctx.groups["curGroupId"]))
     leader = int(group["leaderId"])
@@ -92,10 +107,8 @@ def _attackers(ctx: Context, grid: list[list[int]]) -> list:
             card = ctx.card(card_id)
             if card is None:
                 raise GameError(EMBATTLE_ERROR, "card not owned")
-            fighters.append(make_fighter(
-                ctx.config, row_index * 2 + col_index, int(card["base_id"]),
-                int(card.get("level", 1)), MAJOR if card_id == leader else MINOR,
-                int(card.get("power_skill") or 0), card_id=card_id))
+            fighters.append(card_fighter(ctx, row_index * 2 + col_index, card,
+                                         MAJOR if card_id == leader else MINOR))
     if not fighters:
         raise GameError(EMBATTLE_ERROR, "empty formation")
     return fighters

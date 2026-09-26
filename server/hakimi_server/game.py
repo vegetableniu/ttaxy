@@ -472,6 +472,11 @@ class Ledger:
             store[str(code)] = int(store.get(str(code), 0)) + amount
             ctx.save()
             return [self._result(kind, code, amount, {})]
+        if kind == "TALISMAN":
+            from .handlers.talisman import grant_talisman
+            for _ in range(max(1, amount)):
+                grant_talisman(ctx, self, code)
+            return self.rewards[-max(1, amount):]
         if kind == "VIP_TIME":
             # code 0 月卡 (vip), 1 周卡 (week), 2 不值卡 (monsth); amount in hours
             from .handlers.player import vip_info

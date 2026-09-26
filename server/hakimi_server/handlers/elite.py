@@ -80,10 +80,8 @@ def _fight(ctx: Context, battle: dict, groups: list[list[list[int]]]):
                 if card_id and card is None:
                     raise GameError(EMBATTLE_ERROR, "card not owned")
                 if card:
-                    attackers.append(make_fighter(ctx.config, r * 2 + c, int(card["base_id"]),
-                                                  int(card.get("level", 1)),
-                                                  MAJOR if not attackers else MINOR,
-                                                  int(card.get("power_skill") or 0)))
+                    from .battle import card_fighter
+                    attackers.append(card_fighter(ctx, r * 2 + c, card, MAJOR if not attackers else MINOR))
         if not attackers:
             continue
         won, report = fight(ctx.config, attackers, [e for e in enemies if e.alive], rng)

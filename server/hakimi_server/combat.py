@@ -121,6 +121,21 @@ def make_fighter(config, slot: int, base_id: int, level: int, role: int,
                    power=power, begin=begin, period=period, card_id=card_id)
 
 
+def apply_alters(fighter: Fighter, alters: dict) -> Fighter:
+    """Add equipment/talisman bonuses: flat ATTACK/LIFE, PCT_* and RATE_*."""
+    attack, life = fighter.attack, fighter.max_hp
+    attack += int(float(alters.get("ATTACK", 0)))
+    life += int(float(alters.get("LIFE", 0)))
+    attack = int(attack * (1 + float(alters.get("PCT_ATTACK", 0))))
+    life = int(life * (1 + float(alters.get("PCT_LIFE", 0))))
+    fighter.attack, fighter.hp, fighter.max_hp = max(1, attack), max(1, life), max(1, life)
+    for key, value in alters.items():
+        if key.startswith("RATE_"):
+            name = key[5:]
+            fighter.rates[name] = float(fighter.rates.get(name, 0)) + float(value)
+    return fighter
+
+
 def _i8(v: int) -> bytes:
     return struct.pack(">b", v) if v < 128 else struct.pack(">B", v)
 

@@ -393,5 +393,31 @@ class SocialArenaTests(DomainTestCase):
         self.assertEqual(self.call(29, 3, {})["code"], 0)
 
 
+class TalismanArtifactTests(DomainTestCase):
+    def test_talisman_hunt_equip_upgrade_and_artifact(self):
+        def change(state):
+            state["player"]["level"] = 65
+            state["wallet"].update(copper=10_000_000, gold=10_000)
+        self.edit(change)
+        found = self.call(49, 11, {})
+        self.assertEqual(found["code"], 0)
+        self.assertEqual(self.call(49, 10, {})["content"]["treasures"], found["content"]["treasures"])
+        received = self.call(49, 13, {})
+        self.assertEqual(received["code"], 0)
+        self.assertEqual(self.call(49, 11, {})["code"], 0)
+        self.call(49, 13, {})
+        talismans = self.call(49, 2, {})["content"]
+        self.assertEqual(len(talismans), 2)
+        up = self.call(49, 7, {"talismanId": talismans[0]["id"], "talismanIds": [talismans[1]["id"]]})
+        self.assertIn(up["code"], (0, -11))
+        self.assertEqual(self.call(49, 8, {})["code"], 0)
+        self.assertEqual(self.call(45, 1, {})["code"], 0)
+        self.assertEqual(self.call(45, 4, {"id": 1})["code"], 0)
+        once = self.call(45, 6, {"autoBuy": False})
+        self.assertEqual(once["code"], 0)
+        self.assertEqual(self.call(45, 7, {"autoBuy": True})["code"], 0)
+        self.assertEqual(self.call(45, 5, {})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

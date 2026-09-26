@@ -33,9 +33,8 @@ def _groups_fighters(ctx: Context, groups) -> list[list]:
             for c, value in enumerate(row):
                 card = ctx.card(as_id(value)) if as_id(value) else None
                 if card:
-                    team.append(make_fighter(ctx.config, r * 2 + c, int(card["base_id"]),
-                                             int(card.get("level", 1)), MAJOR if not team else MINOR,
-                                             int(card.get("power_skill") or 0)))
+                    from .battle import card_fighter
+                    team.append(card_fighter(ctx, r * 2 + c, card, MAJOR if not team else MINOR))
         if team:
             teams.append(team)
     return teams

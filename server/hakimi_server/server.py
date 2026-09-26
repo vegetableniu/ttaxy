@@ -43,6 +43,7 @@ from .game import (
 )
 from .handlers.player import vip_info
 from .handlers.equip import equip_vo
+from .handlers.talisman import talisman_vo
 from .handlers.email import has_new as has_new_mail
 from .handlers.charge import daily_card_returns
 from . import handlers  # noqa: F401  (registers @route handlers)
@@ -159,6 +160,9 @@ class LocalServer:
             info["hasNewMail"] = has_new_mail(ctx)
             info["equipVos"] = [equip_vo(ctx, e) for e in ctx.state.get("equips", [])]
             info["buyEquipSpace"] = int(ctx.state.get("equip_extend", 0))
+            info["talismanVos"] = [talisman_vo(t) for t in ctx.state.get("talismans", [])]
+            info["talismanPackExtendCount"] = int(ctx.state.get("talisman_extend", 0))
+            info["artifactLevel"] = int(ctx.state.get("artifact", {}).get("level", 0))
             gifts = build_gift_list(self.schema, record)
             info["validGiftVo"] = gifts
             info["hasReward"] = bool(gifts["users"])
