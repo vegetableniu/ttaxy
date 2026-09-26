@@ -363,5 +363,35 @@ class ChargeTests(DomainTestCase):
         self.assertEqual(self.call(46, 2, {})["code"], 0)
 
 
+class SocialArenaTests(DomainTestCase):
+    def grid(self):
+        return [[long_id(v) for v in row] for row in self.state()["groups"]["groups"][0]["embattles"]]
+
+    def test_friends_chat_arena_pvp(self):
+        commend = self.call(19, 5, {})["content"]
+        self.assertEqual(len(commend), 5)
+        self.assertEqual(self.call(19, 2, {"name": commend[0]["name"]})["code"], 0)
+        social = self.call(19, 1, {})["content"]
+        self.assertEqual(len(social["friends"]), 1)
+        self.edit(lambda s: s["player"].update(level=30))
+        chat = self.call(92, 2, {"content": "大家好"})
+        self.assertEqual(chat["code"], 0)
+        self.assertTrue(self.call(92, 1, {"afterId": 0})["content"])
+        match = self.call(24, 1, {})["content"]
+        target = match["playerList"][0]["id"]
+        defy = self.call(24, 2, {"embattle": [self.grid()], "id": target})
+        self.assertEqual(defy["code"], 0)
+        for report in defy["content"]["reports"]:
+            parse_report(report)
+        self.assertEqual(self.call(24, 7, {})["code"], 0)
+        self.edit(lambda s: s["player"].update(level=60))
+        info = self.call(29, 1, {})["content"]
+        target = info["matchList"][-1]
+        pvp = self.call(29, 2, {"embattle": [self.grid()], "rank": 101,
+                                "targetId": target["id"], "targetRank": target["rank"]})
+        self.assertEqual(pvp["code"], 0)
+        self.assertEqual(self.call(29, 3, {})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -180,7 +180,8 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertEqual(info["content"]["player"]["baseId"], 1021)
 
     def test_unknown_command_is_not_fabricated(self):
-        request = self.request(92, 1, {"afterId": 0})
+        request = ApplicationPacket(encoding=0, status=0, order=0, identity=0,
+                                    cmd=99, mod=99, content=b"", trailing=b"")
         with self.assertRaisesRegex(ProtocolError, "unimplemented command"):
             self.server.handle(request)
 
