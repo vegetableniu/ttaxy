@@ -27,7 +27,7 @@ from .protocol import (
 )
 from .transport import FrameBuffer, pack_transport_frame
 from .login import build_login_info
-from .battle import GameConfig, battle_triggers
+from .battle import GameConfig
 from .battle import decode_long_id
 from .defaults import long_id
 from .gift import (
@@ -227,111 +227,6 @@ class LocalServer:
             # silent refresh and explicitly suppresses the MENPAI_NOT_JOIN
             # error while preserving the original not-joined state.
             return {"code": -8, "content": None}
-        if (request.mod, request.cmd) == (22, 9):  # MULTI_ACTION
-            account = self.sessions.get(request.trailing)
-            if account is None:
-                raise ProtocolError("MULTI_ACTION has an invalid session")
-            record = self.repository.get(account)
-            if record is None:
-                raise ProtocolError("MULTI_ACTION account no longer exists")
-            battle_id = str(request_value.get("battleId") or "")
-            embattle = request_value.get("embattle") or []
-            triggers = battle_triggers(
-                self.game_config, record, battle_id, embattle
-            )
-            battle = self.game_config.battle(battle_id)
-            coins = sum(int(trigger["coins"]) for trigger in triggers)
-            battle_level = max(1, int(battle.get("level") or 1))
-            state = record.state
-            state["pending_battle"] = {
-                "battle_id": battle_id,
-                "cost": int(battle.get("cost") or 0),
-                "coins": coins,
-                "exp": battle_level * 10,
-                "success": True,
-            }
-            self.repository.update_state(account, state)
-            return {"code": 0, "content": triggers}
-        if (request.mod, request.cmd) == (22, 5):  # EXIT
-            account = self.sessions.get(request.trailing)
-            if account is None:
-                raise ProtocolError("EXIT has an invalid session")
-            record = self.repository.get(account)
-            if record is None:
-                raise ProtocolError("EXIT account no longer exists")
-            state = record.state
-            pending = state.pop("pending_battle", None)
-            costs = []
-            rewards = []
-            if pending and pending.get("success"):
-                battle_id = pending["battle_id"]
-                first_clear = battle_id not in state["battles"]
-                if first_clear:
-                    state["battles"].append(battle_id)
-                state["daily_counts"][battle_id] = (
-                    int(state["daily_counts"].get(battle_id, 0)) + 1
-                )
-                old_points = int(state["action_points"].get("0", 0))
-                cost = int(pending.get("cost", 0))
-                state["action_points"]["0"] = max(
-                    0,
-                    old_points - cost,
-                )
-                coins = int(pending.get("coins", 0))
-                exp_gain = int(pending.get("exp", 0))
-                state["wallet"]["copper"] = int(state["wallet"].get("copper", 0)) + coins
-                player = state["player"]
-                player["exp"] = int(player.get("exp", 0)) + exp_gain
-                while player["level"] in self.game_config.levels:
-                    need = int(self.game_config.levels[player["level"]].get("exp") or 0)
-                    if need <= 0 or player["exp"] < need:
-                        break
-                    player["exp"] -= need
-                    player["level"] += 1
-                costs.append({
-                    "amount": -cost,
-                    "code": 0,
-                    "contents": {
-                        "point": state["action_points"]["0"],
-                        "refreshTime": int(time.time() * 1000),
-                    },
-                    "type": 4,
-                })
-                rewards.extend([
-                    {
-                        "additionRate": {},
-                        "amount": coins,
-                        "code": 0,
-                        "contents": {},
-                        "mail": False,
-                        "type": 1,
-                    },
-                    {
-                        "additionRate": {},
-                        "amount": exp_gain,
-                        "code": 0,
-                        "contents": {
-                            "level": player["level"],
-                            "exp": player["exp"],
-                        },
-                        "mail": False,
-                        "type": 0,
-                    },
-                ])
-                if battle_id == "CN01BN01" and first_clear:
-                    rewards.extend(
-                        grant_hero(self.schema, record, state, 71, self.game_config)
-                        for _ in range(5)
-                    )
-                self.repository.update_state(account, state)
-            return {
-                "code": 0,
-                "content": {
-                    "costAndReward": {"costs": costs, "rewards": rewards},
-                    "failedTimes": 0,
-                    "hasDemog": False,
-                },
-            }
         handler = ROUTES.get((request.mod, request.cmd))
         if handler is None:
             raise ProtocolError(f"unimplemented command {request.mod}:{request.cmd}")

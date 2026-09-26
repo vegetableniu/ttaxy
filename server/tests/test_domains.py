@@ -195,5 +195,118 @@ class LotteryEquipTests(DomainTestCase):
                                            "position": 1})["code"], 0)
 
 
+def parse_report(data: bytes) -> dict:
+    """Mirror of Module/BattleShow/ReportParser (asserts full consumption)."""
+    import struct
+    pos = 0
+    stop = len(data) - 1  # last byte = result, never consumed
+
+    def take(fmt):
+        nonlocal pos
+        size = struct.calcsize(fmt)
+        assert pos + size <= stop, "read past end"
+        value = struct.unpack_from(fmt, data, pos)[0]
+        pos += size
+        return value
+
+    def delimiter():
+        nonlocal pos
+        if pos < stop and struct.unpack_from(">b", data, pos)[0] == -1:
+            pos += 1
+            return True
+        return False
+
+    def value():
+        return [(take(">b"), take(">i")) for _ in range(take(">b"))]
+
+    def buffs():
+        return [(take(">h"), take(">b"), value()) for _ in range(take(">b"))]
+
+    def passives():
+        return [(take(">h"), value()) for _ in range(take(">b"))]
+
+    def target():
+        return {"id": take(">b"), "state": take(">b"), "value": value(),
+                "buffs": buffs(), "passives": passives()}
+
+    def team():
+        units = []
+        while not delimiter():
+            units.append({"slot": take(">b"), "model": take(">H"), "role": take(">b"),
+                          "class": take(">b"), "hp": take(">i"), "max": take(">i"),
+                          "skill": take(">B")})
+        combs = [take(">h") for _ in range(take(">b"))]
+        return units
+
+    def info():
+        items = []
+        while not delimiter():
+            items.append((take(">b"), value(), buffs(), passives()))
+        return items
+
+    attackers, defenders, rounds = team(), team(), []
+    while pos < stop:
+        starts = info()
+        actions = []
+        while not delimiter():
+            action = {"id": take(">b"), "skill": take(">h")}
+            action["targets"] = [target() for _ in range(take(">b"))]
+            if take(">b") != 0:
+                target()
+            actions.append(action)
+        ends = info()
+        for _ in range(take(">h")):
+            take(">b")
+            for _ in range(take(">b")):
+                take(">h"), take(">b")
+        delimiter()
+        rounds.append(actions)
+    assert pos == stop
+    return {"attackers": attackers, "defenders": defenders, "rounds": rounds,
+            "result": data[-1]}
+
+
+class BattleTests(DomainTestCase):
+    def formation(self):
+        group = self.state()["groups"]["groups"][0]
+        return [[long_id(v) for v in row] for row in group["embattles"]]
+
+    def test_reports_parse_like_the_client_and_hp_is_consistent(self):
+        result = self.call(22, 9, {"battleId": "CN01BN01", "embattle": self.formation(),
+                                   "friend": long_id(-1)})
+        self.assertEqual(result["code"], 0)
+        report = parse_report(result["content"][0]["reports"])
+        self.assertEqual(len(report["attackers"]), 3)
+        self.assertEqual(report["result"], 1)
+        hp = {u["slot"]: u["hp"] for u in report["attackers"] + report["defenders"]}
+        for actions in report["rounds"]:
+            for action in actions:
+                for t in action["targets"]:
+                    hp[t["id"]] += sum(v for kind, v in t["value"] if kind == 1)
+        self.assertTrue(all(hp[u["slot"]] <= 0 for u in report["defenders"]))
+        self.assertEqual(self.call(22, 5, {})["code"], 0)
+        self.assertIn("CN01BN01", self.state()["battles"])
+
+    def test_progress_lock_sweep_and_failure(self):
+        self.assertEqual(self.call(22, 9, {"battleId": "CN01BN02", "embattle": self.formation(),
+                                           "friend": long_id(-1)})["code"], -10)
+        self.edit(lambda s: s.update(battles=["CN01BN01"]))
+        swept = self.call(22, 10, {"battleId": "CN01BN01", "friend": long_id(-1), "requestId": ""})
+        self.assertEqual(swept["code"], 0)
+        self.assertTrue(swept["content"]["finished"])
+        # a hopeless fight (level-1 team vs a level-38 boss chapter) is lost and pays nothing
+        self.edit(lambda s: (s.update(battles=[b["id"] for b in self.config.rows("BattleInfoConfig")
+                                               if b["id"] < "CN12BN06"]),
+                             s["player"].update(level=40)))
+        copper = self.state()["wallet"]["copper"]
+        lost = self.call(22, 9, {"battleId": "CN12BN06", "embattle": self.formation(),
+                                 "friend": long_id(-1)})
+        self.assertFalse(lost["content"][-1]["success"])
+        exit_vo = self.call(22, 5, {})["content"]
+        self.assertEqual(exit_vo["failedTimes"], 1)
+        self.assertEqual(self.state()["wallet"]["copper"], copper)
+        self.assertEqual(self.call(22, 1, {})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

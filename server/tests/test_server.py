@@ -250,6 +250,9 @@ class StartupSequenceTests(unittest.TestCase):
             })
         )
         record = self.repository.get("localuser.1_1")
+        state = record.state
+        state["battles"] = ["CN01BN01"]
+        self.repository.update_state("localuser.1_1", state)
         response = self.round_trip_response(
             self.request(22, 9, {
                 "battleId": "CN01BN02",
