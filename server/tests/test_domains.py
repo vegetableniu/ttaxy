@@ -342,5 +342,26 @@ class EliteMailTests(DomainTestCase):
         self.assertEqual(self.call(17, 4, {"mailId": mail_id, "target": {"id": "", "type": 0}})["code"], -12)
 
 
+class ChargeTests(DomainTestCase):
+    def test_free_recharge_month_card_and_deposit(self):
+        order = self.call(11, 4, {"amount": 1, "channel": "", "goods": "1001", "imei": "",
+                                  "mac": "", "version": ""})
+        self.assertEqual(order["code"], 0)
+        self.assertEqual(order["content"]["addition"], "1001*1")
+        state = self.state()
+        self.assertEqual(state["wallet"]["gold"], 300)
+        self.assertEqual(state["wallet"]["totalCharge"], 300)
+        self.assertTrue(self.call(11, 3, {})["content"]["vip"])
+        self.call(10, 7, {})  # login mails today's month-card return
+        box = self.call(17, 1, {})["content"]["receives"]
+        self.assertTrue(any(m["title"].startswith("月卡") for m in box))
+        self.call(11, 4, {"amount": 1, "channel": "", "goods": "1006", "imei": "", "mac": "", "version": ""})
+        self.assertEqual(self.call(31, 1, {})["code"], 0)
+        self.assertEqual(self.call(31, 2, {"id": 1})["code"], 0)
+        self.assertEqual(self.call(31, 3, {})["code"], -8)  # min days
+        self.assertEqual(self.call(90, 1, {})["code"], 0)
+        self.assertEqual(self.call(46, 2, {})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

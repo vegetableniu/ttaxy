@@ -44,6 +44,7 @@ from .game import (
 from .handlers.player import vip_info
 from .handlers.equip import equip_vo
 from .handlers.email import has_new as has_new_mail
+from .handlers.charge import daily_card_returns
 from . import handlers  # noqa: F401  (registers @route handlers)
 from .storage import (
     AccountExistsError,
@@ -153,6 +154,8 @@ class LocalServer:
                 kind: point_value(ctx, kind) for kind in (0, 1, 2)
             }
             info["vip"] = vip_info(ctx)
+            daily_card_returns(ctx)
+            self.repository.update_state(account, ctx.state)
             info["hasNewMail"] = has_new_mail(ctx)
             info["equipVos"] = [equip_vo(ctx, e) for e in ctx.state.get("equips", [])]
             info["buyEquipSpace"] = int(ctx.state.get("equip_extend", 0))
@@ -209,18 +212,6 @@ class LocalServer:
             return {
                 "code": 0,
                 "content": build_progress_rewards(self.schema, record),
-            }
-        if (request.mod, request.cmd) == (46, 2):  # LOAD_REWARD_INFO
-            if request.trailing not in self.sessions:
-                raise ProtocolError("LOAD_REWARD_INFO has an invalid session")
-            return {
-                "code": 0,
-                "content": {
-                    "baseRewardIds": [],
-                    "chargeCount": 0,
-                    "monthPlayers": 0,
-                    "weekPlayers": 0,
-                },
             }
         if (request.mod, request.cmd) == (10, 9):  # LOGIN_COMPLETE
             return {"code": 0, "content": 0}

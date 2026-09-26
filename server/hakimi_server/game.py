@@ -472,6 +472,14 @@ class Ledger:
             store[str(code)] = int(store.get(str(code), 0)) + amount
             ctx.save()
             return [self._result(kind, code, amount, {})]
+        if kind == "VIP_TIME":
+            # code 0 月卡 (vip), 1 周卡 (week), 2 不值卡 (monsth); amount in hours
+            from .handlers.player import vip_info
+            key = {0: "vipTime", 1: "weekTime", 2: "monthTime"}.get(code, "vipTime")
+            vip = ctx.state.setdefault("vip", {})
+            vip[key] = max(now_ms(), int(vip.get(key, 0))) + amount * 3_600_000
+            ctx.save()
+            return [self._result(kind, code, amount, vip_info(ctx))]
         # Counters consumed by their own modules (token coin, box keys, ...).
         ctx.add_counter(f"reward_{kind}_{code}", amount)
         return [self._result(kind, code, amount, {})]

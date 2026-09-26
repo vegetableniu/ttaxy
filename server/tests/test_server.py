@@ -338,7 +338,7 @@ class StartupSequenceTests(unittest.TestCase):
             self.request(46, 2, {}, session=TEST_SESSION)
         )
         self.assertEqual(groupbuy["code"], 0)
-        self.assertEqual(groupbuy["content"]["chargeCount"], 0)
+        self.assertGreater(groupbuy["content"]["chargeCount"], 0)  # 单机: every tier reachable
 
 
 if __name__ == "__main__":
