@@ -5,10 +5,10 @@ from __future__ import annotations
 
 import random
 
+from ..settings import setting
 from ..game import Context, GameError, as_id, charge_times, parse_json, route
 
 # ------------------------------------------------------------ 龙宫寻宝 (14)
-ADVANCE_ODDS = [0.7, 0.55, 0.4, 0.25, 0.0]  # 推测值
 
 
 def _treasure(ctx: Context) -> dict:
@@ -31,7 +31,7 @@ def _look(ctx: Context) -> dict:
     ledger.pay_currency("COPPER", int(ctx.config.index("RankConfig").get(rank, {}).get("costs") or 0))
     found = random.choice(_treasure_pool(ctx, rank))
     t["treasures"].append(found)
-    t["rank"] = min(rank + 1, 4) if random.random() < ADVANCE_ODDS[rank] else 0
+    t["rank"] = min(rank + 1, 4) if random.random() < setting("hunt.advance_odds", [0.7, 0.55, 0.4, 0.25, 0.0])[rank] else 0
     ctx.save()
     return {"costs": list(ledger.costs), "rank": int(t["rank"]), "treasures": [found]}
 
@@ -176,8 +176,8 @@ def _rebirth_fight(ctx: Context, battle: dict, groups) -> tuple[bool, list, dict
         r["counts"][battle["id"]] = int(r["counts"].get(battle["id"], 0)) + 1
         level = int(battle.get("level") or 1)
         ledger.pay_action_point(int(battle.get("cost") or 0))
-        ledger.grant({"type": "CURRENCY", "code": 0, "amount": 300 + level * 100})  # 推测值
-        ledger.grant({"type": "EXP", "code": 0, "amount": level * 20})               # 推测值
+        ledger.grant({"type": "CURRENCY", "code": 0, "amount": int(setting("rebirth.coins_base", 300)) + level * int(setting("rebirth.coins_per_level", 100))})
+        ledger.grant({"type": "EXP", "code": 0, "amount": level * int(setting("rebirth.exp_per_level", 20))})
         ledger.grant_all(parse_json(battle.get("itemDrop"), []))
         ctx.save()
     return won, triggers, ledger.cost_and_reward()

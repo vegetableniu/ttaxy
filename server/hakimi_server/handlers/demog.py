@@ -15,12 +15,11 @@ import random
 from ..bots import BOT_BASE, bot
 from ..combat import BOSS, fight, make_fighter
 from ..defaults import long_id
+from ..settings import setting
 from ..game import Context, GameError, as_id, now_ms, parse_json, point_value, refresh_points, route
 
 NOT_FOUND = -2
 ENERGY_NOT_ENOUGH = -5
-ESCAPE_HOURS = 24
-HP_FACTOR = 60  # 推测值: boss HP multiplier
 
 
 def _active(ctx: Context) -> str:
@@ -52,9 +51,9 @@ def spawn(ctx: Context) -> dict:
     level = max(1, ctx.level)
     battle_id, base = _battle_row(ctx, level)
     boss = make_fighter(ctx.config, 6, base, level, BOSS)
-    hp = boss.max_hp * HP_FACTOR
+    hp = boss.max_hp * int(setting("demog.hp_factor", 60))
     demog = {"id": int(d["next"]), "battle": battle_id, "base": base, "level": level,
-             "hp": hp, "total": hp, "escape": now_ms() + ESCAPE_HOURS * 3_600_000,
+             "hp": hp, "total": hp, "escape": now_ms() + int(setting("demog.escape_hours", 24)) * 3_600_000,
              "damages": {}, "attacked": False}
     d["next"] = int(d["next"]) + 1
     d["list"].append(demog)
@@ -67,7 +66,7 @@ def maybe_spawn(ctx: Context) -> bool:
     if ctx.level < int(lock.get("level") or 28):
         return False
     alive = [x for x in _demog_state(ctx)["list"] if x["escape"] > now_ms()]
-    if alive or random.random() > 0.15:  # 推测值: appearance chance
+    if alive or random.random() > float(setting("demog.spawn_chance", 0.15)):
         return False
     spawn(ctx)
     return True
@@ -173,7 +172,7 @@ def attack(ctx: Context, req: dict):
     demog["hp"] = max(0, boss.hp)
     demog["attacked"] = True
     demog["damages"][str(ctx.player_id)] = int(demog["damages"].get(str(ctx.player_id), 0)) + damage
-    feat = max(1, damage // 100)  # 推测值
+    feat = max(1, damage // int(setting("demog.damage_per_feat", 100)))
     d["feat"] = int(d["feat"]) + feat
     d["damage_max"] = max(int(d["damage_max"]), damage)
     killed = demog["hp"] <= 0

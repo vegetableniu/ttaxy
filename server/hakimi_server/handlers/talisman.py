@@ -13,6 +13,7 @@ from __future__ import annotations
 import random
 
 from ..defaults import long_id
+from ..settings import setting
 from ..game import Context, GameError, as_id, charge_times, parse_json, route
 
 ARGUMENT_ILLEGAL = -1
@@ -21,7 +22,6 @@ PACK_FULL = -5
 CANNOT_EQUIP = -10
 MAX_LEVEL = -11
 LEVEL_LIMIT = -12
-ADVANCE_ODDS = [0.7, 0.55, 0.4, 0.25, 0.0]  # 推测值: chance to meet the next NPC
 
 
 def _talismans(ctx: Context) -> list[dict]:
@@ -301,7 +301,7 @@ def _look(ctx: Context) -> dict:
         raise GameError(PACK_FULL, "temporary pack full")
     found = random.choice(_treasure_pool(ctx, rank))
     hunt["treasures"].append(found)
-    if random.random() < ADVANCE_ODDS[min(rank, len(ADVANCE_ODDS) - 1)]:
+    if random.random() < setting("hunt.advance_odds", [0.7, 0.55, 0.4, 0.25, 0.0])[min(rank, 4)]:
         hunt["rank"] = min(rank + 1, 4)
     else:
         hunt["rank"] = 0

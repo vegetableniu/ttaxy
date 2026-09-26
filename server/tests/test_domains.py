@@ -446,5 +446,17 @@ class DemogMiscTests(DomainTestCase):
         self.assertEqual(self.call(44, 2, {"content": "1234"})["code"], 0)
 
 
+class MenpaiTests(DomainTestCase):
+    def test_join_contribute_pray_shop(self):
+        self.edit(lambda s: (s["player"].update(level=40), s["wallet"].update(gold=5000)))
+        sects = self.call(47, 3, {"key": "", "page": 1})["content"]["data"]
+        self.assertEqual(self.call(47, 1, {"menpai": sects[0]["id"]})["code"], 0)
+        self.assertEqual(self.call(47, 2, {})["code"], 0)
+        self.assertEqual(self.call(47, 14, {"count": 100})["code"], 0)
+        self.assertEqual(self.call(47, 23, {"time": 1})["code"], 0)
+        for cmd, req in ((4, {"page": 1}), (40, {}), (12, {"page": 1}), (28, {"page": 1}), (35, {})):
+            self.assertEqual(self.call(47, cmd, req)["code"], 0, cmd)
+
+
 if __name__ == "__main__":
     unittest.main()

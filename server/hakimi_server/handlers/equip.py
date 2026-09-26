@@ -7,6 +7,7 @@ and ConfigValue EQUIP:* (pack size 99, +5 per extension, max 2 per hero).
 from __future__ import annotations
 
 from ..defaults import long_id
+from ..settings import setting
 from ..game import Context, GameError, as_id, parse_json, route
 
 MATERIALS = ["PURPLE", "ORANGE", "RED"]
@@ -18,9 +19,6 @@ PACK_FULL = -5
 MATERIAL_NOT_ENOUGH = -6
 FRAGMENT_NOT_ENOUGH = -7
 MAX_LEVEL = -8
-# 推测值: extension price (the PackExtendCost table cannot be told apart from
-# six other id/cost tables in db.dat).
-EXTEND_COST_GOLD = 50
 
 
 def equips(ctx: Context) -> list[dict]:
@@ -186,7 +184,7 @@ def _buy_space(ctx: Context, currency: str, amount: int):
 
 @route(56, 5)  # BUY_EQUIP_PACK_SPACE
 def buy_space(ctx: Context, req: dict):
-    return _buy_space(ctx, "JADE", EXTEND_COST_GOLD)
+    return _buy_space(ctx, "JADE", int(setting("equip.pack_extend_gold", 50)))
 
 
 @route(56, 9)  # BUY_EQUIP_PACK_SPACE_BY_COUPON

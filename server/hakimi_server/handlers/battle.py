@@ -15,6 +15,7 @@ import time
 
 from ..combat import BOSS, MAJOR, MINOR, enemy_roster, fight, make_fighter
 from ..defaults import long_id
+from ..settings import setting
 from ..game import Context, GameError, as_id, embattle_ids, now_ms, parse_json, route
 from ..gift import grant_hero
 
@@ -26,7 +27,6 @@ ENTER_NOT_ENOUGH = -11
 POINT_NOT_ENOUGH = -12
 BLOCK_BY_LEVEL = -17
 HERO_PACK_FULL = -18
-DROP_RATE = 0.3  # 推测值
 
 
 def _battle(ctx: Context, battle_id: str) -> dict:
@@ -119,12 +119,13 @@ def _defenders(ctx: Context, battle: dict, wave: int, waves: int) -> list:
     # BATTLE:BLOCK_SECTIONS (序章 CN01/CN02) are the scripted guide chapters:
     # one weak enemy per wave so the tutorial can always be completed.
     guided = battle["id"][:4] in ctx.config.value("BATTLE:BLOCK_SECTIONS", [])
-    scale = 0.4  # 推测值: tuned so an at-level starter team clears early chapters
-    count = 1 if guided else (3 if wave == waves - 1 else 2)
+    scale = float(setting("battle.enemy_scale", 0.4))
+    count = 1 if guided else int(setting("battle.enemies_last_wave", 3) if wave == waves - 1
+                                 else setting("battle.enemies_per_wave", 2))
     fighters = []
     for slot, base_id, role in enemy_roster(ctx.config, battle["id"], wave, waves, count=count):
         fighters.append(make_fighter(ctx.config, slot, base_id, level, role,
-                                     scale=scale * (1.8 if role == BOSS else 1.0)))
+                                     scale=scale * (float(setting("battle.boss_scale", 1.8)) if role == BOSS else 1.0)))
     return fighters
 
 
@@ -135,7 +136,7 @@ def simulate(ctx: Context, battle_id: str, grid: list[list[int]]) -> list[dict]:
     attackers = _attackers(ctx, grid)
     rng = random.Random()
     level = max(1, int(battle.get("level") or 1))
-    coins_total = 100 + level * 50
+    coins_total = int(setting("battle.coins_base", 100)) + level * int(setting("battle.coins_per_level", 50))
     triggers = []
     for wave in range(waves):
         alive = [u for u in attackers if u.alive]
@@ -161,7 +162,7 @@ def _pending(ctx: Context, battle_id: str, triggers: list[dict], friend: int = 0
     ctx.state["pending_battle"] = {
         "battle_id": battle_id, "success": success,
         "coins": sum(int(t["coins"]) for t in triggers),
-        "exp": max(1, int(battle.get("level") or 1)) * 10,
+        "exp": max(1, int(battle.get("level") or 1)) * int(setting("battle.exp_per_level", 10)),
         "cost": int(battle.get("cost") or 0), "waves": len(triggers),
         "total": max(1, int(battle.get("enemies") or 1)), "friend": friend,
         "rounds": 0,
@@ -244,16 +245,17 @@ def settle(ctx: Context) -> dict:
     ledger.grant({"type": "CURRENCY", "code": 0, "amount": int(pending["coins"])})
     ledger.grant({"type": "EXP", "code": 0, "amount": int(pending["exp"])})
     for spec in parse_json(battle.get("itemDrop"), []):
-        if first_clear or random.random() < DROP_RATE:
+        if first_clear or random.random() < float(setting("battle.drop_rate", 0.3)):
             ledger.grant(spec)
     if int(pending.get("friend") or 0) > 0:  # -1 = no assistant
         ledger.grant({"type": "CURRENCY", "code": 5,
                       "amount": int(ctx.config.value("BATTLE:PARTNER_FRIENDSHIP", 10))})
-    if battle_id == "CN01BN01" and first_clear:
-        # 推测值: the guide's first-drop cards (five 小萌牛) that the upgrade
-        # tutorial consumes; verified to drive the stock guide on device.
-        for _ in range(5):
-            ledger.rewards.append(grant_hero(ctx.schema, ctx.record, ctx.state, 71, ctx.config))
+    gift = setting("battle.first_battle_gift", {}) or {}
+    if battle_id == gift.get("battle") and first_clear:
+        # guide first-drop cards consumed by the upgrade tutorial (verified on device)
+        for _ in range(int(gift.get("count", 0))):
+            ledger.rewards.append(grant_hero(ctx.schema, ctx.record, ctx.state,
+                                             int(gift["hero"]), ctx.config))
     ctx.state["failed_times"] = 0
     ctx.save()
     from .demog import maybe_spawn

@@ -18,6 +18,7 @@ from __future__ import annotations
 import random
 
 from ..defaults import long_id
+from ..settings import setting
 from ..game import (
     Context, GameError, as_id, embattle_ids, floor, group_vo, parse_json, route,
 )
@@ -45,9 +46,6 @@ ARGUMENT_ILLEGAL = -1
 NO_HERO_COST_RANK_UP_CONFIG = -68
 ERROR_MATERIALS = -70
 
-# 推测值: pack extension price/size are not in any client table.
-PACK_EXTEND_SLOTS = 5
-PACK_EXTEND_GOLD = 50
 
 
 def _base(ctx: Context, card: dict) -> dict:
@@ -155,7 +153,7 @@ def hero_pack(ctx: Context) -> dict:
     groups = ctx.groups
     current = _group(ctx, groups["curGroupId"])
     return {
-        "extendCount": int(ctx.state.get("pack_extend", 0)) // PACK_EXTEND_SLOTS,
+        "extendCount": int(ctx.state.get("pack_extend", 0)) // int(setting("hero.pack_extend_slots", 5)),
         "extendLimit": int(ctx.state.get("pack_extend", 0)),
         "heros": [ctx.hero_vo(c) for c in ctx.cards],
         "leader": long_id(int(current["leaderId"])),
@@ -457,11 +455,11 @@ def lock(ctx: Context, req: dict):
 
 def _buy_pack(ctx: Context, currency: str) -> dict:
     ledger = ctx.ledger()
-    ledger.pay_currency(currency, PACK_EXTEND_GOLD)
-    ctx.state["pack_extend"] = int(ctx.state.get("pack_extend", 0)) + PACK_EXTEND_SLOTS
+    ledger.pay_currency(currency, int(setting("hero.pack_extend_gold", 50)))
+    ctx.state["pack_extend"] = int(ctx.state.get("pack_extend", 0)) + int(setting("hero.pack_extend_slots", 5))
     ctx.save()
     extend = int(ctx.state["pack_extend"])
-    return {"costs": ledger.costs, "extendCount": extend // PACK_EXTEND_SLOTS,
+    return {"costs": ledger.costs, "extendCount": extend // int(setting("hero.pack_extend_slots", 5)),
             "extendLimit": extend}
 
 

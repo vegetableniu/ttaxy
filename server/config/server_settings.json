@@ -1,0 +1,38 @@
+{
+  "_说明": "本地服务端可调参数。原服数据缺失处的推测值都在这里，改完重启服务端生效。",
+  "battle": {
+    "enemy_scale": 0.4,
+    "boss_scale": 1.8,
+    "enemies_per_wave": 2,
+    "enemies_last_wave": 3,
+    "coins_base": 100,
+    "coins_per_level": 50,
+    "exp_per_level": 10,
+    "drop_rate": 0.3,
+    "max_rounds": 30,
+    "first_battle_gift": {"battle": "CN01BN01", "hero": 71, "count": 5}
+  },
+  "elite": {"enemy_scale": 0.8, "boss_scale": 2.0, "coins_base": 200, "coins_per_level": 80,
+            "exp_per_level": 15, "drop_rate": 0.5},
+  "rebirth": {"coins_base": 300, "coins_per_level": 100, "exp_per_level": 20},
+  "lottery": {
+    "pools": [
+      {"id": 1, "lotteryType": "LOTTERY_L01", "currency": "FRIENDSHIP", "price": 200, "gain": "友情寻仙", "extra_drop_max_star": 2},
+      {"id": 2, "lotteryType": "LOTTERY_L1", "currency": "JADE", "price": 280, "gain": "仙玉寻仙"},
+      {"id": 3, "lotteryType": "LOTTERY_XIAN", "currency": "JADE", "price": 300, "gain": "仙玉寻仙", "race": "XIAN"},
+      {"id": 4, "lotteryType": "LOTTERY_LING", "currency": "JADE", "price": 300, "gain": "仙玉寻仙", "race": "LING"},
+      {"id": 5, "lotteryType": "LOTTERY_YAO", "currency": "JADE", "price": 300, "gain": "仙玉寻仙", "race": "YAO"}
+    ],
+    "star_weights": {"3": 900, "4": 40, "5": 30, "6": 20, "7": 10},
+    "ten_draw_guarantee_star": 7,
+    "equip_pack_price": 100
+  },
+  "hero": {"pack_extend_slots": 5, "pack_extend_gold": 50},
+  "equip": {"pack_extend_gold": 50},
+  "arena": {"win_copper_base": 1000, "win_copper_per_level": 100},
+  "demog": {"hp_factor": 60, "spawn_chance": 0.15, "damage_per_feat": 100, "escape_hours": 24},
+  "hunt": {"advance_odds": [0.7, 0.55, 0.4, 0.25, 0.0]},
+  "menpai": {"demog_hp_factor": 40},
+  "mail": {"keep_days": 30},
+  "recharge": {"free": true}
+}

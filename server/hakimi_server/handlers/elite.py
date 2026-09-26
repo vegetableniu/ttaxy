@@ -13,6 +13,7 @@ import random
 import time
 
 from ..combat import BOSS, MAJOR, MINOR, enemy_roster, fight, make_fighter
+from ..settings import setting
 from ..game import Context, GameError, as_id, charge_times, parse_json, route
 from .battle import _unlocked
 
@@ -22,7 +23,6 @@ BLOCK_BY_PROGRESS = -10
 ENTER_NOT_ENOUGH = -11
 BUY_TIME_LIMIT = -13
 BLOCK_BY_LEVEL = -17
-ELITE_SCALE = 0.8  # 推测值
 
 
 def _today() -> str:
@@ -68,7 +68,7 @@ def battles_times(ctx: Context, req: dict):
 def _fight(ctx: Context, battle: dict, groups: list[list[list[int]]]):
     level = max(1, int(battle.get("level") or 1))
     enemies = [make_fighter(ctx.config, slot, base, level, role,
-                            scale=ELITE_SCALE * (2.0 if role == BOSS else 1.0))
+                            scale=float(setting("elite.enemy_scale", 0.8)) * (float(setting("elite.boss_scale", 2.0)) if role == BOSS else 1.0))
                for slot, base, role in enemy_roster(ctx.config, battle["id"], 0, 1, count=3)]
     triggers, won = [], False
     rng = random.Random()
@@ -109,10 +109,10 @@ def _settle(ctx: Context, battle: dict, won: bool):
     elite["counts"][battle["id"]] = int(elite["counts"].get(battle["id"], 0)) + 1
     level = max(1, int(battle.get("level") or 1))
     ledger.pay_action_point(int(battle.get("cost") or 0))
-    ledger.grant({"type": "CURRENCY", "code": 0, "amount": 200 + level * 80})  # 推测值
-    ledger.grant({"type": "EXP", "code": 0, "amount": level * 15})              # 推测值
+    ledger.grant({"type": "CURRENCY", "code": 0, "amount": int(setting("elite.coins_base", 200)) + level * int(setting("elite.coins_per_level", 80))})
+    ledger.grant({"type": "EXP", "code": 0, "amount": level * int(setting("elite.exp_per_level", 15))})
     for spec in parse_json(battle.get("itemDrop"), []):
-        if first or random.random() < 0.5:
+        if first or random.random() < float(setting("elite.drop_rate", 0.5)):
             ledger.grant(spec)
     ctx.save()
     return ledger

@@ -219,11 +219,6 @@ class LocalServer:
             }
         if (request.mod, request.cmd) == (10, 9):  # LOGIN_COMPLETE
             return {"code": 0, "content": 0}
-        if (request.mod, request.cmd) == (47, 2):  # GET_SELEF_MENPAI
-            # A fresh role has not joined a sect.  Home performs this as a
-            # silent refresh and explicitly suppresses the MENPAI_NOT_JOIN
-            # error while preserving the original not-joined state.
-            return {"code": -8, "content": None}
         handler = ROUTES.get((request.mod, request.cmd))
         if handler is None:
             raise ProtocolError(f"unimplemented command {request.mod}:{request.cmd}")

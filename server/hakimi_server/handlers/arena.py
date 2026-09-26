@@ -16,6 +16,7 @@ import time
 from ..bots import BOT_BASE, bot, bots_near
 from ..combat import MAJOR, MINOR, fight, make_fighter
 from ..defaults import long_id
+from ..settings import setting
 from ..game import Context, GameError, as_id, now_ms, route
 
 ARENA_LOCK = "ARENA"
@@ -140,7 +141,7 @@ def arena_defy(ctx: Context, req: dict):
         gained = int(table[min(len(table) - 1, random.randrange(len(table)))])
         arena["integral"] = int(arena["integral"]) + gained
         arena["total"] = int(arena["total"]) + gained
-        ledger.grant({"type": "CURRENCY", "code": 0, "amount": 1000 + ctx.level * 100})  # 推测值
+        ledger.grant({"type": "CURRENCY", "code": 0, "amount": int(setting("arena.win_copper_base", 1000)) + ctx.level * int(setting("arena.win_copper_per_level", 100))})
         arena["seed"] = int(arena["seed"]) + 1
     ctx.save()
     return {"costResult": ledger.costs, "groupNum": groups, "integral": gained,

@@ -6,6 +6,7 @@ Player-to-player mail is delivered to other local accounts by role name.
 
 from __future__ import annotations
 
+from ..settings import setting
 from ..game import Context, GameError, now_ms, route
 
 RECEIVER_NOT_FOUND = -2
@@ -15,7 +16,6 @@ INVALID_CONTENT = -5
 OUT_OF_LIMIT = -7
 ATTACHMENT_DRAW = -12
 EMAIL_NOT_FOUND = -15
-KEEP_DAYS = 30
 
 
 def _mails(state: dict) -> list[dict]:
@@ -50,7 +50,7 @@ def _vo(ctx: Context, mail: dict) -> dict:
     return {
         "attachment": {"charge": 0, "chargeTypes": [], "rewards": rewards} if rewards else None,
         "baseId": 0, "content": mail["content"], "createTime": int(mail["created"]),
-        "destoryTime": int(mail["created"]) + KEEP_DAYS * 86_400_000,
+        "destoryTime": int(mail["created"]) + int(setting("mail.keep_days", 30)) * 86_400_000,
         "drawed": bool(mail["drawed"]),
         "groupTarget": {"id": str(ctx.player_id), "type": 0},
         "id": int(mail["id"]), "mailState": 0, "mailType": int(mail.get("type", 1)),
@@ -62,7 +62,7 @@ def _vo(ctx: Context, mail: dict) -> dict:
 
 
 def _expire(ctx: Context) -> None:
-    limit = now_ms() - KEEP_DAYS * 86_400_000
+    limit = now_ms() - int(setting("mail.keep_days", 30)) * 86_400_000
     mails = _mails(ctx.state)
     kept = [m for m in mails if int(m["created"]) >= limit]
     if len(kept) != len(mails):

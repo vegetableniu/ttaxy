@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import random
 
+from ..settings import setting
 from ..game import Context, GameError, now_ms, parse_json, route
 
 LOTTERY_INVALID = -12
@@ -20,16 +21,19 @@ LOTTERY_TIMES_LIMIT = -11
 
 YEAR_MS = 365 * 86_400_000
 
-# id, lotteryType (Lock id), currency, once price, pool filter  —— 推测值
-POOLS = [
-    (1, "LOTTERY_L01", "FRIENDSHIP", 200, {"gain": "友情寻仙", "extra_drop_max_star": 2}),
-    (2, "LOTTERY_L1", "JADE", 280, {"gain": "仙玉寻仙"}),
-    (3, "LOTTERY_XIAN", "JADE", 300, {"gain": "仙玉寻仙", "race": "XIAN"}),
-    (4, "LOTTERY_LING", "JADE", 300, {"gain": "仙玉寻仙", "race": "LING"}),
-    (5, "LOTTERY_YAO", "JADE", 300, {"gain": "仙玉寻仙", "race": "YAO"}),
-]
-# star -> weight for jade pools (7★ guaranteed once per ten-draw)
-JADE_WEIGHTS = {3: 900, 4: 40, 5: 30, 6: 20, 7: 10}
+def pools() -> list[tuple]:
+    """(id, lotteryType, currency, price, filter) from server_settings.json lottery.pools."""
+    out = []
+    for p in setting("lottery.pools", []):
+        spec = {k: p[k] for k in ("gain", "race", "extra_drop_max_star") if k in p}
+        out.append((int(p["id"]), p["lotteryType"], p["currency"], int(p["price"]), spec))
+    return out
+
+
+def jade_weights() -> dict:
+    return {int(k): int(v) for k, v in setting("lottery.star_weights", {"3": 1}).items()}
+
+
 OTHER_KINDS = [  # mall widgets served by other commands
     (101, "BUY_POINTS", "购买体力"), (102, "BUY_BAG", "扩充卡包"),
     (103, "BUY_FRIEND", "扩充好友"), (410, "TOKEN_COIN", "代币兑换"),
@@ -93,7 +97,7 @@ def _other_row(ctx: Context, row_id: int, kind: str, title: str) -> dict:
 
 @route(11, 11)  # GET_LOTTERY_LIST
 def get_lottery_list(ctx: Context, req: dict):
-    rows = [_row(ctx, pool) for pool in POOLS]
+    rows = [_row(ctx, pool) for pool in pools()]
     rows += [_other_row(ctx, *other) for other in OTHER_KINDS]
     return rows
 
@@ -104,16 +108,18 @@ def _draw_one(ctx: Context, cards: list[dict], jade: bool, guarantee: bool) -> i
     by_star: dict[int, list[dict]] = {}
     for h in cards:
         by_star.setdefault(int(h["star"]), []).append(h)
-    if guarantee and 7 in by_star:
-        return int(random.choice(by_star[7])["id"])
-    stars = [s for s in JADE_WEIGHTS if s in by_star]
-    star = random.choices(stars, weights=[JADE_WEIGHTS[s] for s in stars])[0]
+    top = int(setting("lottery.ten_draw_guarantee_star", 7))
+    if guarantee and top in by_star:
+        return int(random.choice(by_star[top])["id"])
+    weights = jade_weights()
+    stars = [s for s in weights if s in by_star] or list(by_star)
+    star = random.choices(stars, weights=[weights.get(s, 1) for s in stars])[0]
     return int(random.choice(by_star[star])["id"])
 
 
 @route(11, 1)  # LOTTERY {id, time}: time = number of draws (1 or 10)
 def lottery(ctx: Context, req: dict):
-    pool = next((p for p in POOLS if p[0] == int(req.get("id") or 0)), None)
+    pool = next((p for p in pools() if p[0] == int(req.get("id") or 0)), None)
     times = int(req.get("time") or 1)
     if pool is None or times not in (1, 10):
         raise GameError(LOTTERY_INVALID, "invalid lottery")
@@ -157,7 +163,7 @@ def equip_lottery(ctx: Context, req: dict):
         state["free"] = int(state["free"]) + 1
         times = 1
     else:
-        ledger.pay_jade(100 * times)  # 推测值: equipment pack price
+        ledger.pay_jade(int(setting("lottery.equip_pack_price", 100)) * times)
     equips = [e for e in ctx.config.rows("BaseEquip")]
     from .equip import grant_equipment
     for _ in range(times):
