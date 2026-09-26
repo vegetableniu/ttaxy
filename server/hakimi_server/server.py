@@ -202,10 +202,6 @@ class LocalServer:
                 "code": 0,
                 "content": bool(build_gift_list(self.schema, record)["users"]),
             }
-        if (request.mod, request.cmd) == (16, 9):  # GET_ACTIVITYS
-            if request.trailing not in self.sessions:
-                raise ProtocolError("GET_ACTIVITYS has an invalid session")
-            return {"code": 0, "content": build_valid_activities(self.schema)}
         if (request.mod, request.cmd) == (16, 11):  # PROGRESS_REWARDS
             account = self.sessions.get(request.trailing)
             if account is None:
@@ -230,8 +226,13 @@ class LocalServer:
             raise ProtocolError("account no longer exists")
         ctx = Context(self, account, record, record.state)
         try:
-            content = handler(ctx, request_value if isinstance(request_value, dict)
-                              else {"_": request_value})
+            if isinstance(request_value, dict):
+                args = request_value
+            elif isinstance(request_value, list) and len(request_value) == 1:
+                args = {"_": request_value[0]}  # positional single-argument request
+            else:
+                args = {"_": request_value}
+            content = handler(ctx, args)
         except GameError as error:
             # Nothing is persisted: the request's state changes are discarded.
             print(f"game error {request.mod}:{request.cmd} -> {error.code} ({error})", flush=True)

@@ -129,6 +129,15 @@ class Context:
     def obj(self, type_name: str) -> dict:
         return default_object(self.schema, type_name)
 
+    def blank(self, mod: int, cmd: int, **fields) -> Any:
+        """Default response content of a command, with ``fields`` filled in."""
+        from .defaults import default_value
+        content_type = self.schema.response_type(mod, cmd).get("content")
+        value = default_value(self.schema, content_type)
+        if isinstance(value, dict):
+            value.update(fields)
+        return value
+
     def ledger(self) -> "Ledger":
         if self._ledger is None:
             self._ledger = Ledger(self)

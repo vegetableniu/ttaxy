@@ -226,6 +226,14 @@ class Writer:
         if isinstance(type_info, dict):
             self._write_struct_map(type_info, value)
             return
+        if isinstance(type_info, list):  # positional argument list
+            items = value if isinstance(value, (list, tuple)) else [value]
+            if not self._start_container(ARRAY, items):
+                return
+            self._varint(len(type_info))
+            for item_type, item in zip(type_info, list(items) + [None] * len(type_info)):
+                self._write(item_type, item)
+            return
         raise ProtocolError(f"unsupported type expression {type_info!r}")
 
     def _write_dynamic(self, value: Any) -> None:
