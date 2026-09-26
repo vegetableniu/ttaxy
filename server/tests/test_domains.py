@@ -84,11 +84,12 @@ class HeroTests(DomainTestCase):
         hero = result["content"]["hero"]
         self.assertGreater(hero["level"], 1)
         state = self.state()
-        self.assertEqual(len(state["cards"]), 1)
+        self.assertEqual(len(state["cards"]), 3)  # 3 starter cards, food consumed
         # coinRate of 至尊宝 is 1.0: cost equals total fed exp
         self.assertEqual(state["wallet"]["copper"], 100000 - 4000)
 
     def test_failed_request_changes_nothing(self):
+        self.edit(lambda s: s["wallet"].update(copper=0))
         food = self.give_card(310)
         before = self.state()
         result = self.call(13, 4, {"src": long_id(self.leader()["id"]), "tar": [long_id(food)]})
@@ -105,8 +106,16 @@ class HeroTests(DomainTestCase):
         self.assertEqual(result["content"]["hero"]["level"], 15)
         self.assertEqual(self.state()["wallet"]["copper"], 4000)
 
-    def test_fielded_card_cannot_be_sold(self):
+    def test_starting_state_and_protected_cards(self):
+        state = self.state()
+        self.assertEqual(sorted(c["base_id"] for c in state["cards"]), [1001, 1021, 1041])
+        self.assertEqual(state["wallet"]["copper"], 100000)
+        self.assertEqual(state["wallet"]["gift"], 300)
+        # leader is protected (locked); the fielded 1041 is merely in use
         result = self.call(13, 7, {"tar": [long_id(self.leader()["id"])]})
+        self.assertEqual(result["code"], -15)
+        fielded = next(c for c in state["cards"] if c["base_id"] == 1041)
+        result = self.call(13, 7, {"tar": [long_id(fielded["id"])]})
         self.assertEqual(result["code"], -13)
 
     def test_sell_and_formation(self):
@@ -138,6 +147,23 @@ class ItemTests(DomainTestCase):
         self.assertEqual(self.state()["items"], [])
         items = self.call(12, 1, {})
         self.assertEqual(items["code"], 0)
+
+
+class PlayerTests(DomainTestCase):
+    def test_player_routes_encode(self):
+        self.assertEqual(self.call(11, 2, {})["content"]["gift"], 300)
+        self.assertFalse(self.call(11, 3, {})["content"]["vip"])
+        info = self.call(11, 12, {})["content"]
+        self.assertTrue(info["first"])
+        checked = self.call(11, 13, {})
+        self.assertEqual(checked["code"], 0)
+        self.assertEqual(self.call(11, 13, {})["code"], -13)  # once per day
+        points = self.call(21, 2, {})["content"]["points"]
+        self.assertEqual(points[0]["point"], 100)
+        bought = self.call(21, 1, {})
+        self.assertEqual(bought["code"], 0)
+        self.assertEqual(self.state()["action_points"]["0"], 200)
+        self.assertEqual(self.call(11, 9, {})["code"], -10)  # roulette unlocks at level 5
 
 
 if __name__ == "__main__":

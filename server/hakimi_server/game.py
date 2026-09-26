@@ -335,6 +335,24 @@ class Ledger:
         self._change_currency(code, -amount)
         self.costs.append({"type": 0, "code": code, "amount": -amount, "contents": None})
 
+    def pay_jade(self, amount: int, types: list[str] | None = None) -> None:
+        """Pay 仙玉: the client sums GOLD+GIFT+INTER (GetPlayerAllJade); the
+        server config lists them as cost types, spent in that order."""
+        amount = int(amount)
+        if amount <= 0:
+            return
+        types = types or ["GOLD", "GIFT", "INTER"]
+        codes = [CURRENCY.index(t) for t in types]
+        if sum(self.balance(c) for c in codes) < amount:
+            raise GameError(GOLD_NOT_ENOUGH, "jade not enough")
+        for code in codes:
+            take = min(amount, self.balance(code))
+            if take > 0:
+                self.pay_currency(code, take)
+                amount -= take
+            if amount <= 0:
+                break
+
     def pay_costs(self, specs: list[dict]) -> None:
         """Pay a config cost list such as ``costItems`` (all-or-nothing by caller)."""
         for raw in specs:
@@ -456,6 +474,14 @@ class Ledger:
         self.grant_all(reward_specs(self.ctx.config, reward_id))
 
 
+def charge_times(ctx: Context, kind: str, default: int = 0) -> int:
+    """Daily limit unlocked by total recharge (Charge2Times, VIP-like tiers)."""
+    total = int(ctx.wallet.get("totalCharge", 0))
+    tiers = [int(r["addTimes"]) for r in ctx.config.rows("Charge2Times")
+             if r["type"] == kind and int(r["chargeAmount"]) <= total]
+    return max(tiers, default=default)
+
+
 def reward_specs(config, reward_id: str) -> list[dict]:
     row = config.index("RewardConfig").get(str(reward_id))
     if row is None:
@@ -479,6 +505,86 @@ def add_player_exp(ctx: Context, amount: int) -> None:
             break
         player["exp"] -= need
         player["level"] += 1
+    ctx.save()
+
+
+# ------------------------------------------------------- action points
+POINT_KINDS = {0: "SINGLE", 1: "DEMOG", 2: "MENPAI"}
+
+
+def refresh_points(ctx: Context) -> dict:
+    """Regenerate action points (POINT:<KIND>_INCREASE_* in ConfigValue)."""
+    points = ctx.state.setdefault("action_points", {})
+    stamps = ctx.state.setdefault("point_refresh", {})
+    now = now_ms()
+    for kind, name in POINT_KINDS.items():
+        interval = int(ctx.config.value(f"POINT:{name}_INCREASE_INTERVAL", 0) or 0)
+        limit = int(ctx.config.value(f"POINT:{name}_INCREASE_LIMIT", 0) or 0)
+        step = int(ctx.config.value(f"POINT:{name}_INCREASE_COUNT", 1) or 1)
+        key = str(kind)
+        if key not in points:
+            points[key] = int(ctx.config.value(f"POINT:{name}_INIT_VALUE", 0) or 0)
+        last = int(stamps.get(key, now))
+        if interval <= 0:
+            stamps[key] = now
+            continue
+        period = interval * 60_000
+        ticks = max(0, (now - last) // period)
+        current = int(points[key])
+        if current >= limit:
+            stamps[key] = now
+        elif ticks:
+            points[key] = min(limit, current + ticks * step)
+            stamps[key] = now if points[key] >= limit else last + ticks * period
+        else:
+            stamps.setdefault(key, last)
+    ctx.save()
+    return points
+
+
+def point_value(ctx: Context, kind: int) -> dict:
+    points = refresh_points(ctx)
+    exchange = ctx.state.setdefault("point_exchange", {})
+    today = time.strftime("%Y%m%d")
+    record = exchange.get(str(kind), {})
+    count = int(record.get("count", 0)) if record.get("day") == today else 0
+    return {"point": int(points.get(str(kind), 0)),
+            "refreshTime": int(ctx.state["point_refresh"].get(str(kind), now_ms())),
+            "exchangeCount": count, "exchangeTime": now_ms(), "extraTime": 0}
+
+
+# ------------------------------------------------------------ new player
+def init_new_player(ctx: Context) -> None:
+    """Apply ACCOUNT:INIT_* server settings once (3 starter cards, copper,
+    gift jade, starting formation and protected leader)."""
+    if ctx.state.get("init_done"):
+        return
+    starter = int(ctx.record.starter_hero)
+    leaders = list(ctx.config.value("ACCOUNT:INIT_LEADER", [1001, 1021]))
+    selection = leaders.index(starter) if starter in leaders else 0
+    reward_ids = ctx.config.value("ACCOUNT:INIT_REWARDS", [])
+    ledger = Ledger(ctx)
+    by_base = {starter: int(ctx.record.hero_id)}
+    ensure_cards(ctx.record, ctx.state, ctx.config)
+    if selection < len(reward_ids):
+        for raw in reward_specs(ctx.config, reward_ids[selection]):
+            spec = normalize_spec(raw)
+            if spec["type"] == "HERO" and spec["code"] in by_base:
+                continue
+            if spec["type"] == "HERO":
+                by_base[spec["code"]] = int(ctx.new_card(spec["code"])["id"])
+            else:
+                ledger.grant(spec)
+    grids = ctx.config.value("ACCOUNT:INIT_EMBATTLES", [])
+    if selection < len(grids):
+        grid = [[by_base.get(int(v), 0) if v else 0 for v in row] for row in grids[selection]]
+        group = ensure_groups(ctx.record, ctx.state)["groups"][0]
+        group["embattles"], group["leaderId"] = grid, int(ctx.record.hero_id)
+    for base in ctx.config.value("ACCOUNT:INIT_PROTECTS", []):
+        card = ctx.card(by_base.get(int(base), -1))
+        if card is not None:
+            card["locked"] = True
+    ctx.state["init_done"] = True
     ctx.save()
 
 

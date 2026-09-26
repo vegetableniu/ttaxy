@@ -352,10 +352,18 @@ class Writer:
         if not self._start_container(OBJECT, value):
             return
         ordered_fields = info["fields"]
+        unknown = [k for k in value if not str(k).startswith("__") and k not in ordered_fields]
+        if unknown:
+            # A misspelled field would silently reach the client as nil.
+            raise ProtocolError(f"{type_name} has no field(s) {unknown}; wire fields: {ordered_fields}")
         self._varint(int(info["code"]))
         self._byte(len(ordered_fields))
         for field in ordered_fields:
-            self._write(fields.get(field), value.get(field))
+            field_type = fields.get(field)
+            if field_type is None:
+                # describe.dat renamed a few booleans (schema isFirst -> wire first)
+                field_type = fields.get("is" + field[:1].upper() + field[1:])
+            self._write(field_type, value.get(field))
 
 
 class Reader:

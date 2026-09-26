@@ -28,9 +28,21 @@ def decode_long_id(value: bytes) -> int:
     return -number if negative else number
 
 
+# db.dat tables whose xlsconfig field lists are identical cannot be named by
+# 30_extract_db.py; these were identified by content.
+TABLE_ALIASES = {
+    "ConfigValue": "_key_8f7cc034",            # HERO:BUY_PACK_COST, POINT:*, ...
+    "DailyCheckConfig": "_key_0411dd75",       # day 7 = MYSTCARD
+    "FirstDailyCheckConfig": "_key_963314ef",  # newbie week, day 7 = hero 5467
+}
+
+
 class GameConfig:
     def __init__(self, path: Path):
         raw = json.loads(path.read_text(encoding="utf-8"))
+        for name, key in TABLE_ALIASES.items():
+            if name not in raw and key in raw:
+                raw[name] = raw[key]
         self.raw = raw
         self._indexes: dict[tuple[str, str], dict] = {}
         self.heroes = {int(row["id"]): row for row in raw["BaseHero"]}
@@ -46,6 +58,17 @@ class GameConfig:
             cached = {row[key]: row for row in self.rows(table) if key in row}
             self._indexes[(table, key)] = cached
         return cached
+
+    def value(self, key: str, default: Any = None) -> Any:
+        """A ConfigValue entry, JSON-decoded when possible (server settings)."""
+        row = self.index("ConfigValue").get(key)
+        if row is None:
+            return default
+        content = row.get("content")
+        try:
+            return json.loads(content)
+        except (TypeError, ValueError):
+            return content
 
     def hero(self, base_id: int) -> dict[str, Any]:
         try:

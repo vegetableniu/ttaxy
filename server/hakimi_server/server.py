@@ -37,7 +37,11 @@ from .gift import (
     claim_user_gift,
     grant_hero,
 )
-from .game import ROUTES, Context, GameError, ensure_cards, ensure_groups, group_vo, hero_vo
+from .game import (
+    ROUTES, Context, GameError, ensure_cards, ensure_groups, group_vo, hero_vo,
+    init_new_player, point_value, refresh_points,
+)
+from .handlers.player import vip_info
 from . import handlers  # noqa: F401  (registers @route handlers)
 from .storage import (
     AccountExistsError,
@@ -110,6 +114,11 @@ class LocalServer:
             record = self.repository.get(account)
             if record is None:
                 raise ProtocolError("LOGIN_INFO account no longer exists")
+            ctx = Context(self, account, record, record.state)
+            init_new_player(ctx)
+            refresh_points(ctx)
+            self.repository.update_state(account, ctx.state)
+            record = self.repository.get(account)
             info = build_login_info(
                 self.schema,
                 account_name=record.account,
@@ -138,6 +147,10 @@ class LocalServer:
                  "owner": long_id(record.player_id), "content": ""}
                 for i in state.get("items", [])
             ]
+            info["actionPoint"]["points"] = {
+                kind: point_value(ctx, kind) for kind in (0, 1, 2)
+            }
+            info["vip"] = vip_info(ctx)
             gifts = build_gift_list(self.schema, record)
             info["validGiftVo"] = gifts
             info["hasReward"] = bool(gifts["users"])

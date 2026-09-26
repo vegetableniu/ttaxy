@@ -222,6 +222,19 @@ class AccountRepository:
             raise RuntimeError("created account could not be reloaded")
         return record
 
+    def rename(self, account: str, role_name: str) -> None:
+        validate_role_name(role_name)
+        with self._connect() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            if connection.execute(
+                "SELECT 1 FROM accounts WHERE role_name = ? AND account != ?",
+                (role_name, account),
+            ).fetchone():
+                raise RoleNameExistsError(role_name)
+            connection.execute(
+                "UPDATE accounts SET role_name = ? WHERE account = ?", (role_name, account)
+            )
+
     def update_state(self, account: str, state: dict) -> AccountRecord:
         now_ms = int(time.time() * 1000)
         payload = json.dumps(state, ensure_ascii=False, sort_keys=True)

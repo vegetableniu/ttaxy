@@ -304,7 +304,7 @@ class StartupSequenceTests(unittest.TestCase):
         login = self.round_trip_response(
             self.request(10, 7, {}, session=TEST_SESSION)
         )
-        self.assertEqual(len(login["content"]["heros"]["heros"]), 2)
+        self.assertEqual(len(login["content"]["heros"]["heros"]), 4)
         self.assertEqual(login["content"]["heros"]["heros"][1]["baseId"], 311)
         self.assertEqual(len(login["content"]["validGiftVo"]["users"]), 1)
         self.assertTrue(login["content"]["hasReward"])

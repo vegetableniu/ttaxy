@@ -32,9 +32,15 @@ def default_value(schema: Schema, type_info: Any, stack: frozenset[str] = frozen
             return 0
         if type_info in stack:
             return None
+        wire = schema.objects_by_name.get(type_info)
+        names = wire["fields"] if wire else list(definition)
         return {
-            field: default_value(schema, field_type, stack | {type_info})
-            for field, field_type in definition.items()
+            field: default_value(
+                schema,
+                definition.get(field, definition.get("is" + field[:1].upper() + field[1:])),
+                stack | {type_info},
+            )
+            for field in names
         }
     if isinstance(type_info, dict) and "__ref" in type_info:
         primitive = type_info["__ref"]

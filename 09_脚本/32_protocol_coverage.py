@@ -61,11 +61,11 @@ def read_handlers() -> dict[tuple[int, int], int]:
 
 def read_server_handlers() -> dict[tuple[int, int], str]:
     handlers: dict[tuple[int, int], str] = {}
-    for path in sorted(SERVER_DIR.glob("*.py")):
+    for path in sorted(SERVER_DIR.rglob("*.py")):
         for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             for match in SERVER_RE.finditer(line):
                 key = (int(match["mod"]), int(match["cmd"]))
-                handlers.setdefault(key, f"{path.name}:{line_number}")
+                handlers.setdefault(key, f"{path.relative_to(SERVER_DIR).as_posix()}:{line_number}")
     return handlers
 
 
