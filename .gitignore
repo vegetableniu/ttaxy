@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# 调试/测试产物（本地保留，不入库）
+06_构建/*.png
+06_构建/*.log
+06_构建/*.txt
+06_构建/*.db
+06_构建/*.xml
+06_构建/*.bin
+06_构建/_luac/
+06_构建/classes.dex
+06_构建/original_*
+08_存档*
+baseline_logcat.txt
+server/data/
+server/06_构建/
+*.db
+!05_改造/**/*.db
+!06_构建/AndroidManifest.xml
