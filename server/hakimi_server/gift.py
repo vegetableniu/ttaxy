@@ -35,20 +35,21 @@ def hero_vo(schema: Schema, card: dict[str, Any]) -> dict[str, Any]:
 
 
 def grant_hero(
-    schema: Schema, record: AccountRecord, state: dict[str, Any], base_id: int
+    schema: Schema, record: AccountRecord, state: dict[str, Any], base_id: int,
+    config: Any = None,
 ) -> dict[str, Any]:
-    cards = state.setdefault("heroes", [])
-    highest = max(
-        [record.hero_id, *(int(card["id"]) for card in cards)],
-        default=record.hero_id,
-    )
+    from .game import ensure_cards
+    cards = ensure_cards(record, state, config or _NullConfig())
+    uid = max(int(state.get("next_uid", 0)), *(int(c["id"]) for c in cards)) + 1
+    state["next_uid"] = uid
+    info = (config.heroes.get(base_id, {}) if config else {})
     card = {
-        "id": highest + 1,
+        "id": uid,
         "base_id": base_id,
         "level": 1,
         "exp": 0,
         "locked": False,
-        "power_skill": 0,
+        "power_skill": int(info.get("powerSkill") or 0) if str(info.get("powerSkill") or "").isdigit() else 0,
         "skill_exp": 0,
     }
     cards.append(card)
@@ -60,6 +61,10 @@ def grant_hero(
         "mail": False,
         "type": 5,
     }
+
+
+class _NullConfig:
+    heroes: dict = {}
 
 
 def build_gift_list(schema: Schema, record: AccountRecord) -> dict[str, Any]:
@@ -130,6 +135,7 @@ def claim_user_gift(
     schema: Schema,
     record: AccountRecord,
     identifier: int,
+    config: Any = None,
 ) -> tuple[dict[str, Any], dict[str, Any]] | None:
     state = record.state
     claimed = {int(value) for value in state.get("claimed_gifts", [])}
@@ -146,6 +152,6 @@ def claim_user_gift(
     if definition is None:
         return None
 
-    reward = grant_hero(schema, record, state, int(definition["base_id"]))
+    reward = grant_hero(schema, record, state, int(definition["base_id"]), config)
     state.setdefault("claimed_gifts", []).append(identifier)
     return state, reward

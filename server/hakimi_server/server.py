@@ -29,6 +29,7 @@ from .transport import FrameBuffer, pack_transport_frame
 from .login import build_login_info
 from .battle import GameConfig, battle_triggers
 from .battle import decode_long_id
+from .defaults import long_id
 from .gift import (
     build_gift_list,
     build_progress_rewards,
@@ -36,6 +37,8 @@ from .gift import (
     claim_user_gift,
     grant_hero,
 )
+from .game import ROUTES, Context, GameError, ensure_cards, ensure_groups, group_vo, hero_vo
+from . import handlers  # noqa: F401  (registers @route handlers)
 from .storage import (
     AccountExistsError,
     AccountRepository,
@@ -117,6 +120,24 @@ class LocalServer:
                 created_ms=record.created_ms,
                 state=record.state,
             )
+            state = record.state
+            cards = ensure_cards(record, state, self.game_config)
+            groups = ensure_groups(record, state)
+            self.repository.update_state(account, state)
+            info["heros"]["heros"] = [hero_vo(self.schema, card) for card in cards]
+            leader = next(g for g in groups["groups"] if g["groupId"] == groups["curGroupId"])
+            info["heros"]["leader"] = group_vo(leader)["leaderId"]
+            info["heros"]["extendCount"] = int(state.get("pack_extend", 0))
+            info["groupVo"].update(
+                curGroupId=int(groups["curGroupId"]),
+                groups=[group_vo(g) for g in groups["groups"]],
+            )
+            info["items"] = [
+                {"id": long_id(int(i["id"])), "baseId": int(i["base_id"]),
+                 "amount": int(i["amount"]), "type": int(i.get("type", 0)),
+                 "owner": long_id(record.player_id), "content": ""}
+                for i in state.get("items", [])
+            ]
             gifts = build_gift_list(self.schema, record)
             info["validGiftVo"] = gifts
             info["hasReward"] = bool(gifts["users"])
@@ -139,7 +160,7 @@ class LocalServer:
             if record is None:
                 raise ProtocolError("DRAW_USER account no longer exists")
             identifier = decode_long_id(request_value.get("giftId") or b"")
-            claimed = claim_user_gift(self.schema, record, identifier)
+            claimed = claim_user_gift(self.schema, record, identifier, self.game_config)
             if claimed is None:
                 return {"code": -5, "content": []}
             state, reward = claimed
@@ -190,10 +211,6 @@ class LocalServer:
             # silent refresh and explicitly suppresses the MENPAI_NOT_JOIN
             # error while preserving the original not-joined state.
             return {"code": -8, "content": None}
-        if (request.mod, request.cmd) == (13, 12):  # CURRENT_SCORE
-            # The client reads the current formation score from index 2.
-            # A newly-created role has no accumulated combat power yet.
-            return {"code": 0, "content": [0, 0]}
         if (request.mod, request.cmd) == (22, 9):  # MULTI_ACTION
             account = self.sessions.get(request.trailing)
             if account is None:
@@ -287,7 +304,7 @@ class LocalServer:
                 ])
                 if battle_id == "CN01BN01" and first_clear:
                     rewards.extend(
-                        grant_hero(self.schema, record, state, 71)
+                        grant_hero(self.schema, record, state, 71, self.game_config)
                         for _ in range(5)
                     )
                 self.repository.update_state(account, state)
@@ -299,7 +316,26 @@ class LocalServer:
                     "hasDemog": False,
                 },
             }
-        raise ProtocolError(f"unimplemented command {request.mod}:{request.cmd}")
+        handler = ROUTES.get((request.mod, request.cmd))
+        if handler is None:
+            raise ProtocolError(f"unimplemented command {request.mod}:{request.cmd}")
+        account = self.sessions.get(request.trailing)
+        if account is None:
+            raise ProtocolError(f"{request.mod}:{request.cmd} has an invalid session")
+        record = self.repository.get(account)
+        if record is None:
+            raise ProtocolError("account no longer exists")
+        ctx = Context(self, account, record, record.state)
+        try:
+            content = handler(ctx, request_value if isinstance(request_value, dict)
+                              else {"_": request_value})
+        except GameError as error:
+            # Nothing is persisted: the request's state changes are discarded.
+            print(f"game error {request.mod}:{request.cmd} -> {error.code} ({error})", flush=True)
+            return {"code": error.code, "content": None}
+        if ctx.dirty:
+            self.repository.update_state(account, ctx.state)
+        return {"code": 0, "content": content}
 
     def response(self, request: ApplicationPacket, value: Any) -> bytes:
         content = encode(self.schema, self.schema.response_type(request.mod, request.cmd), value)

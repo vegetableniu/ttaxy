@@ -113,7 +113,8 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertEqual(responses[3]["content"]["register"], 1)
         self.assertEqual(responses[4]["content"], 0)
         self.assertEqual(responses[5], {"code": -8, "content": None})
-        self.assertEqual(responses[6]["content"], [0, 0])
+        self.assertEqual(responses[6]["content"][0], 0)
+        self.assertGreater(responses[6]["content"][1], 0)
 
     def test_login_info_rejects_wrong_session(self):
         request = self.request(10, 7, {}, session=b"wrong")
@@ -179,7 +180,7 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertEqual(info["content"]["player"]["baseId"], 1021)
 
     def test_unknown_command_is_not_fabricated(self):
-        request = self.request(13, 1, {})
+        request = self.request(92, 1, {"afterId": 0})
         with self.assertRaisesRegex(ProtocolError, "unimplemented command"):
             self.server.handle(request)
 
@@ -237,7 +238,7 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertEqual(state["action_points"]["0"], 95)
         self.assertEqual(state["wallet"]["copper"], 150)
         self.assertEqual(state["player"]["exp"], 10)
-        self.assertEqual([card["base_id"] for card in state["heroes"]], [71] * 5)
+        self.assertEqual([card["base_id"] for card in state["cards"][1:]], [71] * 5)
 
     def test_second_battle_returns_all_configured_waves(self):
         self.round_trip_response(

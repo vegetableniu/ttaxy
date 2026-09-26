@@ -31,9 +31,21 @@ def decode_long_id(value: bytes) -> int:
 class GameConfig:
     def __init__(self, path: Path):
         raw = json.loads(path.read_text(encoding="utf-8"))
+        self.raw = raw
+        self._indexes: dict[tuple[str, str], dict] = {}
         self.heroes = {int(row["id"]): row for row in raw["BaseHero"]}
         self.battles = {str(row["id"]): row for row in raw["BattleInfoConfig"]}
         self.levels = {int(row["id"]): row for row in raw["LevelConfig"]}
+
+    def rows(self, table: str) -> list[dict[str, Any]]:
+        return self.raw.get(table, [])
+
+    def index(self, table: str, key: str = "id") -> dict[Any, dict[str, Any]]:
+        cached = self._indexes.get((table, key))
+        if cached is None:
+            cached = {row[key]: row for row in self.rows(table) if key in row}
+            self._indexes[(table, key)] = cached
+        return cached
 
     def hero(self, base_id: int) -> dict[str, Any]:
         try:
