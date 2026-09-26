@@ -7,7 +7,8 @@
     "enemies_last_wave": 3,
     "coins_base": 100,
     "coins_per_level": 50,
-    "exp_per_level": 10,
+    "exp_per_cost": 10,
+    "exp_per_cost_level": 2,
     "drop_rate": 0.3,
     "max_rounds": 30,
     "first_battle_gift": {

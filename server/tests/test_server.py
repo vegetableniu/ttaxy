@@ -230,7 +230,7 @@ class StartupSequenceTests(unittest.TestCase):
         )
         self.assertEqual(exit_response["code"], 0)
         self.assertEqual(exit_response["content"]["costAndReward"]["rewards"][0]["amount"], 150)
-        self.assertEqual(exit_response["content"]["costAndReward"]["rewards"][1]["amount"], 10)
+        self.assertEqual(exit_response["content"]["costAndReward"]["rewards"][1]["amount"], 60)
         first_rewards = exit_response["content"]["costAndReward"]["rewards"]
         self.assertEqual([item["code"] for item in first_rewards[2:]], [71] * 5)
         self.assertEqual(len({item["contents"]["id"] for item in first_rewards[2:]}), 5)
@@ -238,7 +238,7 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertIn("CN01BN01", state["battles"])
         self.assertEqual(state["action_points"]["0"], 95)
         self.assertEqual(state["wallet"]["copper"], 150)
-        self.assertEqual(state["player"]["exp"], 10)
+        self.assertEqual(state["player"]["exp"], 60)
         self.assertEqual([card["base_id"] for card in state["cards"][1:]], [71] * 5)
 
     def test_second_battle_returns_all_configured_waves(self):
@@ -269,6 +269,36 @@ class StartupSequenceTests(unittest.TestCase):
         self.assertFalse(response["content"][0]["finished"])
         self.assertTrue(response["content"][1]["finished"])
         self.assertEqual(sum(item["coins"] for item in response["content"]), 150)
+
+    def test_assistant_slot_fights_with_commended_bot(self):
+        self.round_trip_response(
+            self.request(10, 2, {
+                "account": "localuser.1_1", "adult": False,
+                "appId": "com.eyugame.ahxy.mi", "channel": None,
+                "device": 1, "idfa": "device", "key": "localsign",
+                "origin": "localuser", "timestamp": 1, "token": "device",
+            })
+        )
+        record = self.repository.get("localuser.1_1")
+        state = record.state
+        state["battles"] = ["CN01BN01"]
+        self.repository.update_state("localuser.1_1", state)
+        commends = self.round_trip_response(self.request(19, 5, {}, session=TEST_SESSION))
+        friend = commends["content"][0]["id"]
+        response = self.round_trip_response(
+            self.request(22, 2, {
+                "battleId": "CN01BN02",
+                "embattle": [
+                    [long_id(record.hero_id), long_id(-1)],
+                    [long_id(0), long_id(0)],
+                    [long_id(0), long_id(0)],
+                ],
+                "friend": friend,
+            }, session=TEST_SESSION)
+        )
+        self.assertEqual(response["code"], 0)
+        resume = self.round_trip_response(self.request(22, 3, {}, session=TEST_SESSION))
+        self.assertEqual(resume["content"]["assistant"]["name"], commends["content"][0]["name"])
 
     def test_new_player_gift_is_claimed_once_and_restored_on_login(self):
         self.round_trip_response(

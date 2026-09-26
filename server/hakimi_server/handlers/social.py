@@ -78,8 +78,11 @@ def commend_friend(ctx: Context, req: dict):
     s = _social(ctx)
     count = int(ctx.config.value("SOCIALITY:COMMEND_OTHERS", 5))
     seed = f"{ctx.player_id}:{now_ms() // 60_000}"
-    return [commend_vo(ctx.config, b, b.id in s["friends"])
-            for b in bots_near(ctx.config, ctx.level, count, seed)]
+    picked = bots_near(ctx.config, ctx.level, count, seed)
+    # remembered so the chosen assistant fights at the level shown (battle.helper)
+    ctx.state["commends"] = {str(b.id): b.level for b in picked}
+    ctx.save()
+    return [commend_vo(ctx.config, b, b.id in s["friends"]) for b in picked]
 
 
 def _add_friend(ctx: Context, fid: int) -> None:

@@ -3,7 +3,7 @@
 Flow used by the client: MULTI_ACTION (all waves at once) or ENTER + TRIGGER
 per wave, then EXIT to settle.  QUICK_BATTLE / QUICK_ADVANCE settle at once.
 Rewards (推测值 — the server-only formulas are unknown):
-  copper = 100 + level * 50 per battle, exp = level * 10,
+  copper = 100 + level * 50 per battle, exp = cost * (10 + level * 2),
   BattleInfoConfig.itemDrop: always on first clear, 30% afterwards.
 Stamina (BattleInfoConfig.cost) is only charged for a won battle.
 """
@@ -96,13 +96,36 @@ def card_fighter(ctx: Context, slot: int, card: dict, role: int):
     return apply_alters(fighter, alters)
 
 
-def _attackers(ctx: Context, grid: list[list[int]]) -> list:
+def helper(ctx: Context, friend: int):
+    """The bot picked on the 助战 screen (COMMEND_FRIEND remembers its level)."""
+    if friend <= 0:
+        return None
+    from ..bots import bot
+    level = (ctx.state.get("commends") or {}).get(str(friend))
+    return bot(ctx.config, friend, int(level) if level else None)
+
+
+def assistant_vo(ctx: Context, friend: int):
+    b = helper(ctx, friend)
+    if b is None:
+        return None
+    from ..bots import commend_vo
+    return commend_vo(ctx.config, b, b.id in (ctx.state.get("social") or {}).get("friends", []))
+
+
+def _attackers(ctx: Context, grid: list[list[int]], friend: int = 0) -> list:
     group = next(g for g in ctx.groups["groups"] if int(g["groupId"]) == int(ctx.groups["curGroupId"]))
     leader = int(group["leaderId"])
     fighters = []
     for row_index, row in enumerate(grid):
         for col_index, card_id in enumerate(row):
             if not card_id:
+                continue
+            if card_id < 0:  # ID[-1]: the assistant's slot
+                b = helper(ctx, friend)
+                if b is not None:
+                    fighters.append(make_fighter(ctx.config, row_index * 2 + col_index,
+                                                 b.leader, b.level, MINOR))
                 continue
             card = ctx.card(card_id)
             if card is None:
@@ -129,11 +152,11 @@ def _defenders(ctx: Context, battle: dict, wave: int, waves: int) -> list:
     return fighters
 
 
-def simulate(ctx: Context, battle_id: str, grid: list[list[int]]) -> list[dict]:
+def simulate(ctx: Context, battle_id: str, grid: list[list[int]], friend: int = 0) -> list[dict]:
     """Run every wave; attackers keep their HP between waves."""
     battle = _battle(ctx, battle_id)
     waves = max(1, int(battle.get("enemies") or 1))
-    attackers = _attackers(ctx, grid)
+    attackers = _attackers(ctx, grid, friend)
     rng = random.Random()
     level = max(1, int(battle.get("level") or 1))
     coins_total = int(setting("battle.coins_base", 100)) + level * int(setting("battle.coins_per_level", 50))
@@ -162,7 +185,10 @@ def _pending(ctx: Context, battle_id: str, triggers: list[dict], friend: int = 0
     ctx.state["pending_battle"] = {
         "battle_id": battle_id, "success": success,
         "coins": sum(int(t["coins"]) for t in triggers),
-        "exp": max(1, int(battle.get("level") or 1)) * int(setting("battle.exp_per_level", 10)),
+        # 推测值: player exp scales with the stamina spent and the battle level
+        "exp": int(battle.get("cost") or 0) * (int(setting("battle.exp_per_cost", 10))
+                                               + max(1, int(battle.get("level") or 1))
+                                               * int(setting("battle.exp_per_cost_level", 2))),
         "cost": int(battle.get("cost") or 0), "waves": len(triggers),
         "total": max(1, int(battle.get("enemies") or 1)), "friend": friend,
         "rounds": 0,
@@ -175,8 +201,9 @@ def multi_action(ctx: Context, req: dict):
     battle_id = str(req.get("battleId") or "")
     battle = _battle(ctx, battle_id)
     _check_enter(ctx, battle)
-    triggers = simulate(ctx, battle_id, embattle_ids(req.get("embattle")))
-    _pending(ctx, battle_id, triggers, as_id(req.get("friend")))
+    friend = as_id(req.get("friend"))
+    triggers = simulate(ctx, battle_id, embattle_ids(req.get("embattle")), friend)
+    _pending(ctx, battle_id, triggers, friend)
     ctx.state["pending_triggers"] = []
     return triggers
 
@@ -186,8 +213,9 @@ def enter(ctx: Context, req: dict):
     battle_id = str(req.get("battleId") or "")
     battle = _battle(ctx, battle_id)
     _check_enter(ctx, battle)
-    triggers = simulate(ctx, battle_id, embattle_ids(req.get("embattle")))
-    _pending(ctx, battle_id, triggers, as_id(req.get("friend")))
+    friend = as_id(req.get("friend"))
+    triggers = simulate(ctx, battle_id, embattle_ids(req.get("embattle")), friend)
+    _pending(ctx, battle_id, triggers, friend)
     # reports are bytes; keep them hex-encoded in the JSON save
     ctx.state["pending_triggers"] = [dict(t, reports=t["reports"].hex()) for t in triggers]
     total = max(1, int(battle.get("enemies") or 1))
@@ -209,7 +237,8 @@ def resume_vo(ctx: Context) -> dict | None:
     if not pending:
         return None
     queue = ctx.state.get("pending_triggers") or []
-    return {"assistant": None, "battleId": pending["battle_id"], "coins": int(pending["coins"]),
+    return {"assistant": assistant_vo(ctx, int(pending.get("friend") or 0)),
+            "battleId": pending["battle_id"], "coins": int(pending["coins"]),
             "equips": 0, "failed": not pending["success"], "finished": not queue,
             "fragments": 0, "heros": 0, "remains": len(queue),
             "totalEnemies": int(pending["total"])}
@@ -279,11 +308,11 @@ def exit_battle(ctx: Context, req: dict):
 def _quick(ctx: Context, battle_id: str, grid: list[list[int]], friend: int) -> dict:
     battle = _battle(ctx, battle_id)
     _check_enter(ctx, battle)
-    triggers = simulate(ctx, battle_id, grid)
+    triggers = simulate(ctx, battle_id, grid, friend)
     _pending(ctx, battle_id, triggers, friend)
     success = ctx.state["pending_battle"]["success"]
     exit_vo = settle(ctx)
-    return {"assistant": None, "battleId": battle_id, "exitVo": exit_vo,
+    return {"assistant": assistant_vo(ctx, friend), "battleId": battle_id, "exitVo": exit_vo,
             "failed": not success, "finished": True}
 
 

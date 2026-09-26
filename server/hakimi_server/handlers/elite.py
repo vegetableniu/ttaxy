@@ -76,8 +76,8 @@ def _fight(ctx: Context, battle: dict, groups: list[list[list[int]]]):
         attackers = []
         for r, row in enumerate(grid):
             for c, card_id in enumerate(row):
-                card = ctx.card(card_id) if card_id else None
-                if card_id and card is None:
+                card = ctx.card(card_id) if card_id > 0 else None
+                if card_id > 0 and card is None:
                     raise GameError(EMBATTLE_ERROR, "card not owned")
                 if card:
                     from .battle import card_fighter
