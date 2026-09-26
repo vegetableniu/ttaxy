@@ -279,6 +279,13 @@ def _rank_vo(ctx, score: int, drawn: list) -> dict:
             "score": score, "topList": top, "topName": top[0]["name"], "topScore": top[0]["score"]}
 
 
+@route(11, 17)  # GET_CONSUME_RANK
+def player_consume_rank(ctx, req):
+    return [{"consume": t["score"], "id": t["id"], "leaderBaseId": t["leaderBaseId"],
+             "leaderLevel": t["playerLevel"], "name": t["name"], "rank": t["rank"]}
+            for t in _rank_lists(ctx, ctx.counter("gold_consumed"))]
+
+
 @route(55, 1)
 def consume_info(ctx, req):
     return _rank_vo(ctx, ctx.counter("gold_consumed"), ctx.state.get("consume_drawn", []))

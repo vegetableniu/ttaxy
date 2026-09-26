@@ -2,5 +2,5 @@
 
 from . import (  # noqa: F401
     account_misc, activity, arena, artifact, battle, charge, demog, elite, email, equip, hero,
-    item, lottery, menpai, misc, player, shops, social, talisman,
+    item, late, lottery, menpai, misc, player, shops, social, talisman,
 )
