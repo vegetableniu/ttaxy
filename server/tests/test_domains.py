@@ -419,5 +419,32 @@ class TalismanArtifactTests(DomainTestCase):
         self.assertEqual(self.call(45, 5, {})["code"], 0)
 
 
+class DemogMiscTests(DomainTestCase):
+    def test_demog_cycle_and_misc(self):
+        def change(state):
+            state["player"]["level"] = 40
+            state["wallet"].update(gold=5000, copper=1_000_000)
+            for card in state["cards"]:
+                card["level"] = 40
+        self.edit(change)
+        appear = self.call(26, 14, {})
+        self.assertEqual(appear["code"], 0)
+        grid = [[long_id(v) for v in row] for row in self.state()["groups"]["groups"][0]["embattles"]]
+        hit = self.call(26, 3, {"allOut": False, "demogId": appear["content"]["id"],
+                                "embattle": [grid], "summoner": long_id(0)})
+        self.assertEqual(hit["code"], 0)
+        self.assertGreater(hit["content"]["damage"], 0)
+        for report in hit["content"]["reports"]:
+            parse_report(report)
+        for cmd in (1, 2, 6, 7, 12, 15):
+            self.assertEqual(self.call(26, cmd, {})["code"], 0, cmd)
+        self.assertEqual(self.call(26, 8, {"type": 0})["code"], 0)
+        self.assertEqual(self.call(26, 9, {"owner": long_id(90_000_123)})["code"], 0)
+        self.assertEqual(self.call(14, 2, {})["code"], 0)
+        self.assertEqual(self.call(14, 4, {})["code"], 0)
+        self.assertEqual(self.call(23, 1, {})["code"], 0)
+        self.assertEqual(self.call(44, 2, {"content": "1234"})["code"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

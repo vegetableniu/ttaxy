@@ -49,6 +49,9 @@ COST_TYPES = ["CURRENCY", "ITEM", "EQUIP", "FRAGMENT", "ACTION_POINT", "HERO",
               "TURKEY", "TALISMAN", "EQUIPMENT"]
 ITEM_TYPES = ["ITEM", "EQUIP", "FRAGMENT"]
 CARD_REWARDS = {"HERO", "EXP_CARD", "COIN_CARD", "TREASURE"}
+# Single-pool currencies whose reward "code" is only a display id.
+CODELESS = {"DEMOG_FRAGMENT", "DEMOG_FEAT", "TALISMAN_FRAGMENT", "TALISMAN_LIEBI",
+            "MENPAI_MONEY", "MENPAI_EXP", "LEADERSHIP"}
 ITEM_ADD, ITEM_ALTER, ITEM_REMOVE = 0, 1, 2
 
 # Result codes shared by many modules (com.eyu.mt.module.*.facade.*Result).
@@ -485,8 +488,18 @@ class Ledger:
             vip[key] = max(now_ms(), int(vip.get(key, 0))) + amount * 3_600_000
             ctx.save()
             return [self._result(kind, code, amount, vip_info(ctx))]
+        if kind == "ARENA_INTEGRAL":
+            arena = ctx.state.setdefault("arena", {})
+            arena["integral"] = int(arena.get("integral", 0)) + amount
+            arena["total"] = int(arena.get("total", 0)) + amount
+            ctx.save()
+            return [self._result(kind, code, amount, {})]
         # Counters consumed by their own modules (token coin, box keys, ...).
-        ctx.add_counter(f"reward_{kind}_{code}", amount)
+        if kind in CODELESS:
+            code_key = 0
+        else:
+            code_key = code
+        ctx.add_counter(f"reward_{kind}_{code_key}", amount)
         return [self._result(kind, code, amount, {})]
 
     def grant_all(self, specs: list[dict]) -> None:

@@ -256,7 +256,9 @@ def settle(ctx: Context) -> dict:
             ledger.rewards.append(grant_hero(ctx.schema, ctx.record, ctx.state, 71, ctx.config))
     ctx.state["failed_times"] = 0
     ctx.save()
-    return {"costAndReward": ledger.cost_and_reward(), "failedTimes": 0, "hasDemog": False}
+    from .demog import maybe_spawn
+    return {"costAndReward": ledger.cost_and_reward(), "failedTimes": 0,
+            "hasDemog": maybe_spawn(ctx)}
 
 
 def _clear_campaign(ctx: Context, battle: dict) -> None:
